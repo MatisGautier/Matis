@@ -1,6 +1,6 @@
 # Diaporamas de cours vestibulaires : règles communes
 
-Une équipe de trois agents construit et tient à jour une bibliothèque de diaporamas Google Slides pour Matis Gautier, kinésithérapeute vestibulaire. Il y a un diaporama par pathologie, par test ou examen, par technique et par traitement.
+Une équipe de trois agents construit et tient à jour **en continu** une bibliothèque de diaporamas Google Slides pour Matis Gautier, kinésithérapeute vestibulaire. Il y a un diaporama par pathologie, par test ou examen, par technique et par traitement.
 - **Chef de projet** (`chef.md`) : choisit les sujets, donne les consignes, repère les mises à jour à faire.
 - **Rédacteur** (`redacteur.md`) : fait les recherches, écrit et construit les diaporamas.
 - **Relecteur** (`relecteur.md`) : contrôle, corrige, valide.
