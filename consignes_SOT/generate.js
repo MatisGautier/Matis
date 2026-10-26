@@ -25,7 +25,7 @@ const LANGS = {
     cond: 'Condition', eyes: 'Yeux', support: 'Support', surround: 'Décor',
     open: 'Ouverts', closed: 'Fermés',
     fixedS: 'Fixe', movesS: 'Peut bouger', fixedD: 'Fixe', movesD: 'Peut bouger',
-    footer: 'Durée : 20 secondes · Vous êtes attaché(e) par un harnais : vous ne pouvez pas tomber.',
+    footer: 'Durée : 20 secondes',
     text: [
       "Gardez les yeux ouverts et regardez droit devant vous. Le décor autour de vous ne bouge pas, et le support sous vos pieds non plus. Restez le plus droit et le plus immobile possible, les bras le long du corps.",
       "Fermez les yeux et gardez-les fermés jusqu'à la fin de l'essai. Le support sous vos pieds ne bouge pas. Restez le plus droit et le plus immobile possible.",
@@ -40,7 +40,7 @@ const LANGS = {
     cond: 'Condition', eyes: 'Eyes', support: 'Platform', surround: 'Surroundings',
     open: 'Open', closed: 'Closed',
     fixedS: 'Fixed', movesS: 'May move', fixedD: 'Fixed', movesD: 'May move',
-    footer: 'Duration: 20 seconds · You are wearing a safety harness: you cannot fall.',
+    footer: 'Duration: 20 seconds',
     text: [
       "Keep your eyes open and look straight ahead. The surroundings do not move, and neither does the platform under your feet. Stand as straight and as still as possible, arms by your sides.",
       "Close your eyes and keep them closed until the end of the trial. The platform under your feet does not move. Stand as straight and as still as possible.",
@@ -55,7 +55,7 @@ const LANGS = {
     cond: 'Bedingung', eyes: 'Augen', support: 'Plattform', surround: 'Umgebung',
     open: 'Offen', closed: 'Geschlossen',
     fixedS: 'Unbewegt', movesS: 'Kann sich bewegen', fixedD: 'Unbewegt', movesD: 'Kann sich bewegen',
-    footer: 'Dauer: 20 Sekunden · Sie sind durch einen Sicherheitsgurt gesichert: Sie können nicht fallen.',
+    footer: 'Dauer: 20 Sekunden',
     text: [
       "Halten Sie die Augen offen und blicken Sie geradeaus. Die Umgebung bewegt sich nicht, und die Plattform unter Ihren Füßen auch nicht. Stehen Sie so aufrecht und ruhig wie möglich, die Arme locker am Körper.",
       "Schließen Sie die Augen und lassen Sie sie bis zum Ende der Messung geschlossen. Die Plattform unter Ihren Füßen bewegt sich nicht. Stehen Sie so aufrecht und ruhig wie möglich.",
@@ -70,7 +70,7 @@ const LANGS = {
     cond: 'Condición', eyes: 'Ojos', support: 'Plataforma', surround: 'Entorno',
     open: 'Abiertos', closed: 'Cerrados',
     fixedS: 'Inmóvil', movesS: 'Puede moverse', fixedD: 'Inmóvil', movesD: 'Puede moverse',
-    footer: 'Duración: 20 segundos · Lleva un arnés de seguridad: no puede caerse.',
+    footer: 'Duración: 20 segundos',
     text: [
       "Mantenga los ojos abiertos y mire al frente. El entorno no se mueve, y la plataforma bajo sus pies tampoco. Mantenga el cuerpo lo más recto e inmóvil posible, con los brazos a lo largo del cuerpo.",
       "Cierre los ojos y manténgalos cerrados hasta el final de la prueba. La plataforma bajo sus pies no se mueve. Mantenga el cuerpo lo más recto e inmóvil posible.",
@@ -85,7 +85,7 @@ const LANGS = {
     cond: 'Condição', eyes: 'Olhos', support: 'Plataforma', surround: 'Ambiente',
     open: 'Abertos', closed: 'Fechados',
     fixedS: 'Imóvel', movesS: 'Pode mexer-se', fixedD: 'Imóvel', movesD: 'Pode mexer-se',
-    footer: 'Duração: 20 segundos · Está preso(a) por um arnês de segurança: não pode cair.',
+    footer: 'Duração: 20 segundos',
     text: [
       "Mantenha os olhos abertos e olhe em frente. O ambiente à sua volta não se mexe, nem a plataforma sob os seus pés. Mantenha o corpo o mais direito e imóvel possível, com os braços ao longo do corpo.",
       "Feche os olhos e mantenha-os fechados até ao fim do teste. A plataforma sob os seus pés não se mexe. Mantenha o corpo o mais direito e imóvel possível.",
@@ -100,7 +100,7 @@ const LANGS = {
     cond: 'الحالة', eyes: 'العينان', support: 'المنصة', surround: 'المحيط',
     open: 'مفتوحتان', closed: 'مغمضتان',
     fixedS: 'ثابتة', movesS: 'قد تتحرك', fixedD: 'ثابت', movesD: 'قد يتحرك',
-    footer: 'المدة: 20 ثانية · أنت مثبَّت بحزام أمان: لا يمكنك السقوط.',
+    footer: 'المدة: 20 ثانية',
     text: [
       "أبقِ عينيك مفتوحتين وانظر إلى الأمام مباشرة. المحيط من حولك لا يتحرك، وكذلك المنصة تحت قدميك. حافظ على جسمك مستقيمًا وثابتًا قدر الإمكان، مع إبقاء ذراعيك بجانب جسمك.",
       "أغمض عينيك وأبقهما مغمضتين حتى نهاية الاختبار. المنصة تحت قدميك لا تتحرك. حافظ على جسمك مستقيمًا وثابتًا قدر الإمكان.",
@@ -115,7 +115,7 @@ const LANGS = {
     cond: 'Condizione', eyes: 'Occhi', support: 'Pedana', surround: 'Ambiente',
     open: 'Aperti', closed: 'Chiusi',
     fixedS: 'Immobile', movesS: 'Può muoversi', fixedD: 'Immobile', movesD: 'Può muoversi',
-    footer: "Durata: 20 secondi · Indossa un'imbracatura di sicurezza: non può cadere.",
+    footer: "Durata: 20 secondi",
     text: [
       "Tenga gli occhi aperti e guardi dritto davanti a sé. L'ambiente intorno a lei non si muove, e nemmeno la pedana sotto i suoi piedi. Mantenga il corpo il più dritto e fermo possibile, con le braccia lungo i fianchi.",
       "Chiuda gli occhi e li tenga chiusi fino alla fine della prova. La pedana sotto i suoi piedi non si muove. Mantenga il corpo il più dritto e fermo possibile.",
@@ -134,43 +134,43 @@ const SIMPLE = {
     floorFixed: 'Le sol ne bouge pas', floorMoves: 'Le sol peut bouger',
     wallFixed: 'Le décor ne bouge pas', wallMoves: 'Le décor peut bouger',
     stand: 'Restez droit, les pieds immobiles', signal: "Tape sur l'épaule = début et fin",
-    time: '20 secondes', safe: 'Harnais : vous ne pouvez pas tomber' },
+    time: '20 secondes' },
   en: { sourds: 'Illustrated instructions', malvoyants: 'Large print',
     eyesOpen: 'Eyes open: look straight ahead', eyesClosed: 'Eyes closed until the end',
     floorFixed: 'The floor does not move', floorMoves: 'The floor may move',
     wallFixed: 'The surroundings do not move', wallMoves: 'The surroundings may move',
     stand: 'Stand straight, feet still', signal: 'Tap on the shoulder = start and end',
-    time: '20 seconds', safe: 'Harness: you cannot fall' },
+    time: '20 seconds' },
   de: { sourds: 'Bebilderte Hinweise', malvoyants: 'Großdruck',
     eyesOpen: 'Augen offen: geradeaus schauen', eyesClosed: 'Augen zu bis zum Ende',
     floorFixed: 'Der Boden bewegt sich nicht', floorMoves: 'Der Boden kann sich bewegen',
     wallFixed: 'Die Umgebung bewegt sich nicht', wallMoves: 'Die Umgebung kann sich bewegen',
     stand: 'Aufrecht stehen, Füße still', signal: 'Tippen auf die Schulter = Start und Ende',
-    time: '20 Sekunden', safe: 'Sicherheitsgurt: Sie können nicht fallen' },
+    time: '20 Sekunden' },
   es: { sourds: 'Instrucciones ilustradas', malvoyants: 'Letra grande',
     eyesOpen: 'Ojos abiertos: mire al frente', eyesClosed: 'Ojos cerrados hasta el final',
     floorFixed: 'El suelo no se mueve', floorMoves: 'El suelo puede moverse',
     wallFixed: 'El entorno no se mueve', wallMoves: 'El entorno puede moverse',
     stand: 'Cuerpo recto, pies quietos', signal: 'Toque en el hombro = inicio y fin',
-    time: '20 segundos', safe: 'Arnés: no puede caerse' },
+    time: '20 segundos' },
   pt: { sourds: 'Instruções ilustradas', malvoyants: 'Letra grande',
     eyesOpen: 'Olhos abertos: olhe em frente', eyesClosed: 'Olhos fechados até ao fim',
     floorFixed: 'O chão não se mexe', floorMoves: 'O chão pode mexer-se',
     wallFixed: 'O ambiente não se mexe', wallMoves: 'O ambiente pode mexer-se',
     stand: 'Corpo direito, pés quietos', signal: 'Toque no ombro = início e fim',
-    time: '20 segundos', safe: 'Arnês: não pode cair' },
+    time: '20 segundos' },
   ar: { sourds: 'تعليمات مصوَّرة', malvoyants: 'خط كبير',
     eyesOpen: 'العينان مفتوحتان: انظر إلى الأمام', eyesClosed: 'العينان مغمضتان حتى النهاية',
     floorFixed: 'الأرض لا تتحرك', floorMoves: 'قد تتحرك الأرض',
     wallFixed: 'المحيط لا يتحرك', wallMoves: 'قد يتحرك المحيط',
     stand: 'قف مستقيمًا، والقدمان ثابتتان', signal: 'لمسة على الكتف = البداية والنهاية',
-    time: '20 ثانية', safe: 'حزام أمان: لا يمكنك السقوط' },
+    time: '20 ثانية' },
   it: { sourds: 'Istruzioni illustrate', malvoyants: 'Caratteri grandi',
     eyesOpen: 'Occhi aperti: guardi davanti a sé', eyesClosed: 'Occhi chiusi fino alla fine',
     floorFixed: 'Il pavimento non si muove', floorMoves: 'Il pavimento può muoversi',
     wallFixed: "L'ambiente non si muove", wallMoves: "L'ambiente può muoversi",
     stand: 'Corpo dritto, piedi fermi', signal: 'Tocco sulla spalla = inizio e fine',
-    time: '20 secondi', safe: 'Imbracatura: non può cadere' },
+    time: '20 secondi' },
 };
 
 // Pictogrammes (SVG, trait en currentColor)
@@ -225,7 +225,6 @@ function scene(c, id) {
       <path d="M30 200 V32 Q30 18 44 18 H156 Q170 18 170 32 V200" fill="${wallBg}" stroke="${wall}" stroke-width="6"/>
     </g>
     ${c.surround === 'moves' ? arc('M58 2 Q100 -12 142 2', wall, 'w') : ''}
-    <path d="M86 22 L90 92 M114 22 L110 92" stroke="#8a97a0" stroke-width="2.5" stroke-dasharray="5 3"/>
     <g stroke="${INK}" stroke-linecap="round" fill="none">
       <path d="M100 88 V148" stroke-width="9"/>
       <path d="M100 98 L85 142 M100 98 L115 142" stroke-width="7"/>
@@ -263,7 +262,7 @@ function halfDeaf(L, i, code) {
       </div>
     </div>
     <div class="signal"><span class="emo">✋</span>${esc(S.signal)}</div>
-    <footer><span class="emo">⏱️</span> ${esc(S.time)} &nbsp;·&nbsp; <span class="emo">🦺</span> ${esc(S.safe)}</footer>
+    <footer><span class="emo">⏱️</span> ${esc(S.time)}</footer>
   </section>`;
 }
 
