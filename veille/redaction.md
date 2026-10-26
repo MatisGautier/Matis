@@ -7,7 +7,7 @@ Tu tournes chaque matin vers 7 h 45 (heure de Paris), après l'agent Collecte. T
 
 Lis d'abord `regles.md`. Lance `TZ=Europe/Paris date` pour connaître le jour.
 
-**S'il n'y a rien à envoyer** (pas d'article en attente, pas de fiche patient, pas de synthèse, et on n'est pas lundi), n'envoie aucun mail et termine.
+**S'il n'y a rien à envoyer** (pas d'article en attente, pas de fiche patient, pas de synthèse, pas de diaporama à annoncer, et on n'est pas lundi), n'envoie aucun mail et termine.
 
 ## 1. Lire les avis de Matis
 
@@ -111,9 +111,10 @@ Contenu, dans cet ordre :
    - pour un article qui a attendu plus d'un jour : « ⏳ Repéré le <date> ».
 3. Les fiches patients faites pour des articles urgents déjà envoyés (section 2), avec leur lien Drive.
 4. **📚 Synthèse du jour** (lundi, mercredi, vendredi) : thème, 3 messages clés, lien Drive.
-5. **👀 À survoler** : titres des articles notés 4-5 depuis le dernier mail, avec leur lien PubMed, en une ligne chacun.
-6. **📋 Récap de la semaine (lundi seulement)** : fiches et fiches patients de la semaine, fiches patients non faites et pourquoi, articles jugés utiles par Matis, nombre d'articles en attente, vérifications HAS/SFORL/Kinésithérapie la Revue, problèmes, lien vers le tableau.
-7. En pied de mail : « 💬 Réponds à ce mail pour me dire ce qui t'est utile, par exemple : 1 👍 2 👎 3 appliqué. » Ajoute les liens vers le tableau et vers le classeur des fiches patients.
+5. **🎓 Diaporamas** : lis l'onglet `Diaporamas!A:L`. Liste les lignes `Validé` dont la colonne L est vide (« Nouveau diaporama ») ou plus ancienne que la colonne I (« Diaporama mis à jour »). Pour chacune, donne le sujet, le nombre de diapos, le lien (F) et, pour une mise à jour, ce qui a changé (dernières lignes de la colonne E). Après l'envoi, écris la date du jour en L. Ajoute en une ligne l'avancement : « <n> diaporamas validés sur <total> ».
+6. **👀 À survoler** : titres des articles notés 4-5 depuis le dernier mail, avec leur lien PubMed, en une ligne chacun.
+7. **📋 Récap de la semaine (lundi seulement)** : fiches et fiches patients de la semaine, fiches patients non faites et pourquoi, articles jugés utiles par Matis, nombre d'articles en attente, vérifications HAS/SFORL/Kinésithérapie la Revue, problèmes, lien vers le tableau.
+8. En pied de mail : « 💬 Réponds à ce mail pour me dire ce qui t'est utile, par exemple : 1 👍 2 👎 3 appliqué. » Ajoute les liens vers le tableau et vers le classeur des fiches patients.
 
 Ensuite, mets sur le mail le libellé « Veille Vestibulaire », celui de chaque catégorie présente, celui des synthèses s'il y en a une, et celui des fiches patients (adulte ou enfant) s'il y en a.
 
