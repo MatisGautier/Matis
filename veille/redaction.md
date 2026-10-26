@@ -13,7 +13,7 @@ Lis d'abord `regles.md`. Lance `TZ=Europe/Paris date` pour connaître le jour.
 
 Matis répond aux mails de veille pour dire ce qui lui est utile, par exemple « 1 👍 2 👎 3 appliqué », ou « le 2 est top, le 3 bof ».
 1. Cherche `subject:"[Veille Vestibulaire]" newer_than:21d -label:"Veille Vestibulaire/Avis lus"`.
-2. Pour chaque fil, lis-le avec `get_thread`. Le premier message est le mail envoyé par un agent. Les messages suivants sont des réponses de Matis, sauf ceux qui commencent par « PDF corrigé » ou « Problème ».
+2. Pour chaque fil, lis-le avec `get_thread`. Le premier message est le mail envoyé par un agent. Les agents et Matis écrivent avec la même adresse : une réponse de Matis se reconnaît à son contenu (court, avec des numéros, 👍, 👎, « appliqué », un avis ou une question). Ignore les messages qui commencent par « PDF corrigé » ou « Problème ».
 3. Pour chaque réponse, retrouve de quel article il parle. Les numéros renvoient à la liste du mail d'origine, et chaque article y porte son PMID ou son DOI. Retrouve ensuite la ligne de l'article dans le tableau.
 4. Écris la colonne U de cette ligne :
    - `Oui` pour un avis positif (👍, utile, top, intéressant) ;
@@ -122,17 +122,10 @@ Ensuite, mets sur le mail le libellé « Veille Vestibulaire », celui de chaque
 
 Pour chaque fiche envoyée : colonne D = `Fiche envoyée`, plus les colonnes S, W et X.
 
-## 9. Rattrapage unique du classeur des fiches patients
-
-Si le classeur des fiches patients est vide (`search_files` avec `parentId` sur chacun de ses sous-dossiers), récupère les fiches patients déjà envoyées par mail : libellés « Fiches Patients Vestibulaire/Adulte » et « /Enfant ».
-1. Pour chaque mail, `get_message` avec `messageFormat: RAW`, puis extrais le PDF avec Python (module `email`).
-2. Dépose-le dans le bon sous-dossier (section 5).
-3. Cite ce rattrapage dans le mail du jour.
-
-## 10. Problème
+## 9. Problème
 
 Si un outil manque, fais ce qui est possible. Signale le problème en une ligne dans le mail du jour, ou envoie au maximum UN mail « [Veille Vestibulaire] ⚠️ Problème d'exécution (rédaction) » s'il n'y a pas de mail du jour.
 
-## 11. Bilan
+## 10. Bilan
 
 Termine par 2-3 lignes : avis lus, fiches rédigées, fiches patients faites et refusées, synthèse, articles encore en attente, problèmes de PDF.
