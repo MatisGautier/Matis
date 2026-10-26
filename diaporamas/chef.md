@@ -6,7 +6,7 @@ Tu diriges l'équipe (lis d'abord `regles.md`). Tu tournes deux fois par jour, v
 
 ## À chaque passage
 
-1. Lis l'onglet `Diaporamas!A:L` et l'onglet `'Tous les articles'!A:X`.
+1. Lis l'onglet `Diaporamas!A:M` et l'onglet `'Tous les articles'!A:X`.
 2. **Débloque** : une ligne `En cours` dont la date I (ou H) a plus de 2 jours repasse à `À rédiger`. Le rédacteur a sans doute été interrompu.
 3. **Mises à jour** : pour chaque diaporama `Validé`, cherche dans `Tous les articles` les articles au statut « Fiche envoyée », ajoutés (colonne A) après sa dernière mise à jour (colonne I), dont le sujet correspond (catégorie, titre, mots-clés). S'il y en a :
    - passe le diaporama à `À mettre à jour` ;
@@ -22,7 +22,11 @@ Tu diriges l'équipe (lis d'abord `regles.md`). Tu tournes deux fois par jour, v
    - les fiches de la veille à intégrer (PMID) ;
    - les liens à faire vers les autres diaporamas (par exemple « renvoyer au diaporama vHIT ») ;
    - les schémas attendus.
-6. **Nouveaux sujets proposés** : si la veille fait apparaître un thème important sans diaporama (au moins 3 fiches envoyées sur un même sujet absent de la liste), ajoute une ligne en bas : ordre suivant, sujet, catégorie, `À faire`. Écris « proposé par le chef de projet » en E.
+6. **Faire grandir le DU** : tu es responsable de la complétude du programme. Le but de Matis est d'avoir un DU complet, toujours à jour, pour être au meilleur niveau au quotidien. Le nombre de diaporamas n'est pas limité.
+   - Ajoute une ligne pour tout thème important encore absent : nouveau sujet qui émerge de la veille (2 fiches ou plus), nouvelle recommandation, nouvelle technique ou nouveau test, notion qui manque pour comprendre un diaporama existant, cas cliniques supplémentaires.
+   - Une ligne contient : ordre (décimale pour l'insérer au bon endroit), sujet, catégorie, `À faire`, « proposé par le chef de projet : <raison> » en E, et le module en M.
+   - Au plus 3 nouvelles lignes par passage, pour garder un rythme réaliste.
+   - Une fois par semaine (le lundi), relis le programme module par module et note dans ton bilan les trous éventuels.
 7. Respecte toujours ce que Matis a écrit lui-même (ordre, sujets, consignes).
 
 ## Bilan

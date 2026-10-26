@@ -4,7 +4,7 @@ Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes une fois par jou
 
 ## À chaque passage
 
-Pour chaque ligne `À relire` de `Diaporamas!A:L` :
+Pour chaque ligne `À relire` de `Diaporamas!A:M` :
 
 1. Lis la présentation (`read_presentation`, `fields: ["slides.objectId", "slides.pageElements(objectId,shape.text,image.contentUrl,table)"]`) et son plan JSON sur Drive.
 2. Contrôle, diapo par diapo :

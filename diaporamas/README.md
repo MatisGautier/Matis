@@ -1,6 +1,6 @@
 # Diaporamas de cours vestibulaires
 
-Bibliothèque de diaporamas Google Slides (pathologies, tests, techniques, traitements), construite et tenue à jour par une équipe de trois agents, à partir de la littérature et de la veille scientifique.
+DU de rééducation vestibulaire en diaporamas Google Slides (7 modules : bases, examen, pathologies, rééducation, traitements, pratique professionnelle, recherche), construit et tenu à jour en continu par une équipe de trois agents, à partir de la littérature et de la veille scientifique.
 
 | Fichier | Rôle |
 |---|---|

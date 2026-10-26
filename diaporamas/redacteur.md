@@ -4,7 +4,7 @@ Tu construis les diaporamas (lis d'abord `regles.md`). Tu tournes deux fois par 
 
 ## 1. Choisir le travail
 
-Lis `Diaporamas!A:L` et prends **une** ligne, dans cet ordre de priorité :
+Lis `Diaporamas!A:M` et prends **une** ligne, dans cet ordre de priorité :
 1. `À corriger` : remarques du relecteur en K ;
 2. `À mettre à jour` : articles à intégrer en E ;
 3. `À rédiger` : celle de plus petit ordre (A).

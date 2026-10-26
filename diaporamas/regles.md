@@ -1,6 +1,15 @@
 # Diaporamas de cours vestibulaires : règles communes
 
-Une équipe de trois agents construit et tient à jour **en continu** une bibliothèque de diaporamas Google Slides pour Matis Gautier, kinésithérapeute vestibulaire. Il y a un diaporama par pathologie, par test ou examen, par technique et par traitement.
+Une équipe de trois agents construit et tient à jour **en continu** un véritable **DU de rééducation vestibulaire** sous forme de diaporamas Google Slides, pour Matis Gautier, kinésithérapeute vestibulaire. Le but : qu'il soit au meilleur niveau au quotidien, avec un cours toujours à jour des dernières publications. Il y a un diaporama par notion de base, par test ou examen, par pathologie, par technique, par traitement et par compétence professionnelle. La liste n'est pas fermée : le programme s'enrichit au fil du temps.
+
+Le programme est organisé en 7 modules (colonne M) :
+- **M1** Bases fondamentales ;
+- **M2** Examen clinique et explorations ;
+- **M3** Pathologies ;
+- **M4** Rééducation et techniques ;
+- **M5** Traitements médicaux et chirurgicaux ;
+- **M6** Pratique professionnelle et raisonnement clinique ;
+- **M7** Recherche et pratique fondée sur les preuves.
 - **Chef de projet** (`chef.md`) : choisit les sujets, donne les consignes, repère les mises à jour à faire.
 - **Rédacteur** (`redacteur.md`) : fait les recherches, écrit et construit les diaporamas.
 - **Relecteur** (`relecteur.md`) : contrôle, corrige, valide.
@@ -13,9 +22,9 @@ Conseils techniques : lance les recherches PubMed une par une (sinon « Rate lim
 
 | Col. | Contenu |
 |---|---|
-| A | Ordre de priorité (Matis peut le changer) |
+| A | Ordre de priorité, décimales permises (1.5 passe entre 1 et 2) ; Matis peut le changer |
 | B | Sujet |
-| C | Catégorie : `Pathologie`, `Test`, `Technique` ou `Traitement` |
+| C | Catégorie, qui décide du dossier Drive : `Pathologie` (dont les bases), `Test`, `Technique`, `Traitement` ou `Pratique` (pratique professionnelle, cas cliniques, recherche) |
 | D | Statut : `À faire` → `À rédiger` → `En cours` → `À relire` → `Validé` ; ou `À corriger`, `À mettre à jour` |
 | E | Consignes du chef de projet (angle, points à couvrir, articles de la veille à intégrer) |
 | F | Lien Google Slides |
@@ -25,6 +34,7 @@ Conseils techniques : lance les recherches PubMed une par une (sinon « Rate lim
 | J | Articles intégrés (PMID ou DOI, séparés par des virgules) |
 | K | Remarques du relecteur |
 | L | Annoncé à Matis le : rempli par l'agent de veille, ne pas toucher |
+| M | Module du DU (M1 à M7) |
 
 Écris seulement dans les cellules de ton rôle, avec `update_values`. Matis peut aussi écrire dans A, B et E : ses demandes priment sur tout.
 
@@ -37,9 +47,22 @@ Conseils techniques : lance les recherches PubMed une par une (sinon « Rate lim
 
 ## 3. Plan type
 
+**Fin commune à TOUS les diaporamas**, avant les références, pour être « au top au quotidien » :
+- **« L'essentiel en une diapo »** : les 5 à 6 messages à retenir pour le cabinet ;
+- **« Testez-vous »** : 5 questions (QCM ou cas éclair), puis une diapo **« Corrigé »** qui explique chaque réponse en une ligne, avec sa source ;
+- **« Pour aller plus loin »** : liens vers les autres diaporamas du DU (module et numéro d'ordre).
+
+**Notion de base** (module M1, 15 à 25 diapos) : titre ; plan ; objectifs ; notions d'anatomie et de physiologie, avec schémas ; ce que cela explique en clinique ; ce que cela change pour la rééducation ; fin commune ; références ; historique.
+
 **Pathologie** (20 à 30 diapos) : titre ; plan ; définition et critères diagnostiques ; épidémiologie ; rappels anatomo-physiologiques utiles ; **physiopathologie** (au moins 2 schémas) ; présentation clinique ; diagnostic et diagnostic différentiel (tableau) ; signes d'alerte ; examens complémentaires (renvoyer aux diaporamas des tests) ; traitements médicaux et chirurgicaux ; **rééducation** (protocole détaillé, dosage, niveau de preuve) ; pronostic et récidive ; messages clés pour le cabinet ; perspectives de recherche ; nouveautés de la veille ; références ; historique des mises à jour.
 
 **Test ou examen** (15 à 25 diapos) : titre ; plan ; principe physiologique (schéma) ; matériel ; déroulé pas à pas (schéma en étapes) ; interprétation et valeurs normales ; exemples normal et pathologique ; pièges et artefacts ; performances diagnostiques (sensibilité, spécificité) ; indications et contre-indications ; place du kiné ; messages clés ; nouveautés de la veille ; références ; historique.
+
+**Pathologie** : ajoute toujours un **cas clinique** réaliste (présentation, examen, raisonnement, prise en charge, évolution), placé avant la fin commune.
+
+**Pratique professionnelle** (module M6 ou M7, 15 à 25 diapos) : titre ; plan ; objectifs ; contenu structuré en étapes, avec des outils prêts à l'emploi (trames, check-lists, arbres décisionnels) ; exemples concrets ; erreurs fréquentes ; fin commune ; références ; historique. Pour la France, les règles officielles (nomenclature, prescription, HAS, Ordre) sont vérifiées sur les sources officielles par WebSearch.
+
+**Cas cliniques commentés** (20 à 30 diapos) : 4 à 6 cas, chacun en 4-5 diapos : présentation ; examen ; « Qu'en pensez-vous ? » ; raisonnement et diagnostic ; prise en charge et évolution, avec les sources. Fin commune ; références.
 
 **Technique ou traitement** (15 à 25 diapos) : titre ; plan ; principe et rationnel physiologique (schéma) ; indications et contre-indications ; réalisation pas à pas (schéma en étapes) ; paramètres et dosage ; efficacité et niveau de preuve (essais, méta-analyses, chiffres) ; effets indésirables et précautions ; variantes ; mise en pratique au cabinet ; messages clés ; nouveautés de la veille ; références ; historique.
 
