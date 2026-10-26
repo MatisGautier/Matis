@@ -1,0 +1,45 @@
+{
+ "titre": "Le vertige des petits cristaux (VPPB)",
+ "sous_titre": "La pièce tourne quand vous vous couchez ou levez la tête ? Voici ce qui se passe, et comment on le soigne.",
+ "public": "adulte",
+ "en_une_phrase": "Des petits cristaux de l'oreille ont glissé au mauvais endroit. Le kiné les remet à leur place avec des mouvements de la tête. C'est impressionnant, mais ce n'est pas grave.",
+ "cest_quoi": [
+  "Au fond de l'oreille, il y a **l'oreille interne**. Elle aide à garder l'**équilibre**.",
+  "Elle contient de minuscules **cristaux**, plus petits que des grains de sable.",
+  "Parfois, des cristaux **glissent dans un petit tuyau** où ils ne devraient pas être."
+ ],
+ "pourquoi": [
+  "Quand vous bougez la tête, les cristaux **roulent dans le tuyau**.",
+  "L'oreille croit que vous tournez : **la pièce tourne** pendant quelques secondes.",
+  "Cela arrive souvent **sans raison connue**, parfois après un choc à la tête."
+ ],
+ "ce_quon_a_decouvert": [
+  "Des chercheurs ont suivi **77 patients** en 2026.",
+  "Environ **2 patients sur 3** sont guéris **dès la 1re séance**.",
+  "**Après 60 ans**, il faut souvent **2 séances ou plus**. C'est normal !"
+ ],
+ "ce_que_tu_peux_faire": [
+  "**Revenir au rendez-vous** de contrôle, même si ça va mieux.",
+  "Vous **lever doucement** : asseyez-vous d'abord au bord du lit.",
+  "**Allumer la lumière** la nuit pour ne pas tomber."
+ ],
+ "comment_ca_va_se_passer": [
+  "Le kiné fait des **mouvements de tête** pour trouver le bon tuyau.",
+  "Puis il **guide les cristaux** vers la sortie, en quelques minutes.",
+  "Un **petit flottement** peut rester 1 ou 2 jours. Ça passe tout seul."
+ ],
+ "alerte": [
+  "le vertige **ne s'arrête plus**, même quand vous ne bougez pas ;",
+  "vous ne pouvez **plus marcher seul** ;",
+  "vous avez **très mal à la tête**, vous voyez **double**, vous avez du mal à **parler**, ou un côté du corps est **faible** ;",
+  "vous **n'entendez plus** d'une oreille."
+ ],
+ "le_savais_tu": "Ce vertige s'appelle VPPB : Vertige Positionnel Paroxystique Bénin. « Bénin » veut dire « pas grave ». C'est la cause de vertige la plus fréquente !",
+ "sources": [
+  "Bayrak AF, Öztürk DF, Çetin B. Comparison of the Efficacy of Appiani and Zuma Maneuvers in Patients with Apogeotropic Horizontal Canal BPPV. J Int Adv Otol, 2026. PMID 42867354.",
+  "Haute Autorité de Santé. Vertiges positionnels paroxystiques bénins : manœuvres diagnostiques et thérapeutiques. Recommandation de bonne pratique, 2017.",
+  "Bhattacharyya N et al. Clinical Practice Guideline: Benign Paroxysmal Positional Vertigo (Update). Otolaryngol Head Neck Surg, 2017. PMID 28248609."
+ ],
+ "remis_par": "<voir paramètres de la tâche>",
+ "cabinet": "<voir paramètres de la tâche>"
+}
