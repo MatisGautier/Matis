@@ -8,6 +8,10 @@ Usage : python3 generer_pdf.py fiche.json sortie.pdf
 import json
 import re
 import sys
+from pathlib import Path
+
+# reportlab est fourni dans veille/vendor : aucune installation nécessaire
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "vendor"))
 from datetime import date
 
 from reportlab.lib import colors

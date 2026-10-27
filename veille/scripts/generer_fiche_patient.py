@@ -5,6 +5,10 @@ Usage : python3 generer_fiche_patient.py fiche_patient.json sortie.pdf
 """
 import json
 import sys
+from pathlib import Path
+
+# reportlab est fourni dans veille/vendor : aucune installation nécessaire
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "vendor"))
 from datetime import date
 
 from reportlab.graphics.shapes import Circle, Drawing, Line, PolyLine, String
