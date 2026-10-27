@@ -62,7 +62,7 @@ Laisse la colonne S vide. L'agent Rédaction fera la fiche patient le lendemain 
 
 ## 4. Problème
 
-Si un outil manque, fais ce qui est possible. Envoie au maximum UN mail par jour « [Veille Vestibulaire] ⚠️ Problème d'exécution (collecte) ». Vérifie d'abord dans Gmail : `subject:"Problème d'exécution" newer_than:1d`.
+Si un outil manque, fais ce qui est possible. **Ne contacte pas Matis** : pas de mail de problème, pas de notification. Décris le problème précisément dans ton bilan. Mage, le chef des agents, le lit, le corrige et le signale à Matis dans son rapport du matin.
 
 ## 5. Bilan
 

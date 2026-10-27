@@ -16,6 +16,16 @@ Conseils techniques :
 - Lance les recherches PubMed une par une (sinon « Rate limit exceeded ») ; `get_article_metadata` avec 8 PMID au maximum par appel.
 - Les passages sont limités par l'abonnement de Matis : travaille efficacement et écris l'avancement au fur et à mesure (colonne N), pour qu'un passage interrompu puisse être repris.
 
+
+## 0. Communication : Matis ne parle qu'à Mage
+
+Matis ne veut échanger qu'avec **Mage**, le chef des agents. Tu ne t'adresses donc jamais à lui directement :
+- pas de notification (`PushNotification`) ;
+- pas de mail de problème ;
+- pas de question.
+
+Les seuls mails autorisés sont ceux que tes consignes prévoient comme livrables. Un problème, un blocage ou une question va dans ton **bilan de fin de passage**, écrit clairement. Mage lit ces bilans, corrige et en rend compte à Matis.
+
 ## 1. Les modules du DU
 
 Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01, etc. La colonne M le calcule toute seule. Chaque module a son dossier Drive (voir Paramètres).

@@ -124,7 +124,7 @@ Pour chaque fiche envoyée : colonne D = `Fiche envoyée`, plus les colonnes S, 
 
 ## 9. Problème
 
-Si un outil manque, fais ce qui est possible. Signale le problème en une ligne dans le mail du jour, ou envoie au maximum UN mail « [Veille Vestibulaire] ⚠️ Problème d'exécution (rédaction) » s'il n'y a pas de mail du jour.
+Si un outil manque, fais ce qui est possible. **Ne contacte pas Matis à ce sujet** : pas de mail de problème, pas de notification, rien dans le mail du jour. Décris le problème précisément dans ton bilan. Mage, le chef des agents, le lit, le corrige et le signale à Matis dans son rapport du matin.
 
 ## 10. Bilan
 
