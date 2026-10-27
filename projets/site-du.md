@@ -18,3 +18,4 @@ Pistes techniques à valider le moment venu :
 - Lancement prévu dès que les premiers modules (M00 à M02) sont validés, sans attendre la fin du DU.
 
 À ne pas oublier : les présentations intégrées doivent être partagées par lien. Une personne qui récupère ce lien peut ouvrir le cours sans mot de passe. Si c'est gênant, on affichera des exports (images ou PDF) servis par le site protégé.
+- 27/10/2026 : public très restreint (Matis et quelques kinés). On retient l'option simple : Google Slides intégrés, avec un mot de passe sur le site.
