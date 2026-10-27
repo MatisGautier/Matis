@@ -2,7 +2,7 @@
 """Transforme le plan d'un diaporama (JSON) en requêtes Google Slides (batchUpdate).
 
 Usage : python3 construire_diapos.py plan.json dossier_sortie/ [prefixe]
-  -> écrit dossier_sortie/diapo_01.json, diapo_02.json… : une liste de requêtes
+  -> écrit dossier_sortie/diapo_01.json, diapo_02.json… (et paquet_01.json… par 5) : une liste de requêtes
      par diapo, à envoyer dans l'ordre avec update_presentation ;
   -> affiche les avertissements (texte trop long, source manquante…).
   prefixe (lettres, par défaut « d ») : à changer à chaque reconstruction d'un
@@ -302,7 +302,13 @@ def main():
     for i, requetes in enumerate(diapos, 1):
         (sortie / f"diapo_{i:02d}.json").write_text(
             json.dumps(requetes, ensure_ascii=False), encoding="utf-8")
-    print(f"{len(diapos)} diapos -> {sortie}/diapo_XX.json")
+    # Paquets de 5 diapos : un seul update_presentation par paquet
+    for n, debut in enumerate(range(0, len(diapos), 5), 1):
+        paquet = [r for requetes in diapos[debut:debut + 5] for r in requetes]
+        (sortie / f"paquet_{n:02d}.json").write_text(
+            json.dumps(paquet, ensure_ascii=False), encoding="utf-8")
+    print(f"{len(diapos)} diapos -> {sortie}/diapo_XX.json"
+          f" et paquet_XX.json (diapos 1-5, 6-10…)")
     for a in avert:
         print("ATTENTION :", a)
     print("OK" if not avert else "À CORRIGER avant envoi")

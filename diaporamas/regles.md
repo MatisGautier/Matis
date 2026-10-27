@@ -138,9 +138,10 @@ Un cours de 30 à 50 diapos ne tient pas toujours dans un seul passage : on le c
    - enregistre le plan sur Drive, dans le dossier du module : `create_file` avec `textContent`, `contentMimeType: application/json`, `disableConversionToGoogleType: true`, titre « plan – <Ordre>. <Titre>.json » ;
    - crée la présentation dans le dossier du module (`create_file`, `contentMimeType: application/vnd.google-apps.presentation`, titre « <Ordre>. <Titre> ») et note son lien en F ;
    - puis envoie les diapos.
-2. **Envoi** : `sortie/diapo_01.json`, puis `diapo_02.json`, etc., chacun avec **un** `update_presentation` (`requests` = le contenu du fichier, recopié à l'identique).
-   - Après chaque tranche de 5 diapos, mets à jour N (« 15/42 »).
-   - Si un envoi échoue : `deleteObject` sur l'identifiant de cette diapo, corrige, renvoie.
+2. **Envoi, par paquets de 5 diapos** : le script écrit aussi `sortie/paquet_01.json` (diapos 1 à 5), `paquet_02.json` (6 à 10), etc. Envoie **un paquet par `update_presentation`** (`requests` = le contenu du fichier, recopié à l'identique), pas une diapo à la fois. Utilise les fichiers `diapo_XX.json` seulement pour reprendre au milieu d'un paquet.
+   - Après chaque paquet, mets à jour N (« 15/42 »).
+   - Si un paquet échoue : vérifie avec `read_presentation` quelles diapos sont présentes, supprime (`deleteObject`) une diapo à moitié créée, puis renvoie diapo par diapo.
+   - Enchaîne les paquets sans t'arrêter : vise le cours complet en un seul passage.
 3. **Passages suivants** (statut `En cours` et N incomplet) :
    - relis le plan sur Drive (`download_file_content` ou `read_file_content`) ;
    - relance le script avec **le même préfixe** ;
