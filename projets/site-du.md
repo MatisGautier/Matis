@@ -10,3 +10,11 @@ Pistes techniques à valider le moment venu :
 - cours intégrés via « Publier sur le web » de Google Slides, ou export PDF ;
 - seuls les cours au statut `Validé` sont publiés ;
 - mentions : sources et crédits d'images visibles, avertissement « contenu de formation, ne remplace pas un avis médical », droits des images (Wikimedia : licence et crédit).
+
+## Décisions de Matis
+
+- 27/10/2026 : affichage des cours en Google Slides intégrés au site. Le site se met à jour tout seul à chaque mise à jour d'un cours.
+- 27/10/2026 : site réservé aux kinés, avec un mot de passe. Matis prépare les accès dans les jours à venir.
+- Lancement prévu dès que les premiers modules (M00 à M02) sont validés, sans attendre la fin du DU.
+
+À ne pas oublier : les présentations intégrées doivent être partagées par lien. Une personne qui récupère ce lien peut ouvrir le cours sans mot de passe. Si c'est gênant, on affichera des exports (images ou PDF) servis par le site protégé.
