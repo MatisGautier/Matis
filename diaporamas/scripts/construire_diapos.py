@@ -18,6 +18,7 @@ Format du plan :
     {"type": "contenu", "titre": "...", "puces": ["...", "**gras**", ...],
      "schema": {...} (facultatif), "sources": ["Auteur, Revue année, PMID ..."]},
     {"type": "tableau", "titre": "...", "lignes": [["en-tête", ...], [...]], "sources": [...]},
+    {"type": "plan", "titre": "Plan", "puces": ["1. ...", "2. ..."]}   (sans source)
     {"type": "references", "titre": "Références", "puces": ["...", ...]}
   ]
 }
@@ -271,7 +272,7 @@ def construire(plan, prefixe="d"):
             entete(d, s["titre"], accent)
             tableau(d, s["lignes"], MARGE, 76, L - 2 * MARGE, H - 130, accent)
             pied(d, s.get("sources"), num, plan["titre"])
-        elif genre == "references":
+        elif genre in ("references", "plan"):
             entete(d, s.get("titre", "Références"), accent)
             d.texte(MARGE, 72, L - 2 * MARGE, H - 100, s["puces"], 10, BLEU_NUIT, puces=True)
             d.texte(L - MARGE - 50, H - 26, 50, 16, f"{num}", 8, GRIS, centre=True)
