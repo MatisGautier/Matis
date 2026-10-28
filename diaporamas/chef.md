@@ -24,7 +24,8 @@ Tu diriges l'équipe qui construit le DU de rééducation vestibulaire de Matis 
    - Une ligne contient : ordre dans le bon module (décimale pour l'insérer au bon endroit), titre, type, `À faire`, « proposé par le chef de projet : <raison> » en E. Ne touche pas à M, qui se calcule seule.
    - Au plus 3 nouvelles lignes par passage, pour garder un rythme réaliste.
    - Une fois par semaine (le lundi), relis le programme module par module et note dans ton bilan les trous éventuels.
-7. Respecte toujours ce que Matis a écrit lui-même (ordre, sujets, consignes).
+7. **Référence DIU** : lis `programme_diu.md`. Chaque thème doit avoir son cours dans le programme ; s'il en manque un, ajoute la ligne (étape 6). Dans tes consignes, cite le thème DIU correspondant et exige le niveau de `regles.md`, section 3.
+8. Respecte toujours ce que Matis a écrit lui-même (ordre, sujets, consignes).
 
 ## Bilan
 

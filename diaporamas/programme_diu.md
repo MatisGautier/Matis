@@ -1,0 +1,15 @@
+# Référence : programme d'un DIU français « Vertiges et rééducation vestibulaire » (2025-2026)
+
+Thèmes enseignés dans le DIU suivi par Matis (Paris, 4 modules). Le DU doit **au minimum** couvrir chacun de ces thèmes, au même niveau ou plus. Le chef de projet s'en sert pour vérifier le programme et rédiger les consignes ; le rédacteur s'en sert pour viser le bon niveau.
+
+**Module 1 – Physiologie vestibulaire, du périphérique au central**
+Introduction aux vertiges et à la rééducation vestibulaire · Anatomie de l'os temporal et du labyrinthe, phylogenèse et embryogenèse · Physiologie du système vestibulaire, voies (RVO, RVS, cervelet) · VNG et test calorique · PEO (VEMP) et VVS · Panorama des pathologies vestibulaires · Cochlée : anatomie, physiologie, audiogramme et PEA · Interrogatoire et examen clinique du patient vertigineux · vHIT · Fauteuil rotatoire · Optocinétique · VPPB et vertiges positionnels atypiques (+ travaux pratiques) · Examen neurologique, vertiges centraux, mouvements anormaux des yeux · Tests de 1er niveau (HST, HIT, Bárány, test vibratoire) · Vestibulopathie récurrente bénigne · Névrite et labyrinthite · Dysfonctionnement otolithique · Déhiscence des canaux et 3e fenêtre.
+
+**Module 2 – Déficit et adaptation**
+RVO et stockage de vitesse · Mal des transports · Paroxysmie vestibulaire · Vertiges et psychologie · Adaptation périphérique et centrale, bases physiopathologiques de la réhabilitation · Rapport ORL–kiné · Drapeaux rouges de l'examen · Vestibule et perception du corps propre · Œil, réflexes visuo-visuels, orthoptie · Maladie de Ménière · Vertiges fluctuants · Mécanismes cellulaires de la compensation · Hippocampe et cellules de lieu · Pièges du vHIT.
+
+**Module 3 – Multimodal et rééducation**
+Neurinome vestibulaire · Presbyvestibulopathie · Vertiges vus par le gériatre · Céphalée, migraine, migraine vestibulaire · Syndromes fonctionnels · Réalité virtuelle (historique, apport) · Perspectives : implant vestibulaire, IA, modèles animaux, thérapie génique · Chirurgie du labyrinthe · Radiologie : scanner et IRM du labyrinthe · Techniques et outils de rééducation · Posturographie · Examen clinique sous vidéonystagmoscopie · Mouvements dynamiques actifs (MDA) · Rééducation et PPPD · Rééducation vestibulaire.
+
+**Module 4 – Approfondissement**
+Tangothérapie · Posturographie · Déficit unilatéral aigu et commotion cérébrale : rééducation · Voies vestibulo-thalamo-corticales · Vertiges à bilan normal · Aréflexie vestibulaire bilatérale et association de patients · Conséquences d'un déficit vestibulaire sur le développement de l'enfant · Vertiges de l'enfant : épidémiologie et pathologies · Exploration vestibulaire avant 3 ans · Rééducation de l'enfant (psychomotricité) · Syndromes génétiques cochléo-vestibulaires · Stratégie de rééducation · Sommeil et vertiges · Fistules périlymphatiques · Implants cochléaires et vestibule · Angle ponto-cérébelleux : anatomie, voies d'abord, chirurgie · Chirurgie du Ménière et des déhiscences · Cas cliniques de rééducation · Ateliers pratiques (manœuvres, réalité virtuelle, VEMP, vHIT, VNG, MDA).

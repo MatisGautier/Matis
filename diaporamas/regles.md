@@ -74,6 +74,13 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
 - **Clarté** : **une idée par diapo**, 6 puces au maximum, 20 mots au maximum par puce, gras sur 1-2 mots clés.
 - **Vocabulaire** : chaque terme technique est défini à sa première apparition. Chaque abréviation est développée.
 - **Jamais de chiffre, de définition ni de référence inventés.** En cas de doute, ne pas l'écrire.
+- **Niveau de référence : un très bon DIU français.** `programme_diu.md` liste les thèmes du DIU « Vertiges et rééducation vestibulaire » suivi par Matis : chaque cours doit être au moins aussi complet que l'enseignement correspondant. Pour un cours de contenu (notion, test, pathologie, technique) :
+  - **40 à 50 diapos** (partie 2 si besoin) : le cours 1 de présentation est une introduction, pas le modèle de profondeur ;
+  - **au moins 12 références** vérifiées, dont les critères Bárány, les recommandations internationales et, quand elles existent, **françaises** (HAS, SFORL, consensus français) ;
+  - la **physiopathologie** et les mécanismes expliqués pas à pas, avec au moins 3 schémas ;
+  - le **point de vue de l'ORL** (examens, imagerie, traitements, chirurgie) **et celui du kiné** (bilan, rééducation, dosage, critères d'arrêt) ;
+  - les chiffres (épidémiologie, performances des tests, résultats des traitements) avec leur source ;
+  - au moins un **cas clinique** complet et un « Testez-vous » de 8 à 10 questions.
 
 ## 4. Taille et structure de chaque cours
 
