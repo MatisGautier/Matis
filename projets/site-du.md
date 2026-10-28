@@ -19,3 +19,9 @@ Pistes techniques à valider le moment venu :
 
 À ne pas oublier : les présentations intégrées doivent être partagées par lien. Une personne qui récupère ce lien peut ouvrir le cours sans mot de passe. Si c'est gênant, on affichera des exports (images ou PDF) servis par le site protégé.
 - 27/10/2026 : public très restreint (Matis et quelques kinés). On retient l'option simple : Google Slides intégrés, avec un mot de passe sur le site.
+
+## Avancement
+
+- 28/10/2026 : le sous-domaine bdd.kinevestibulaire.fr est créé par Matis. Le site est écrit en PHP, avec comptes kinés, un onglet par module et les cours en Google Slides intégrés. Il est livré en zip pour FileZilla, en attendant le dépôt privé « site-DU ».
+- Source des cours : onglet `Site` du tableau, qui filtre l'onglet `Diaporamas` avec une formule QUERY. Cet onglet est publié en CSV.
+- Le dossier « Notes du DIU de Matis » n'hérite pas des partages : il reste privé même si le dossier du DU est partagé par lien.
