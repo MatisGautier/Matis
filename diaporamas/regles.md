@@ -131,7 +131,16 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
 
 **Demande de Matis (28/10/2026) : des diapos beaucoup plus propres et variées.**
 
-Ce que donnent les diapos modèles (version 2) :
+**Style de référence (28/10/2026) : les cours du DIU que Matis a suivi**, par exemple « Conséquences d'un déficit vestibulaire sur le développement de l'enfant » :
+- peu de texte et en grand : **3 à 5 lignes courtes** par diapo, 10 mots environ par ligne ;
+- des **sous-points** en retrait, commençant par « - » (exemple : « - schéma corporel erroné ») ;
+- une **ligne de conclusion en gras** en bas, qui commence par « > » (champ `conclusion`) ;
+- des **diapos d'affirmation** : une phrase seule, en grand, au centre (« Enfant ≠ petit adulte », « Vestibulopathie ≠ vertige ») : c'est la diapo `section`. On en met une à chaque grande partie ;
+- les **chiffres clés en cercles** colorés (diapo `cercles`, 3 ou 4 chiffres avec leur libellé) ;
+- un **titre en capitales bleues** avec, au-dessus, un petit **surtitre** gris : la partie en cours, rempli automatiquement avec le titre de la dernière diapo `section` ;
+- les études présentées simplement : « Étude : **13 enfants** (âge moyen 10 ans) vs contrôles », puis les résultats en sous-points.
+
+Ce que donnent les diapos modèles (version 3) :
 - le **logo de Matis en haut à droite** de chaque diapo ;
 - les **sources dans un encadré gris en bas** de la diapo, alimenté par le champ `sources`.
 
@@ -157,12 +166,14 @@ Les schémas viennent des **diapos modèles** (section 7). Limites à respecter 
 - **`chiffres`** : **2 ou 3** grands chiffres clés, à droite des puces.
 - La diapo **`tableau`** pour les comparaisons à plusieurs critères et le vocabulaire : **2 ou 3 colonnes, 9 lignes au maximum** (en-tête compris), textes courts. Avec modération (voir plus haut).
 - La diapo **`colonnes`** : deux cartes côte à côte (périphérique / central, canalolithiase / cupulolithiase, adulte / enfant…), chacune avec un titre et 2 à 5 puces (380 caractères au maximum par carte).
+- La diapo **`cercles`** (dans `schema`, sans puces) : `{"type": "cercles", "elements": [["5-8 %", "Prévalence des vertiges chez l'enfant (3-10 ans)"], ...]}`, 3 ou 4 éléments.
+- Le champ **`conclusion`** d'une diapo de puces : une phrase courte affichée en gras en bas (« > … »).
 - La diapo **`retenir`** : une phrase forte encadrée (`message`, 320 caractères au maximum) et 1 à 3 puces en dessous.
-- Texte des puces : 850 caractères au maximum en pleine largeur, 500 à côté d'un schéma.
+- Texte des puces : 360 caractères au maximum en pleine largeur (texte en 22 pt), 300 à côté d'un schéma.
 
 ## 7. Construire un cours : copie du modèle, duplication, remplacement de textes
 
-Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mcolonnes2`, `Mretenir`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{T1}}`/`{{P1}}`, `{{T2}}`/`{{P2}}` (colonnes), `{{MESSAGE}}` (retenir), `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`. **Ne les supprime jamais.**
+Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mcercles3`, `Mcercles4`, `Mcolonnes2`, `Mretenir`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{T1}}`/`{{P1}}`, `{{T2}}`/`{{P2}}` (colonnes), `{{MESSAGE}}` (retenir), `{{SURTITRE}}`, `{{CONCLUSION}}`, `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`. **Ne les supprime jamais.**
 
 Chaque diapo du cours = 3 petites requêtes + des remplacements de texte :
 1. `duplicateObject` du modèle, avec `objectIds` = `{"<Modèle>": "<prefixe><num sur 3 chiffres>diapo", "<Modèle>_corps": "…diapo_corps"}` (et `"<Modèle>_tab": "…diapo_tab"` pour un tableau ; `"Mcolonnes2_c1": "…diapo_c1", "Mcolonnes2_c2": "…diapo_c2"` pour des colonnes) ;

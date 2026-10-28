@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 
-MAX_PUCES = {"Mtexte": 850, "Mplan": 850, "Mrefs": 2500, "Mimage": 500, "Mfluxv": 500, "Mchiffres": 500,
+MAX_PUCES = {"Mtexte": 360, "Mplan": 600, "Mrefs": 2500, "Mimage": 300, "Mfluxv": 300, "Mchiffres": 300,
              "Mretenir": 320, "Mcolonnes2": 380}
 
 
@@ -63,6 +63,13 @@ def choisir_modele(s, avert, num):
     if not sch:
         return "Mtexte"
     t = sch.get("type")
+    if t == "cercles":
+        n = len(sch["elements"])
+        if not 3 <= n <= 4:
+            avert.append(f"Diapo {num} : cercles : 3 ou 4 éléments")
+        if s.get("puces"):
+            avert.append(f"Diapo {num} : cercles : pas de puces sur cette diapo")
+        return f"Mcercles{min(max(n, 3), 4)}"
     if t == "image":
         return "Mimage" if s.get("puces") else "Mimageseule"
     if t == "chiffres":
@@ -88,7 +95,22 @@ def remplacer(page, cle, valeur):
                                "replaceText": valeur, "pageObjectIds": [page]}}
 
 
-def diapo(s, num, prefixe, avert):
+def sous_puces(page, brut):
+    """Les lignes « - … » sont des sous-points : sans puce, en retrait (comme dans les cours du DIU)."""
+    req, pos = [], 0
+    for ligne in brut.split("\n"):
+        fin = pos + len(ligne)
+        if ligne.startswith("- "):
+            plage = {"type": "FIXED_RANGE", "startIndex": pos, "endIndex": fin}
+            req.append({"deleteParagraphBullets": {"objectId": f"{page}_corps", "textRange": plage}})
+            req.append({"updateParagraphStyle": {"objectId": f"{page}_corps", "textRange": plage, "style": {
+                "indentStart": {"magnitude": 36, "unit": "PT"}, "indentFirstLine": {"magnitude": 36, "unit": "PT"}},
+                "fields": "indentStart,indentFirstLine"}})
+        pos = fin + 1
+    return req
+
+
+def diapo(s, num, prefixe, avert, surtitre=""):
     modele = choisir_modele(s, avert, num)
     page = f"{prefixe}{num:03d}diapo"
     ids = {modele: page}
@@ -104,7 +126,8 @@ def diapo(s, num, prefixe, avert):
                                       "fields": "isSkipped"}}]
     r = lambda cle, val: req.append(remplacer(page, cle, val))
     genre = s.get("type", "contenu")
-    r("TITRE", nettoyer(s.get("titre", "")))
+    titre = nettoyer(s.get("titre", ""))
+    r("TITRE", titre if genre in ("titre", "section") else titre.upper())
     if genre == "titre":
         r("SOUS_TITRE", s.get("sous_titre", ""))
         r("AUTEUR", s.get("auteur", ""))
@@ -113,6 +136,9 @@ def diapo(s, num, prefixe, avert):
     if genre == "section":
         return req
     r("NUM", str(num))
+    r("SURTITRE", nettoyer(s.get("surtitre", surtitre)))
+    if modele == "Mtexte":
+        r("CONCLUSION", "> " + nettoyer(s["conclusion"]) if s.get("conclusion") else "")
     if modele not in ("Mplan", "Mrefs"):
         sources = s.get("sources")
         if not sources:
@@ -150,6 +176,7 @@ def diapo(s, num, prefixe, avert):
         if len(brut) > limite:
             avert.append(f"Diapo {num} : texte trop long ({len(brut)} caractères, {limite} au maximum)")
         r("PUCES", brut)
+        req.extend(sous_puces(page, brut))
         for debut, fin in gras:
             req.append({"updateTextStyle": {"objectId": f"{page}_corps",
                                             "textRange": {"type": "FIXED_RANGE", "startIndex": debut, "endIndex": fin},
@@ -168,6 +195,10 @@ def diapo(s, num, prefixe, avert):
         for i in range(len(sch["etapes"]) + 1, int(modele[-1]) + 1):
             r(f"E{i}", "")
         r("LEGENDE", sch.get("legende", ""))
+    elif modele.startswith("Mcercles"):
+        for i, (valeur, libelle) in enumerate(sch["elements"][:4], 1):
+            r(f"C{i}", valeur)
+            r(f"L{i}", libelle)
     elif modele.startswith("Mchiffres"):
         for i, (valeur, libelle) in enumerate(sch["elements"][:3], 1):
             r(f"C{i}", valeur)
@@ -184,8 +215,11 @@ def main():
     prefixe = sys.argv[3] if len(sys.argv) > 3 else "d"
     premiere = int(sys.argv[4]) if len(sys.argv) > 4 else 1
     avert, diapos = [], []
+    surtitre = plan.get("surtitre", "")          # par défaut : le titre de la dernière section
     for num, s in enumerate(plan["diapos"], 1):
-        req = diapo(s, num, prefixe, avert)
+        if s.get("type") == "section":
+            surtitre = re.sub(r"^\s*\d+[.)]\s*", "", nettoyer(s.get("titre", "")))
+        req = diapo(s, num, prefixe, avert, surtitre)
         if num >= premiere:
             diapos.append(req)
     for n, debut in enumerate(range(0, len(diapos), 10), 1):

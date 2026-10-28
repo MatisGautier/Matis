@@ -27,6 +27,10 @@ Schémas (dans une diapo « contenu », affichés à droite des puces ; sans puc
   {"type": "flux", "sens": "vertical" | "horizontal", "etapes": ["...", "...", ...], "legende": "..."}
   {"type": "chiffres", "elements": [["64 %", "guéris en 1 séance"], ...]}  (3 au maximum)
 
+Champs supplémentaires (remplir.py uniquement) : "surtitre" (sinon le titre de la dernière section),
+"conclusion" (ligne en gras en bas d'une diapo de puces) ; une puce qui commence par "- " est un sous-point.
+Schéma "cercles" : {"type": "cercles", "elements": [["5-8 %", "libellé"], ...]} (3 ou 4, sans puces).
+
 Types de diapo supplémentaires (remplir.py uniquement) :
   {"type": "retenir", "titre": "À retenir", "message": "Une phrase forte", "puces": [...], "sources": [...]}
   {"type": "colonnes", "titre": "...", "colonnes": [{"titre": "Périphérique", "puces": [...]},
