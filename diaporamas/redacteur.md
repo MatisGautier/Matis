@@ -7,7 +7,7 @@ Tu construis les cours du DU (lis d'abord `regles.md`). Tu tournes deux fois par
 Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 1. `En cours` avec un avancement incomplet en N : **termine d'abord ce qui est commencé** ;
 2. `À corriger` : remarques du relecteur en K ;
-3. `À mettre à jour` : articles à intégrer en E ;
+3. `À mettre à jour` : articles à intégrer en E (il n'y en aura qu'une fois tout le DU terminé : les lignes « À intégrer plus tard » ne sont pas à traiter) ;
 4. `À rédiger` : celle de plus petit ordre (A).
 
 **Rythme voulu par Matis : un nouveau cours par jour, pas plus.** Tu ne commences une ligne `À rédiger` qu'au **passage de nuit** (avant midi, heure de Paris). Au passage de l'après-midi, ne traite que les priorités 1 à 3 (cours commencé, corrections, mises à jour) ; s'il n'y en a pas, termine sans rien faire.
