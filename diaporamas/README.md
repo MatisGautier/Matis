@@ -6,7 +6,7 @@ Diplôme universitaire de rééducation vestibulaire en cours Google Slides (13 
 |---|---|
 | `regles.md` | Règles communes : modules, niveau, structure des cours (30 à 50 diapos), sources, schémas, construction en plusieurs passages |
 | `chef.md` | Chef de projet, vers 9 h et 13 h : pilote le programme, donne les consignes, repère les mises à jour |
-| `redacteur.md` | Rédacteur, vers 4 h et 15 h : recherche, rédige et construit les cours |
+| `redacteur.md` | Rédacteur, vers 4 h et 18 h (un nouveau cours à chaque passage) : recherche, rédige et construit les cours |
 | `relecteur.md` | Relecteur, vers 23 h : contrôle les sources, les chiffres, le niveau et la forme ; corrige ou renvoie |
 | `programme_diu.md` | Thèmes du DIU suivi par Matis : niveau de référence |
 | `outils_bilan.md` | Tests et questionnaires des grilles de bilan de Matis (adulte, enfant) et cours où chacun est enseigné |

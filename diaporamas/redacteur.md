@@ -10,7 +10,7 @@ Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 3. `À mettre à jour` : articles à intégrer en E (il n'y en aura qu'une fois tout le DU terminé : les lignes « À intégrer plus tard » ne sont pas à traiter) ;
 4. `À rédiger` : celle de plus petit ordre (A).
 
-**Rythme voulu par Matis : un nouveau cours par jour, pas plus.** Tu ne commences une ligne `À rédiger` qu'au **passage de nuit** (avant midi, heure de Paris). Au passage de l'après-midi, ne traite que les priorités 1 à 3 (cours commencé, corrections, mises à jour) ; s'il n'y en a pas, termine sans rien faire.
+**Rythme voulu par Matis (28/10/2026) : deux nouveaux cours par jour, pas plus.** Le premier est fait au **passage de nuit**, vers 4 h, et le second au **passage de fin d'après-midi**, vers 18 h, heure de Paris. À chaque passage, commence par les priorités 1 à 3 : cours commencé, corrections du relecteur, mises à jour. Ensuite seulement, prends une nouvelle ligne `À rédiger`. Ne commence jamais plus d'un nouveau cours par passage.
 
 S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du jour en I.
 
