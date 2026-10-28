@@ -22,6 +22,13 @@ Pistes techniques à valider le moment venu :
 
 ## Avancement
 
-- 28/10/2026 : le sous-domaine bdd.kinevestibulaire.fr est créé par Matis. Le site est écrit en PHP, avec comptes kinés, un onglet par module et les cours en Google Slides intégrés. Il est livré en zip pour FileZilla, en attendant le dépôt privé « site-DU ».
+- 28/10/2026 : le sous-domaine bdd.kinevestibulaire.fr est créé par Matis. Le site est écrit en PHP, avec comptes kinés, un onglet par module et les cours en Google Slides intégrés. Il est livré en zip pour FileZilla. Matis n'a pas besoin du dépôt GitHub « site-DU » : le code source est gardé ici, dans `projets/site-du/`.
 - Source des cours : onglet `Site` du tableau, qui filtre l'onglet `Diaporamas` avec une formule QUERY. Cet onglet est publié en CSV.
 - Le dossier « Notes du DIU de Matis » n'hérite pas des partages : il reste privé même si le dossier du DU est partagé par lien.
+
+## Mises à jour du site (consigne de Matis, 28/10/2026)
+
+Matis met lui-même les fichiers en ligne avec FileZilla.
+- Les cours se mettent à jour tout seuls, via l'onglet `Site` et Google Slides : aucun envoi de fichier n'est nécessaire.
+- Si le code du site doit changer, Mage modifie `projets/site-du/` et envoie à Matis un message qui précise les fichiers à remplacer, avec le zip.
+- Ne jamais écraser le dossier `data/` du serveur : il contient les comptes et les réglages.
