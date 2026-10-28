@@ -10,6 +10,8 @@ Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 3. `À mettre à jour` : articles à intégrer en E ;
 4. `À rédiger` : celle de plus petit ordre (A).
 
+**Rythme voulu par Matis : un nouveau cours par jour, pas plus.** Tu ne commences une ligne `À rédiger` qu'au **passage de nuit** (avant midi, heure de Paris). Au passage de l'après-midi, ne traite que les priorités 1 à 3 (cours commencé, corrections, mises à jour) ; s'il n'y en a pas, termine sans rien faire.
+
 S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du jour en I.
 
 ## 2. Rechercher
