@@ -13,6 +13,14 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (au plus 2 cours par passage, 
    - c. **Chiffres** : choisis 5 chiffres au hasard et retrouve-les dans la source citée (résumé ou texte intégral).
    - d. **Fond** : rien de faux ou de dangereux, rien de contraire aux recommandations ; les signes d'alerte sont présents pour une pathologie.
    - e. **Forme** : une idée par diapo, 6 puces au maximum, pas de texte coupé (une diapo dont le texte a été réduit sous 11 pt est trop chargée), au moins un schéma toutes les 3 diapos, les images s'affichent (`contentUrl` présent), chaque image a un crédit.
+   - e bis. **Mise en page** (`regles.md`, section 6) :
+     - logo en haut à droite et sources dans l'encadré du bas ;
+     - aucune source dans le texte des puces ;
+     - au plus 1 tableau sur 5 diapos, jamais deux à la suite ;
+     - au moins 1 diapo sur 3 avec un visuel ;
+     - une diapo « retenir » par grande partie.
+     
+     Un cours monotone (surtout des tableaux ou des listes de puces) est renvoyé `À corriger`.
    - f. **Structure** : complète selon `regles.md`, section 4 : objectifs, vocabulaire, corps du type, « L'essentiel », « Pour aller plus en profondeur » (4 à 8 diapos, vraiment approfondi), « Testez-vous » et corrigé sourcé, liens, nouveautés, références, historique ; 30 à 50 diapos ; consignes du chef (colonne E) respectées.
    - f bis. **Niveau DU** : définitions exactes, mécanismes expliqués, ouverture neurologique, controverses signalées ; tout terme technique défini.
    - g. **Langue** : orthographe, abréviations développées, phrases claires.

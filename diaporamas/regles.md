@@ -127,7 +127,24 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
   6. fiches de la veille (onglet `Tous les articles`, statut « Fiche envoyée »).
 - La diapo « Références » liste toutes les sources en entier : auteurs, titre, revue ou éditeur, année, PMID ou DOI.
 
-## 6. Schémas : au moins un toutes les 3 diapos de contenu
+## 6. Mise en page : propre, visuelle, pas que des tableaux
+
+**Demande de Matis (28/10/2026) : des diapos beaucoup plus propres et variées.**
+
+Ce que donnent les diapos modèles (version 2) :
+- le **logo de Matis en haut à droite** de chaque diapo ;
+- les **sources dans un encadré gris en bas** de la diapo, alimenté par le champ `sources`.
+
+Règles de mise en page :
+- **Jamais de source dans le texte** des puces : pas de « (Auteur 2020) » ni de PMID dans les phrases. Tout va dans `sources`, donc dans l'encadré.
+- **Variété obligatoire** dans chaque cours :
+  - **au plus 1 diapo sur 5 en `tableau`**, et jamais deux tableaux de suite. Une comparaison à 2 volets se fait en **`colonnes`** (deux cartes côte à côte) ;
+  - au moins **1 diapo sur 3 avec un visuel** : `flux`, `image`, `chiffres`, `colonnes` ou `retenir` ;
+  - une diapo **`retenir`** (message clé encadré) à la fin de chaque grande partie, en plus de « L'essentiel ».
+- **Une idée par diapo**, 3 à 5 puces courtes. Au-delà, coupe en deux diapos.
+- Le lexique (M00) peut utiliser plus de tableaux, mais il alterne avec des diapos `colonnes`, `retenir` et des schémas toutes les 3 ou 4 diapos.
+
+### Schémas : au moins un toutes les 3 diapos de contenu
 
 Les schémas viennent des **diapos modèles** (section 7). Limites à respecter :
 - **`flux`** : des étapes reliées par des flèches, pour un mécanisme, une voie nerveuse, un déroulé ou un arbre décisionnel. **3 à 5 étapes**, textes courts (une étape peut tenir sur 2 lignes avec `\n`). Avec des puces, le flux s'affiche verticalement à droite ; sans puces, horizontalement en pleine largeur.
@@ -138,15 +155,17 @@ Les schémas viennent des **diapos modèles** (section 7). Limites à respecter 
   - Les planches de Gray (domaine public) sont précieuses pour l'anatomie.
   - Si l'image est refusée, remplace-la par un `flux` ou un tableau.
 - **`chiffres`** : **2 ou 3** grands chiffres clés, à droite des puces.
-- La diapo **`tableau`** pour les comparaisons et le vocabulaire : **2 ou 3 colonnes, 9 lignes au maximum** (en-tête compris), textes courts.
-- Texte des puces : 900 caractères au maximum pleine largeur, 520 à côté d'un schéma.
+- La diapo **`tableau`** pour les comparaisons à plusieurs critères et le vocabulaire : **2 ou 3 colonnes, 9 lignes au maximum** (en-tête compris), textes courts. Avec modération (voir plus haut).
+- La diapo **`colonnes`** : deux cartes côte à côte (périphérique / central, canalolithiase / cupulolithiase, adulte / enfant…), chacune avec un titre et 2 à 5 puces (380 caractères au maximum par carte).
+- La diapo **`retenir`** : une phrase forte encadrée (`message`, 320 caractères au maximum) et 1 à 3 puces en dessous.
+- Texte des puces : 850 caractères au maximum en pleine largeur, 500 à côté d'un schéma.
 
 ## 7. Construire un cours : copie du modèle, duplication, remplacement de textes
 
-Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`. **Ne les supprime jamais.**
+Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mcolonnes2`, `Mretenir`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{T1}}`/`{{P1}}`, `{{T2}}`/`{{P2}}` (colonnes), `{{MESSAGE}}` (retenir), `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`. **Ne les supprime jamais.**
 
 Chaque diapo du cours = 3 petites requêtes + des remplacements de texte :
-1. `duplicateObject` du modèle, avec `objectIds` = `{"<Modèle>": "<prefixe><num sur 3 chiffres>diapo", "<Modèle>_corps": "…diapo_corps"}` (et `"<Modèle>_tab": "…diapo_tab"` pour un tableau) ;
+1. `duplicateObject` du modèle, avec `objectIds` = `{"<Modèle>": "<prefixe><num sur 3 chiffres>diapo", "<Modèle>_corps": "…diapo_corps"}` (et `"<Modèle>_tab": "…diapo_tab"` pour un tableau ; `"Mcolonnes2_c1": "…diapo_c1", "Mcolonnes2_c2": "…diapo_c2"` pour des colonnes) ;
 2. `updateSlidesPosition` vers `insertionIndex` = numéro de la diapo − 1 ;
 3. `updateSlideProperties` `isSkipped: false` (la copie hérite du masquage) ;
 4. un `replaceAllText` par texte, **toujours avec `pageObjectIds` = [la nouvelle diapo]** ; le gras se met ensuite avec `updateTextStyle` sur `…diapo_corps` (plages de caractères) ; l'image avec `replaceAllShapesWithImage` (`containsText` `{{IMAGE}}`) ; les lignes de tableau inutilisées avec `deleteTableRow`.
@@ -163,6 +182,12 @@ Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** 
    - après chaque paquet, mets à jour N (« 20/43 »).
 2. **Si un passage s'arrête avant la fin** : au passage suivant, relis le plan sur Drive (`read_file_content`), regarde les diapos présentes (`read_presentation`, `fields: ["slides.objectId"]`), et relance le script avec le même préfixe et `premiere_diapo` = première diapo manquante.
 3. **À la fin** : écris G et N (« 43/43 »), puis passe le statut à `À relire`.
+
+**Cours construits avant le 28/10/2026 au soir (modèles version 1)** : leurs diapos modèles internes sont anciennes (schémas en étapes déformés, pas de logo, sources sans encadré). Pour les refaire, ne réutilise pas l'ancienne présentation :
+- crée une **nouvelle copie de « Modèle DU »** dans le dossier du module ;
+- reprends le plan sur Drive en appliquant la section 6 (variété, colonnes, retenir, pas de source dans le texte) et reconstruis tout ;
+- remplace le lien en F ;
+- mets l'ancienne présentation et l'ancien plan à la corbeille.
 
 **Mise à jour d'un cours existant** :
 - relis son plan sur Drive et modifie-le ;

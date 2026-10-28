@@ -15,7 +15,11 @@ import sys
 from construire_diapos import (BLEU_NUIT, GRIS, GRIS_CLAIR, H, L, MARGE, Diapo, cadre)
 
 ACCENT = "#1c4587"
-CORPS_H = H - 76 - 44
+ACCENT_CLAIR = "#e8eef9"
+LOGO = "https://raw.githubusercontent.com/MatisGautier/Matis/veille/diaporamas/assets/logo.png"
+CORPS_H = H - 74 - 56            # zone utile entre le titre et l'encadré des sources
+PIED_Y = H - 46                  # encadré des sources
+LOGO_T = 40                      # logo de Matis en haut à droite
 FLUX_V = (3, 4, 5)          # flux vertical à droite des puces
 FLUX_H = (3, 4, 5)          # flux horizontal pleine largeur
 CHIFFRES = (2, 3)
@@ -44,19 +48,35 @@ class Modele(Diapo):
         return taille
 
 
+def logo(m, x, y, taille):
+    m.req.append({"createImage": {"objectId": f"{m.page}_logo", "url": LOGO,
+                                  "elementProperties": cadre(m.page, x, y, taille, taille)}})
+
+
 def entete(m):
-    m.nomme("titre").texte(MARGE, 16, L - 2 * MARGE, 40, "{{TITRE}}", 22, BLEU_NUIT, gras=True)
+    m.rectangle(0, 0, 6, H, ACCENT)                       # liseré bleu à gauche
+    m.nomme("titre").texte(MARGE, 16, L - 2 * MARGE - LOGO_T - 10, 40, "{{TITRE}}", 22, BLEU_NUIT, gras=True)
     m.rectangle(MARGE, 58, 90, 3, ACCENT)
+    logo(m, L - MARGE - LOGO_T + 10, 12, LOGO_T)
 
 
 def pied(m, sources=True):
+    """Encadré des sources en bas de la diapo (jamais dans le texte), numéro en bas à droite."""
     if sources:
-        m.nomme("src").texte(MARGE, H - 38, L - 2 * MARGE - 60, 30, "Sources : {{SOURCES}}", 8, GRIS)
-    m.nomme("num").texte(L - MARGE - 50, H - 26, 50, 16, "{{NUM}}", 8, GRIS, centre=True)
+        oid = m.nomme("src").rectangle(MARGE, PIED_Y, L - 2 * MARGE - 40, 34, GRIS_CLAIR, "ROUND_RECTANGLE")
+        m.rectangle(MARGE, PIED_Y, 4, 34, ACCENT)
+        m.texte(0, 0, 0, 0, "Sources : {{SOURCES}}", 7.5, GRIS, oid=oid, forme_existante=True)
+        m.req.append({"updateShapeProperties": {"objectId": oid, "shapeProperties": {
+            "contentAlignment": "MIDDLE"}, "fields": "contentAlignment"}})
+        m.req.append({"updateParagraphStyle": {"objectId": oid, "textRange": {"type": "ALL"},
+                                               "style": {"alignment": "START",
+                                                         "indentStart": {"magnitude": 10, "unit": "PT"}},
+                                               "fields": "alignment,indentStart"}})
+    m.nomme("num").texte(L - MARGE - 32, PIED_Y + 9, 32, 16, "{{NUM}}", 9, GRIS, centre=True)
 
 
 def corps(m, x, w, taille=16):
-    m.nomme("corps").texte(x, 74, w, CORPS_H, "{{PUCES}}", taille, puces=True)
+    m.nomme("corps").texte(x, 74, w, CORPS_H - 4, "{{PUCES}}", taille, puces=True)
 
 
 def boite(m, x, y, w, h, texte, taille):
@@ -74,21 +94,23 @@ def modeles():
     m = Modele("Mtitre")
     m.fond(BLEU_NUIT)
     m.rectangle(MARGE, 150, 120, 4, ACCENT)
-    m.nomme("titre").texte(MARGE, 70, L - 2 * MARGE, 80, "{{TITRE}}", 34, "#ffffff", gras=True)
+    m.nomme("titre").texte(MARGE, 70, L - 2 * MARGE - 80, 80, "{{TITRE}}", 34, "#ffffff", gras=True)
     m.texte(MARGE, 165, L - 2 * MARGE, 70, "{{SOUS_TITRE}}", 16, "#d0d6e4")
     m.texte(MARGE, 320, L - 2 * MARGE, 50, ["{{AUTEUR}}", "{{DATE}}"], 12, "#d0d6e4")
+    logo(m, L - MARGE - 64, MARGE - 6, 64)
     sortie.append(m)
 
     m = Modele("Msection")
     m.fond(ACCENT)
     m.nomme("titre").texte(MARGE, 150, L - 2 * MARGE, 70, "{{TITRE}}", 30, "#ffffff", gras=True)
+    logo(m, L - MARGE - 52, MARGE - 6, 52)
     sortie.append(m)
 
     for nom, taille, sources in (("Mtexte", 16, True), ("Mplan", 16, False), ("Mrefs", 10, False)):
         m = Modele(nom)
         entete(m)
         if nom == "Mrefs":
-            m.nomme("corps").texte(MARGE, 72, L - 2 * MARGE, H - 100, "{{PUCES}}", taille, puces=True)
+            m.nomme("corps").texte(MARGE, 72, L - 2 * MARGE - 20, H - 72 - 52, "{{PUCES}}", taille, puces=True)
         else:
             corps(m, MARGE, L - 2 * MARGE, taille)
         pied(m, sources)
@@ -113,8 +135,8 @@ def modeles():
         m = Modele(f"Mfluxv{n}")
         entete(m)
         corps(m, MARGE, 390, 15)
-        x, w, esp = 440, L - MARGE - 440, 16
-        bh = min(52, (CORPS_H - 16 - esp * (n - 1)) / n)
+        x, w, esp = 440, L - MARGE - 440, 14
+        bh = min(52, (CORPS_H - 18 - esp * (n - 1)) / n)
         for i in range(n):
             by = 74 + i * (bh + esp)
             boite(m, x, by, w, bh, f"{{{{E{i + 1}}}}}", 12)
@@ -143,7 +165,7 @@ def modeles():
         entete(m)
         corps(m, MARGE, 390, 15)
         x, w = 440, L - MARGE - 440
-        bh = (CORPS_H - 10 * (n - 1)) / n
+        bh = (CORPS_H - 6 - 10 * (n - 1)) / n
         for i in range(n):
             by = 74 + i * (bh + 10)
             m.rectangle(x, by, w, bh, GRIS_CLAIR, "ROUND_RECTANGLE")
@@ -151,6 +173,29 @@ def modeles():
             m.texte(x + 10, by + bh * 0.52, w - 20, bh * 0.45, f"{{{{L{i + 1}}}}}", 11, BLEU_NUIT, centre=True)
         pied(m)
         sortie.append(m)
+
+    m = Modele("Mcolonnes2")                 # comparaison ou deux volets côte à côte
+    entete(m)
+    cw = (L - 2 * MARGE - 20) / 2
+    for i in (1, 2):
+        x = MARGE + (i - 1) * (cw + 20)
+        m.rectangle(x, 76, cw, CORPS_H - 4, GRIS_CLAIR, "ROUND_RECTANGLE")
+        m.rectangle(x, 76, cw, 5, ACCENT)
+        m.nomme(f"t{i}").texte(x + 14, 88, cw - 28, 26, f"{{{{T{i}}}}}", 15, ACCENT, gras=True)
+        m.nomme(f"c{i}").texte(x + 14, 118, cw - 28, CORPS_H - 50, f"{{{{P{i}}}}}", 13, puces=True)
+    pied(m)
+    sortie.append(m)
+
+    m = Modele("Mretenir")                       # message clé, « à retenir »
+    entete(m)
+    oid = m.nomme("msg").rectangle(MARGE + 30, 86, L - 2 * MARGE - 60, 110, ACCENT_CLAIR, "ROUND_RECTANGLE", ACCENT)
+    m.texte(0, 0, 0, 0, "{{MESSAGE}}", 20, BLEU_NUIT, gras=True, centre=True, oid=oid,
+                         forme_existante=True)
+    m.req.append({"updateShapeProperties": {"objectId": oid, "shapeProperties": {
+        "contentAlignment": "MIDDLE"}, "fields": "contentAlignment"}})
+    m.nomme("corps").texte(MARGE + 30, 210, L - 2 * MARGE - 60, CORPS_H - 140, "{{PUCES}}", 14, puces=True)
+    pied(m)
+    sortie.append(m)
 
     for nc in (2, 3):
         m = Modele(f"Mtab{nc}")

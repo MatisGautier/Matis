@@ -15,7 +15,8 @@ import sys
 from pathlib import Path
 
 
-MAX_PUCES = {"Mtexte": 900, "Mplan": 900, "Mrefs": 2600, "Mimage": 520, "Mfluxv": 520, "Mchiffres": 520}
+MAX_PUCES = {"Mtexte": 850, "Mplan": 850, "Mrefs": 2500, "Mimage": 500, "Mfluxv": 500, "Mchiffres": 500,
+             "Mretenir": 320, "Mcolonnes2": 380}
 
 
 def nettoyer(t):
@@ -45,6 +46,12 @@ def choisir_modele(s, avert, num):
         return "M" + genre
     if genre == "plan":
         return "Mplan"
+    if genre in ("cle", "retenir"):
+        return "Mretenir"
+    if genre == "colonnes":
+        if len(s.get("colonnes", [])) != 2:
+            avert.append(f"Diapo {num} : colonnes : exactement 2 colonnes")
+        return "Mcolonnes2"
     if genre == "references":
         return "Mrefs"
     if genre == "tableau":
@@ -85,8 +92,10 @@ def diapo(s, num, prefixe, avert):
     modele = choisir_modele(s, avert, num)
     page = f"{prefixe}{num:03d}diapo"
     ids = {modele: page}
-    if modele.startswith(("Mtexte", "Mplan", "Mrefs", "Mfluxv", "Mchiffres")) or modele == "Mimage":
+    if modele.startswith(("Mtexte", "Mplan", "Mrefs", "Mfluxv", "Mchiffres", "Mretenir")) or modele == "Mimage":
         ids[f"{modele}_corps"] = f"{page}_corps"
+    if modele == "Mcolonnes2":
+        ids.update({"Mcolonnes2_c1": f"{page}_c1", "Mcolonnes2_c2": f"{page}_c2"})
     if modele.startswith("Mtab"):
         ids = {modele: page, f"{modele}_tab": f"{page}_tab"}
     req = [{"duplicateObject": {"objectId": modele, "objectIds": ids}},
@@ -119,6 +128,21 @@ def diapo(s, num, prefixe, avert):
         for i in range(8, len(lignes) - 1, -1):
             req.append({"deleteTableRow": {"tableObjectId": f"{page}_tab",
                                            "cellLocation": {"rowIndex": i, "columnIndex": 0}}})
+        return req
+    if modele == "Mretenir":
+        r("MESSAGE", nettoyer(s.get("message", "")))
+    if modele == "Mcolonnes2":
+        for i, col in enumerate((s.get("colonnes") or [{}, {}])[:2], 1):
+            r(f"T{i}", nettoyer(col.get("titre", "")))
+            brut, gras = corps_et_gras(col.get("puces", []))
+            if len(brut) > MAX_PUCES["Mcolonnes2"]:
+                avert.append(f"Diapo {num} : colonne {i} trop longue ({len(brut)} caractères, "
+                             f"{MAX_PUCES['Mcolonnes2']} au maximum)")
+            r(f"P{i}", brut)
+            for debut, fin in gras:
+                req.append({"updateTextStyle": {"objectId": f"{page}_c{i}",
+                                                "textRange": {"type": "FIXED_RANGE", "startIndex": debut, "endIndex": fin},
+                                                "style": {"bold": True}, "fields": "bold"}})
         return req
     if "corps" in "".join(ids.values()):
         brut, gras = corps_et_gras(s.get("puces", []))

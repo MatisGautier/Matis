@@ -26,6 +26,11 @@ Schémas (dans une diapo « contenu », affichés à droite des puces ; sans puc
   {"type": "image", "url": "https://upload.wikimedia.org/...", "credit": "Auteur, Wikimedia Commons, CC BY 3.0"}
   {"type": "flux", "sens": "vertical" | "horizontal", "etapes": ["...", "...", ...], "legende": "..."}
   {"type": "chiffres", "elements": [["64 %", "guéris en 1 séance"], ...]}  (3 au maximum)
+
+Types de diapo supplémentaires (remplir.py uniquement) :
+  {"type": "retenir", "titre": "À retenir", "message": "Une phrase forte", "puces": [...], "sources": [...]}
+  {"type": "colonnes", "titre": "...", "colonnes": [{"titre": "Périphérique", "puces": [...]},
+                                                    {"titre": "Central", "puces": [...]}], "sources": [...]}
 """
 import json
 import re
