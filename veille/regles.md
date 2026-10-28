@@ -117,4 +117,6 @@ Les PDF voyagent sous forme de texte base64 que tu recopies. Une seule faute de 
 
 Les mails donnent des **liens Drive**. Ils ne joignent pas les PDF : c'est plus léger et plus fiable.
 
+**Plan B si l'exécution d'un script PDF est refusée** : ne t'arrête pas et ne saute pas la fiche. Crée-la en **Google Doc** directement depuis Drive, sans aucun script : `create_file` avec `textContent` = la fiche en HTML simple (titres `<h1>`/`<h2>`, paragraphes, listes, tableau des chiffres clés, bandeau de catégorie en `<p style="background-color:<couleur>;color:#fff">`), `contentMimeType: text/html` et **sans** `disableConversionToGoogleType` (Drive la convertit en Google Doc). Même contenu et mêmes sections que le PDF. Range-la dans le même dossier, et mets son lien dans le mail et dans le tableau. Signale « fiche en Google Doc (script refusé) » dans ton bilan.
+
 Le bandeau coloré des mails s'écrit avec `background-color:<couleur>;color:#fff`. Sans `background-color`, le texte blanc est invisible.
