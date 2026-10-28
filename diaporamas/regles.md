@@ -116,42 +116,44 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
 
 ## 6. Schémas : au moins un toutes les 3 diapos de contenu
 
-Trois sortes de schémas (voir `scripts/construire_diapos.py`) :
-- **`flux`** : des étapes reliées par des flèches, pour un mécanisme, une voie nerveuse, un déroulé ou un arbre décisionnel. C'est le plus sûr.
+Les schémas viennent des **diapos modèles** (section 7). Limites à respecter :
+- **`flux`** : des étapes reliées par des flèches, pour un mécanisme, une voie nerveuse, un déroulé ou un arbre décisionnel. **3 à 5 étapes**, textes courts (une étape peut tenir sur 2 lignes avec `\n`). Avec des puces, le flux s'affiche verticalement à droite ; sans puces, horizontalement en pleine largeur.
 - **`image`** : une illustration de **Wikimedia Commons** (anatomie, coupes, voies), toujours avec un crédit (auteur, licence).
   - Cherche le fichier avec WebSearch (`site:commons.wikimedia.org <sujet>`). Relève son nom exact, son auteur et sa licence (CC BY, CC BY-SA ou domaine public seulement).
   - Calcule l'adresse : `f=Nom_du_fichier.png; h=$(printf %s "$f" | md5sum | cut -c1-2); echo https://upload.wikimedia.org/wikipedia/commons/${h:0:1}/$h/$f`.
   - Exemple qui fonctionne : `https://upload.wikimedia.org/wikipedia/commons/1/14/Blausen_0329_EarAnatomy_InternalEar.png`, crédit « Blausen.com staff (2014), Wikimedia Commons, CC BY 3.0 ».
   - Les planches de Gray (domaine public) sont précieuses pour l'anatomie.
-  - Si l'image est refusée (« image was not found »), remplace-la par un schéma `flux` ou un tableau.
-- **`chiffres`** : 1 à 3 grands chiffres clés.
-- Et la diapo **`tableau`** pour les comparaisons et le vocabulaire.
+  - Si l'image est refusée, remplace-la par un `flux` ou un tableau.
+- **`chiffres`** : **2 ou 3** grands chiffres clés, à droite des puces.
+- La diapo **`tableau`** pour les comparaisons et le vocabulaire : **2 ou 3 colonnes, 9 lignes au maximum** (en-tête compris), textes courts.
+- Texte des puces : 900 caractères au maximum pleine largeur, 520 à côté d'un schéma.
 
-## 7. Construire un cours (en plusieurs passages si besoin)
+## 7. Construire un cours : copie du modèle, duplication, remplacement de textes
 
-Un cours de 30 à 50 diapos ne tient pas toujours dans un seul passage : on le construit **par tranches de 15 à 20 diapos**. Le plan complet est enregistré dès le premier passage.
+Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`. **Ne les supprime jamais.**
+
+Chaque diapo du cours = 3 petites requêtes + des remplacements de texte :
+1. `duplicateObject` du modèle, avec `objectIds` = `{"<Modèle>": "<prefixe><num sur 3 chiffres>diapo", "<Modèle>_corps": "…diapo_corps"}` (et `"<Modèle>_tab": "…diapo_tab"` pour un tableau) ;
+2. `updateSlidesPosition` vers `insertionIndex` = numéro de la diapo − 1 ;
+3. `updateSlideProperties` `isSkipped: false` (la copie hérite du masquage) ;
+4. un `replaceAllText` par texte, **toujours avec `pageObjectIds` = [la nouvelle diapo]** ; le gras se met ensuite avec `updateTextStyle` sur `…diapo_corps` (plages de caractères) ; l'image avec `replaceAllShapesWithImage` (`containsText` `{{IMAGE}}`) ; les lignes de tableau inutilisées avec `deleteTableRow`.
+
+Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** fait tout cela et écrit `sortie/paquet_01.json` (10 diapos), `paquet_02.json`… à envoyer chacun avec **un** `update_presentation`, recopié à l'identique. Format du plan : en tête de `scripts/construire_diapos.py`. S'il refuse un schéma ou un texte trop long, il affiche « ATTENTION » : corrige le plan jusqu'à `OK`.
+
+**Si l'exécution du script est refusée**, écris toi-même les requêtes en suivant exactement le schéma ci-dessus : c'est simple et léger.
 
 1. **Premier passage** :
-   - fais la recherche ;
-   - écris le **plan JSON complet** (format en tête de `scripts/construire_diapos.py`) ;
-   - lance `python3 scripts/construire_diapos.py plan.json sortie/ d` et corrige toutes les lignes « ATTENTION » jusqu'à `OK` ;
+   - fais la recherche, écris le **plan JSON complet**, vérifie-le avec le script ;
    - enregistre le plan sur Drive, dans le dossier du module : `create_file` avec `textContent`, `contentMimeType: application/json`, `disableConversionToGoogleType: true`, titre « plan – <Ordre>. <Titre>.json » ;
-   - crée la présentation dans le dossier du module (`create_file`, `contentMimeType: application/vnd.google-apps.presentation`, titre « <Ordre>. <Titre> ») et note son lien en F ;
-   - puis envoie les diapos.
-2. **Envoi, par paquets de 5 diapos** : le script écrit aussi `sortie/paquet_01.json` (diapos 1 à 5), `paquet_02.json` (6 à 10), etc. Envoie **un paquet par `update_presentation`** (`requests` = le contenu du fichier, recopié à l'identique), pas une diapo à la fois. Utilise les fichiers `diapo_XX.json` seulement pour reprendre au milieu d'un paquet.
-   - Après chaque paquet, mets à jour N (« 15/42 »).
-   - Si un paquet échoue : vérifie avec `read_presentation` quelles diapos sont présentes, supprime (`deleteObject`) une diapo à moitié créée, puis renvoie diapo par diapo.
-   - Enchaîne les paquets sans t'arrêter : vise le cours complet en un seul passage.
-3. **Passages suivants** (statut `En cours` et N incomplet) :
-   - relis le plan sur Drive (`download_file_content` ou `read_file_content`) ;
-   - relance le script avec **le même préfixe** ;
-   - vérifie avec `read_presentation` (`fields: ["slides.objectId"]`) les diapos déjà présentes ;
-   - envoie la suite.
-4. **À la fin** : supprime la diapo vide créée par Google (le premier `objectId`, en général `p`). Écris G et N (« 42/42 »), puis passe le statut à `À relire`.
+   - crée la présentation : **`copy_file` de « Modèle DU »** dans le dossier du module, titre « <Ordre>. <Titre> », et note son lien en F ;
+   - envoie les paquets, à la suite : un cours entier tient en un seul passage (environ 5 paquets) ;
+   - après chaque paquet, mets à jour N (« 20/43 »).
+2. **Si un passage s'arrête avant la fin** : au passage suivant, relis le plan sur Drive (`read_file_content`), regarde les diapos présentes (`read_presentation`, `fields: ["slides.objectId"]`), et relance le script avec le même préfixe et `premiere_diapo` = première diapo manquante.
+3. **À la fin** : écris G et N (« 43/43 »), puis passe le statut à `À relire`.
 
 **Mise à jour d'un cours existant** :
 - relis son plan sur Drive et modifie-le ;
-- supprime toutes les diapos (`deleteObject`) et reconstruis avec un nouveau préfixe (`v2`, `v3`…), éventuellement en plusieurs passages ;
+- supprime les diapos du cours (`deleteObject` sur chaque diapo dont l'identifiant **ne commence pas par `M`**) et reconstruis avec un nouveau préfixe (`v2`, `v3`…) ;
 - remplace le plan sur Drive (corbeille pour l'ancien).
 
 Le lien reste le même pour Matis.

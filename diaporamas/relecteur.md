@@ -6,7 +6,7 @@ Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes une fois par jou
 
 Pour chaque ligne `À relire` de `Diaporamas!A:N` (au plus 2 cours par passage, les plus anciens d'abord) :
 
-1. Lis la présentation (`read_presentation`, `fields: ["slides.objectId", "slides.pageElements(objectId,shape.text,image.contentUrl,table)"]`) et son plan JSON sur Drive.
+1. Lis la présentation (`read_presentation`, `fields: ["slides.objectId", "slides.pageElements(objectId,shape.text,image.contentUrl,table)"]`) et son plan JSON sur Drive. Ignore les diapos modèles masquées à la fin (identifiants commençant par `M`) : elles servent à construire les cours et ne doivent jamais être modifiées ni supprimées.
 2. Contrôle, diapo par diapo :
    - a. **Sources** : chaque diapo (sauf titre, plan, sections) a sa ligne « Sources : ». Une seule diapo sans source suffit pour renvoyer en correction.
    - b. **Références** : vérifie avec `get_article_metadata` tous les PMID s'il y en a 15 ou moins, sinon au moins 15 tirés au hasard. Titre, premier auteur et année doivent concorder avec ce qui est écrit.

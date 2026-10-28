@@ -8,6 +8,8 @@ Diplôme universitaire de rééducation vestibulaire en cours Google Slides (13 
 | `chef.md` | Chef de projet, vers 9 h et 13 h : pilote le programme, donne les consignes, repère les mises à jour |
 | `redacteur.md` | Rédacteur, vers 4 h et 15 h : recherche, rédige et construit les cours |
 | `relecteur.md` | Relecteur, vers 23 h : contrôle les sources, les chiffres, le niveau et la forme ; corrige ou renvoie |
-| `scripts/construire_diapos.py` | Transforme le plan JSON d'un cours en requêtes Google Slides homogènes |
+| `scripts/remplir.py` | Transforme le plan JSON d'un cours en requêtes légères (duplication des diapos modèles + remplacement des textes) |
+| `scripts/modele.py` | A servi à créer une fois les diapos modèles de « Modèle DU » |
+| `scripts/construire_diapos.py` | Ancienne méthode (dessin forme par forme), gardée pour le format du plan et les fonctions communes |
 
 Les agents se coordonnent dans l'onglet « Diaporamas » du tableau de veille. Les cours validés sont annoncés dans le mail du matin de la veille.
