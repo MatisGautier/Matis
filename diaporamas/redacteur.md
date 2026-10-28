@@ -17,6 +17,7 @@ S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du
 ## 2. Rechercher
 
 - Lis les consignes du chef de projet (E), et les remarques du relecteur (K) s'il y en a.
+- Lis la note DIU de Matis sur ce thème (dossier « Notes du DIU de Matis », ID dans les Paramètres) : c'est une **liste de points à couvrir**, pas une source. Chaque point est vérifié et sourcé dans la littérature, jamais copié (`regles.md`, section 3).
 - Pour un cours de type `Notion` (anatomie, neuro, physiologie), appuie-toi sur des revues de référence indexées dans PubMed (par exemple « vestibular anatomy review », « vestibulo-ocular reflex physiology review ») et sur les ouvrages classiques, cités précisément (auteur, titre, édition, année, chapitre).
 - Cherche dans PubMed (`search_articles`) :
   - les critères diagnostiques (Bárány Society) et les recommandations ;

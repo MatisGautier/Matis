@@ -81,6 +81,12 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
   - le **point de vue de l'ORL** (examens, imagerie, traitements, chirurgie) **et celui du kiné** (bilan, rééducation, dosage, critères d'arrêt) ;
   - les chiffres (épidémiologie, performances des tests, résultats des traitements) avec leur source ;
   - au moins un **cas clinique** complet et un « Testez-vous » de 8 à 10 questions.
+- **La science d'abord, les notes de Matis comme liste de contrôle.** Tout le contenu vient de la littérature scientifique vérifiée (PubMed, critères Bárány, HAS, SFORL, Cochrane, ouvrages de référence). Les notes personnelles de Matis sur son DIU (dossier Drive privé « Notes du DIU de Matis », ID dans les Paramètres) servent **uniquement** de liste de points et de « perles cliniques » à couvrir :
+  - lis la note du thème avant de rédiger et vérifie que chaque point est traité ;
+  - chaque point est **vérifié et sourcé dans la littérature** ; un point introuvable dans la littérature n'est pas écrit (signale-le dans le bilan) ;
+  - **ne jamais copier** les notes ni les **citer comme source** ; ne jamais reprendre le nom d'un enseignant ;
+  - si une note contredit la littérature, suis la littérature et signale l'écart dans le bilan (« Note DIU à vérifier : … ») ;
+  - ces notes restent privées : jamais dans le dépôt GitHub, jamais recopiées dans l'onglet.
 
 ## 4. Taille et structure de chaque cours
 
