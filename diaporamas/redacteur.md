@@ -41,6 +41,8 @@ S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du
   - Reconstruis avec un nouveau préfixe.
 - **Correction** : applique chaque remarque du relecteur, puis reconstruis.
 
+**Vérifie le rendu avant de passer à `À relire`.** Exporte la présentation en PDF (`download_file_content`, `exportMimeType: application/pdf`), décode le champ `content` en PDF, lance `pdftoppm -png -r 50` et regarde quelques diapos avec Read. Corrige ce qui déborde ou se chevauche.
+
 ## 4. Mettre à jour l'onglet
 
 - F : lien `https://docs.google.com/presentation/d/<id>/edit` ;
