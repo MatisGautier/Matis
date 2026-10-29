@@ -117,6 +117,10 @@ Les PDF voyagent sous forme de texte base64 que tu recopies. Une seule faute de 
 
 Les mails donnent des **liens Drive**. Ils ne joignent pas les PDF : c'est plus léger et plus fiable.
 
-**Plan B si l'exécution d'un script PDF est refusée** : ne t'arrête pas et ne saute pas la fiche. Crée-la en **Google Doc** directement depuis Drive, sans aucun script : `create_file` avec `textContent` = la fiche en HTML simple (titres `<h1>`/`<h2>`, paragraphes, listes, tableau des chiffres clés, bandeau de catégorie en `<p style="background-color:<couleur>;color:#fff">`), `contentMimeType: text/html` et **sans** `disableConversionToGoogleType` (Drive la convertit en Google Doc). Même contenu et mêmes sections que le PDF. Range-la dans le même dossier, et mets son lien dans le mail et dans le tableau. Signale « fiche en Google Doc (script refusé) » dans ton bilan.
+**Plan B si l'exécution d'un script PDF est refusée** : Matis veut des PDF, pas des Google Docs (consigne du 29/10/2026). Ne saute pas la fiche ; fabrique le PDF avec Google Docs, sans aucun script :
+- crée la fiche en Google Doc : `create_file` avec `textContent` = la fiche en HTML simple (titres `<h1>`/`<h2>`, paragraphes, listes, tableau des chiffres clés, bandeau de catégorie en `<p style="background-color:<couleur>;color:#fff">`), `contentMimeType: text/html`, **sans** `disableConversionToGoogleType`. Même contenu et mêmes sections que le PDF ;
+- exporte-la en PDF avec `download_file_content` (`exportMimeType: application/pdf`). Si le contenu base64 t'est renvoyé directement, dépose ce PDF dans le même dossier (`create_file`, `base64Content`, `contentMimeType: application/pdf`, `disableConversionToGoogleType: true`), mets le Doc à la corbeille et donne le lien du PDF ;
+- sinon, garde le Doc mais donne, dans le mail et dans le tableau, son lien de téléchargement en PDF : `https://docs.google.com/document/d/<ID>/export?format=pdf` (texte du lien : « Fiche en PDF »). Jamais un simple lien vers le Doc.
+Signale « script refusé : PDF fait via Google Docs » dans ton bilan.
 
 Le bandeau coloré des mails s'écrit avec `background-color:<couleur>;color:#fff`. Sans `background-color`, le texte blanc est invisible.
