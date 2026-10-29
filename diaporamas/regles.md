@@ -185,7 +185,7 @@ Chaque diapo du cours = 3 petites requêtes + des remplacements de texte :
 3. `updateSlideProperties` `isSkipped: false` (la copie hérite du masquage) ;
 4. un `replaceAllText` par texte, **toujours avec `pageObjectIds` = [la nouvelle diapo]** ; le gras se met ensuite avec `updateTextStyle` sur `…diapo_corps` (plages de caractères) ; l'image avec `replaceAllShapesWithImage` (`containsText` `{{IMAGE}}`) ; les lignes de tableau inutilisées avec `deleteTableRow`.
 
-Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** fait tout cela et écrit `sortie/paquet_01.json` (10 diapos), `paquet_02.json`… à envoyer chacun avec **un** `update_presentation`, recopié à l'identique. Format du plan : en tête de `scripts/construire_diapos.py`. S'il refuse un schéma ou un texte trop long, il affiche « ATTENTION » : corrige le plan jusqu'à `OK`.
+Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** fait tout cela et écrit `sortie/paquet_01.json` (10 diapos), `paquet_02.json`… à envoyer chacun avec **un** `update_presentation`, recopié à l'identique. Format du plan : en tête de `scripts/construire_diapos.py`. S'il refuse un schéma ou un texte trop long, il affiche « ATTENTION » : corrige le plan jusqu'à `OK`. Depuis le 29/10/2026, Matis a autorisé `remplir.py` et `ajuster_mise_en_page.py` dans le script d'installation de son environnement : écris le plan avec l'outil Write, place-toi dans `diaporamas/` avec un `cd` à part, puis lance le script dans sa propre commande commençant par `python3 scripts/`.
 
 **Si l'exécution du script est refusée**, écris toi-même les requêtes en suivant exactement le schéma ci-dessus : c'est simple et léger.
 
