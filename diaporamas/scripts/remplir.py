@@ -120,6 +120,7 @@ def diapo(s, num, prefixe, avert, surtitre=""):
         ids.update({"Mcolonnes2_c1": f"{page}_c1", "Mcolonnes2_c2": f"{page}_c2"})
     if modele.startswith("Mtab"):
         ids = {modele: page, f"{modele}_tab": f"{page}_tab"}
+    ids[f"{modele}_titre"] = f"{page}_titre"     # tous les modèles ont une zone <modèle>_titre
     req = [{"duplicateObject": {"objectId": modele, "objectIds": ids}},
            {"updateSlidesPosition": {"slideObjectIds": [page], "insertionIndex": num - 1}},
            {"updateSlideProperties": {"objectId": page, "slideProperties": {"isSkipped": False},
@@ -135,6 +136,10 @@ def diapo(s, num, prefixe, avert, surtitre=""):
         return req
     if genre == "section":
         return req
+    if len(titre) > 34:                       # au-delà, le titre en 26 pt passe sur deux lignes
+        req.append({"updateTextStyle": {"objectId": f"{page}_titre", "textRange": {"type": "ALL"},
+                                        "style": {"fontSize": {"magnitude": 19, "unit": "PT"}},
+                                        "fields": "fontSize"}})
     r("NUM", str(num))
     r("SURTITRE", nettoyer(s.get("surtitre", surtitre)))
     if modele == "Mtexte":

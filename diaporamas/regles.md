@@ -169,6 +169,7 @@ Les schémas viennent des **diapos modèles** (section 7). Limites à respecter 
 - La diapo **`cercles`** (dans `schema`, sans puces) : `{"type": "cercles", "elements": [["5-8 %", "Prévalence des vertiges chez l'enfant (3-10 ans)"], ...]}`, 3 ou 4 éléments.
 - Le champ **`conclusion`** d'une diapo de puces : une phrase courte affichée en gras en bas (« > … »).
 - La diapo **`retenir`** : une phrase forte encadrée (`message`, 320 caractères au maximum) et 1 à 3 puces en dessous.
+- Titre : 34 caractères au maximum (au-delà, il passe sur deux lignes et chevauche le texte). Si un titre plus long est indispensable, mets-le en 19 pt (`remplir.py` le fait tout seul ; à la main, `updateTextStyle` fontSize 19 sur la zone du titre).
 - Texte des puces : 360 caractères au maximum en pleine largeur (texte en 22 pt), 300 à côté d'un schéma.
 
 ## 7. Construire un cours : copie du modèle, duplication, remplacement de textes
