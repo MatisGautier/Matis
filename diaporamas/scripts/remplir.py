@@ -144,6 +144,8 @@ def diapo(s, num, prefixe, avert, surtitre=""):
     r("SURTITRE", nettoyer(s.get("surtitre", surtitre)))
     if modele == "Mtexte":
         r("CONCLUSION", "> " + nettoyer(s["conclusion"]) if s.get("conclusion") else "")
+        if len(s.get("conclusion", "")) > 55:
+            avert.append(f"Diapo {num} : conclusion trop longue ({len(s['conclusion'])} caractères, 55 au maximum)")
     if modele not in ("Mplan", "Mrefs"):
         sources = s.get("sources")
         if not sources:
@@ -182,6 +184,9 @@ def diapo(s, num, prefixe, avert, surtitre=""):
             avert.append(f"Diapo {num} : texte trop long ({len(brut)} caractères, {limite} au maximum)")
         r("PUCES", brut)
         req.extend(sous_puces(page, brut))
+        if modele == "Mtexte" and sum(max(1, -(-len(l) // 55)) for l in brut.split("\n") if l.strip()) > 8:
+            req.append({"updateTextStyle": {"objectId": f"{page}_corps", "textRange": {"type": "ALL"},  # 8 lignes en 22 pt
+                                            "style": {"fontSize": {"magnitude": 19, "unit": "PT"}}, "fields": "fontSize"}})
         for debut, fin in gras:
             req.append({"updateTextStyle": {"objectId": f"{page}_corps",
                                             "textRange": {"type": "FIXED_RANGE", "startIndex": debut, "endIndex": fin},

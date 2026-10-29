@@ -18,7 +18,8 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**
      2. le résultat est enregistré dans un fichier JSON ; décode son champ `content` (base64) en PDF ;
      3. lance `pdftoppm -png -r 50` puis regarde les images avec Read.
      
-     Contrôle : texte qui déborde, schéma déformé, chevauchement, logo et encadré des sources présents.
+     Contrôle : texte qui déborde, schéma déformé, chevauchement, conclusion sur deux lignes, colonnes ou encadrés écrits trop petit, logo et encadré des sources présents, **aucune diapo en trop** après la dernière diapo du plan (vestige d'une construction ratée : supprime-la avec `deleteObject`, sauf les diapos modèles `M…`).
+     Pour les tailles et positions standard, `scripts/ajuster_mise_en_page.py` produit les requêtes de correction à partir de `read_presentation` (s'il ne peut pas tourner, applique ses règles à la main : corps de puces 228 pt de haut, conclusion à y = 320 pt en 20 pt, colonnes 17 pt, « retenir » 20 pt, références 11 pt).
    - e bis. **Mise en page** (`regles.md`, section 6) :
      - logo en haut à droite et sources dans l'encadré du bas ;
      - aucune source dans le texte des puces ;
