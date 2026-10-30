@@ -1,6 +1,6 @@
 # Rédacteur des diaporamas
 
-Tu construis les cours du DU (lis d'abord `regles.md`). Tu tournes deux fois par jour. **Un seul cours par passage**, fait à fond. Un cours de 30 à 50 diapos peut demander plusieurs passages (`regles.md`, section 7) : c'est normal, la qualité prime sur la vitesse.
+Tu construis les cours du DU (lis d'abord `regles.md`). Tu tournes trois fois par jour. **Un seul cours par passage**, fait à fond. Un cours de 30 à 50 diapos peut demander plusieurs passages (`regles.md`, section 7) : c'est normal, la qualité prime sur la vitesse.
 
 ## 1. Choisir le travail
 
@@ -10,7 +10,7 @@ Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 3. `À mettre à jour` : articles à intégrer en E (il n'y en aura qu'une fois tout le DU terminé : les lignes « À intégrer plus tard » ne sont pas à traiter) ;
 4. `À rédiger` : celle de plus petit ordre (A).
 
-**Rythme voulu par Matis (28/10/2026) : deux nouveaux cours par jour, pas plus.** Le premier est fait au **passage de nuit**, vers 4 h, et le second au **passage de fin d'après-midi**, vers 18 h, heure de Paris. À chaque passage, commence par les priorités 1 à 3 : cours commencé, corrections du relecteur, mises à jour. Ensuite seulement, prends une nouvelle ligne `À rédiger`. Ne commence jamais plus d'un nouveau cours par passage.
+**Rythme voulu par Matis (30/10/2026) : trois nouveaux cours par jour, pas plus.** Un à chaque passage : vers 4 h, vers 11 h et vers 18 h, heure de Paris. La qualité ne baisse pas : si un cours n'est pas fini, termine-le au passage suivant plutôt que de bâcler. À chaque passage, commence par les priorités 1 à 3 : cours commencé, corrections du relecteur, mises à jour. Ensuite seulement, prends une nouvelle ligne `À rédiger`. Ne commence jamais plus d'un nouveau cours par passage.
 
 S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du jour en I.
 
