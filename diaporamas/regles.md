@@ -171,13 +171,15 @@ Les schémas viennent des **diapos modèles** (section 7). Limites à respecter 
 - La diapo **`retenir`** : une phrase forte encadrée (`message`, 320 caractères au maximum) et 1 à 3 puces en dessous.
 - Conclusion (« > … ») : **55 caractères au maximum**, une seule ligne ; sur deux lignes, elle touche l'encadré des sources.
 - Diapo de puces avec conclusion : au plus 8 lignes de texte (environ 5 puces d'une ligne et demie) ; au-delà, le corps passe en 19 pt (`remplir.py` le fait tout seul), et s'il ne tient toujours pas, coupe la diapo en deux.
-- Après une construction ratée ou reprise, **supprime toutes les diapos en trop** : la présentation ne contient que les diapos du plan, puis les diapos modèles masquées (`M…`).
+- Après une construction ratée ou reprise, **supprime toutes les diapos en trop** : la présentation ne contient que les diapos du plan.
 - Titre : 34 caractères au maximum (au-delà, il passe sur deux lignes et chevauche le texte). Si un titre plus long est indispensable, mets-le en 19 pt (`remplir.py` le fait tout seul ; à la main, `updateTextStyle` fontSize 19 sur la zone du titre).
 - Texte des puces : 360 caractères au maximum en pleine largeur (texte en 22 pt), 300 à côté d'un schéma.
 
 ## 7. Construire un cours : copie du modèle, duplication, remplacement de textes
 
-Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mcercles3`, `Mcercles4`, `Mcolonnes2`, `Mretenir`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{T1}}`/`{{P1}}`, `{{T2}}`/`{{P2}}` (colonnes), `{{MESSAGE}}` (retenir), `{{SURTITRE}}`, `{{CONCLUSION}}`, `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`. **Ne les supprime jamais.**
+Tous les cours partent de la présentation **« Modèle DU »** (son identifiant est dans les paramètres de ta tâche). Elle contient, en fin de présentation, des **diapos modèles masquées** (identifiants commençant par `M` : `Mtitre`, `Msection`, `Mtexte`, `Mplan`, `Mrefs`, `Mimage`, `Mimageseule`, `Mfluxv3` à `Mfluxv5`, `Mfluxh3` à `Mfluxh5`, `Mchiffres2`, `Mchiffres3`, `Mcercles3`, `Mcercles4`, `Mcolonnes2`, `Mretenir`, `Mtab2`, `Mtab3`) avec des textes à remplacer : `{{TITRE}}`, `{{PUCES}}`, `{{SOURCES}}`, `{{NUM}}`, `{{E1}}`…, `{{C1}}`/`{{L1}}`…, `{{T1}}`/`{{P1}}`, `{{T2}}`/`{{P2}}` (colonnes), `{{MESSAGE}}` (retenir), `{{SURTITRE}}`, `{{CONCLUSION}}`, `{{a1}}`… (tableaux), `{{IMAGE}}`, `{{CREDIT}}`, `{{LEGENDE}}`.
+
+**Une fois le cours construit, supprime ces diapos modèles de la copie du cours** (`deleteObject` sur chaque identifiant commençant par `M`) : masquées dans Slides, elles sortent quand même quand Matis télécharge le cours en PDF (remarque de Matis, 30/10/2026). Ne touche jamais aux diapos modèles de la présentation « Modèle DU » elle-même.
 
 Chaque diapo du cours = 3 petites requêtes + des remplacements de texte :
 1. `duplicateObject` du modèle, avec `objectIds` = `{"<Modèle>": "<prefixe><num sur 3 chiffres>diapo", "<Modèle>_corps": "…diapo_corps"}` (et `"<Modèle>_tab": "…diapo_tab"` pour un tableau ; `"Mcolonnes2_c1": "…diapo_c1", "Mcolonnes2_c2": "…diapo_c2"` pour des colonnes) ;
@@ -196,7 +198,7 @@ Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** 
    - envoie les paquets, à la suite : un cours entier tient en un seul passage (environ 5 paquets) ;
    - après chaque paquet, mets à jour N (« 20/43 »).
 2. **Si un passage s'arrête avant la fin** : au passage suivant, relis le plan sur Drive (`read_file_content`), regarde les diapos présentes (`read_presentation`, `fields: ["slides.objectId"]`), et relance le script avec le même préfixe et `premiere_diapo` = première diapo manquante.
-3. **À la fin** : écris G et N (« 43/43 »), puis passe le statut à `À relire`.
+3. **À la fin** : supprime les 21 diapos modèles `M…` de la présentation du cours, écris G et N (« 43/43 »), puis passe le statut à `À relire`.
 
 **Cours construits avant le 28/10/2026 au soir (modèles version 1)** : leurs diapos modèles internes sont anciennes (schémas en étapes déformés, pas de logo, sources sans encadré). Pour les refaire, ne réutilise pas l'ancienne présentation :
 - crée une **nouvelle copie de « Modèle DU »** dans le dossier du module ;
@@ -204,9 +206,10 @@ Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** 
 - remplace le lien en F ;
 - mets l'ancienne présentation et l'ancien plan à la corbeille.
 
-**Mise à jour d'un cours existant** :
+**Mise à jour ou correction lourde d'un cours existant** (sa présentation n'a plus de diapos modèles) :
 - relis son plan sur Drive et modifie-le ;
-- supprime les diapos du cours (`deleteObject` sur chaque diapo dont l'identifiant **ne commence pas par `M`**) et reconstruis avec un nouveau préfixe (`v2`, `v3`…) ;
+- crée une **nouvelle copie de « Modèle DU »** dans le dossier du module et reconstruis-y tout le cours, puis supprime ses diapos modèles `M…` ;
+- remplace le lien en F, mets l'ancienne présentation à la corbeille ;
 - remplace le plan sur Drive (corbeille pour l'ancien).
 
-Le lien reste le même pour Matis.
+Une petite correction (texte, taille, position) se fait directement dans la présentation, sans reconstruire. Pour ajouter une diapo, duplique une diapo du cours de même type (`duplicateObject`) et remplace ses textes.

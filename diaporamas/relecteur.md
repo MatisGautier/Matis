@@ -6,7 +6,7 @@ Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes deux fois par jo
 
 Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**, le plus ancien d'abord : prends le temps de le relire en entier et de le corriger) :
 
-1. Lis la présentation (`read_presentation`, `fields: ["slides.objectId", "slides.pageElements(objectId,shape.text,image.contentUrl,table)"]`) et son plan JSON sur Drive. Ignore les diapos modèles masquées à la fin (identifiants commençant par `M`) : elles servent à construire les cours et ne doivent jamais être modifiées ni supprimées.
+1. Lis la présentation (`read_presentation`, `fields: ["slides.objectId", "slides.pageElements(objectId,shape.text,image.contentUrl,table)"]`) et son plan JSON sur Drive. S'il reste des diapos modèles à la fin (identifiants commençant par `M`), supprime-les avec `deleteObject` : elles apparaîtraient dans le PDF que Matis télécharge.
 2. Contrôle, diapo par diapo :
    - a. **Sources** : chaque diapo (sauf titre, plan, sections) a sa ligne « Sources : ». Une seule diapo sans source suffit pour renvoyer en correction.
    - b. **Références** : vérifie avec `get_article_metadata` tous les PMID s'il y en a 15 ou moins, sinon au moins 15 tirés au hasard. Titre, premier auteur et année doivent concorder avec ce qui est écrit.
@@ -18,7 +18,7 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**
      2. le résultat est enregistré dans un fichier JSON ; décode son champ `content` (base64) en PDF ;
      3. lance `pdftoppm -png -r 50` puis regarde les images avec Read.
      
-     Contrôle : texte qui déborde, schéma déformé, chevauchement, conclusion sur deux lignes, colonnes ou encadrés écrits trop petit, logo et encadré des sources présents, **aucune diapo en trop** après la dernière diapo du plan (vestige d'une construction ratée : supprime-la avec `deleteObject`, sauf les diapos modèles `M…`).
+     Contrôle : texte qui déborde, schéma déformé, chevauchement, conclusion sur deux lignes, colonnes ou encadrés écrits trop petit, logo et encadré des sources présents, **aucune diapo en trop** après la dernière diapo du plan (vestige d'une construction ratée ou diapo modèle `M…` : supprime-la avec `deleteObject`). Le PDF doit s'arrêter à la dernière diapo du plan.
      Pour les tailles et positions standard, `scripts/ajuster_mise_en_page.py` produit les requêtes de correction à partir de `read_presentation` (s'il ne peut pas tourner, applique ses règles à la main : corps de puces 228 pt de haut, conclusion à y = 320 pt en 20 pt, colonnes 17 pt, « retenir » 20 pt, références 11 pt).
    - e bis. **Mise en page** (`regles.md`, section 6) :
      - logo en haut à droite et sources dans l'encadré du bas ;

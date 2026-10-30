@@ -12,7 +12,7 @@ Les zones sont reconnues à leur géométrie (identique à celle du Modèle DU) 
 - colonnes : texte 17 pt, titres 18 pt ;
 - retenir : puces 20 pt ;
 - références : 11 pt.
-Les diapos modèles masquées (identifiants commençant par « M ») sont traitées comme les autres.
+Les diapos modèles masquées (identifiants commençant par « M »), s'il en reste, sont traitées comme les autres.
 """
 import json
 import math
