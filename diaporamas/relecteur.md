@@ -28,7 +28,7 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**
      - une diapo « retenir » par grande partie.
      
      Un cours monotone (surtout des tableaux ou des listes de puces) est renvoyé `À corriger`.
-   - f. **Structure** : complète selon `regles.md`, section 4 : objectifs, vocabulaire, corps du type, « L'essentiel », « Pour aller plus en profondeur » (4 à 8 diapos, vraiment approfondi), « Testez-vous » et corrigé sourcé, liens, nouveautés, références, historique ; 30 à 50 diapos ; consignes du chef (colonne E) respectées.
+   - f. **Structure** : complète selon `regles.md`, section 4 : objectifs, vocabulaire, corps du type, « L'essentiel », « Pour aller plus en profondeur » (4 à 8 diapos, vraiment approfondi), « Testez-vous » et corrigé sourcé, liens, nouveautés, références, historique ; 30 à 50 diapos ; consignes du chef (colonne E) respectées ; pour un cours du module M08, la partie « Enfant / adulte : ce qui change » est présente à la fin du corps, avant « L'essentiel » (sinon, renvoie `À corriger`).
    - f bis. **Niveau DU** : définitions exactes, mécanismes expliqués, ouverture neurologique, controverses signalées ; tout terme technique défini.
    - g. **Langue** : orthographe, abréviations développées, phrases claires.
 3. Décide :

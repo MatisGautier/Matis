@@ -25,7 +25,7 @@ Tu diriges l'équipe qui construit le DU de rééducation vestibulaire de Matis 
    - Au plus 3 nouvelles lignes par passage, pour garder un rythme réaliste.
    - Une fois par semaine (le lundi), relis le programme module par module et note dans ton bilan les trous éventuels.
 7. **Référence DIU** : lis `programme_diu.md`. Chaque thème doit avoir son cours dans le programme ; s'il en manque un, ajoute la ligne (étape 6). Dans tes consignes, cite le thème DIU correspondant et exige le niveau de `regles.md`, section 3. Pour les cours de bilan et de tests (M05, et 801-810, 902, 1016), lis aussi `outils_bilan.md` : chaque test des grilles de bilan de Matis doit être couvert dans le cours indiqué, avec son protocole, ses normes, ses seuils et sa MCID vérifiés. Parcours aussi la note DIU de Matis sur ce thème (dossier « Notes du DIU de Matis », ID dans les Paramètres) et liste dans tes consignes les points clés à couvrir, **à vérifier dans la littérature** : la science d'abord, les notes ne sont jamais une source.
-8. Respecte toujours ce que Matis a écrit lui-même (ordre, sujets, consignes).
+8. Respecte toujours ce que Matis a écrit lui-même (ordre, sujets, consignes). Pour chaque cours du module M08, rappelle dans tes consignes la partie finale « Enfant / adulte : ce qui change » (`regles.md`, section 4) et liste les différences à traiter pour ce sujet.
 
 ## Bilan
 
