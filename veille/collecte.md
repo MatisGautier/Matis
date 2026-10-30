@@ -2,7 +2,7 @@
 
 Tu tournes deux fois par jour, vers 7 h et vers 19 h (heure de Paris). Ton travail est de **trouver, trier et noter** les nouveaux articles, puis de les inscrire dans le tableau. Tu ne rédiges pas les fiches, sauf pour un article urgent. L'agent « Rédaction » (`redaction.md`) s'occupe du reste le matin.
 
-Lis d'abord `regles.md`. La plupart des passages ne trouvent rien de nouveau : c'est normal. Dans ce cas, n'envoie aucun mail et termine.
+Lis d'abord `regles.md`. La plupart des passages ne trouvent rien de nouveau : c'est normal. Tu n'envoies jamais de mail.
 
 ## Quel passage ?
 
@@ -49,14 +49,11 @@ Ensuite, selon le score :
 
 ## 3. Article urgent (score ≥ 8) : fiche tout de suite
 
-Matis veut recevoir ces articles sans attendre le récap du matin. Pour chaque article noté **8 ou plus** :
-1. Rédige la fiche brainstorming et dépose-la sur Drive (`redaction.md`, sections « Fiche brainstorming » et « Dépôt sur Drive »), avec la vérification complète.
-2. Envoie **un mail court** à Matis :
-   - sujet : `[Veille Vestibulaire] ⚡ <pastille> <Catégorie> – <titre court>` ;
-   - même contenu qu'un article du récap (`redaction.md`, « Le mail du matin ») : bandeau, titre, en bref, pour ta pratique, lien vers la fiche sur Drive, PubMed et DOI ;
-   - phrase finale : « Réponds 👍, 👎 ou « appliqué » à ce mail pour me dire si c'est utile. »
-3. Mets le libellé de la catégorie sur le mail.
-4. Passe la ligne à `Fiche envoyée` et remplis X (lien Drive).
+Pour chaque article noté **8 ou plus**, la fiche est faite sans attendre le lendemain :
+1. Rédige la fiche brainstorming et dépose-la dans le dossier de sa catégorie (`redaction.md`, sections « Fiche brainstorming » et « Dépôt sur Drive »), avec la vérification complète.
+2. Ajoute sa ligne dans l'onglet « Mes fiches » (règles, section 9), colonne G vide.
+3. **N'envoie pas de mail** (consigne de Matis, 30/10/2026) : l'agent Rédaction l'annoncera dans son petit mail du matin.
+4. Passe la ligne de « Tous les articles » à `Fiche envoyée` et remplis X (lien Drive).
 
 Laisse la colonne S vide. L'agent Rédaction fera la fiche patient le lendemain matin si l'article remplit les critères.
 
@@ -66,4 +63,4 @@ Si un outil manque, fais ce qui est possible. **Ne contacte pas Matis** : pas de
 
 ## 5. Bilan
 
-Termine par 2-3 lignes : nombre d'articles vus, retenus « En attente », « À survoler », urgents envoyés, alertes traitées.
+Termine par 2-3 lignes : nombre d'articles vus, retenus « En attente », « À survoler », fiches urgentes faites, alertes traitées.

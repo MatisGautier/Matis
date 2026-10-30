@@ -3,18 +3,19 @@
 Tu tournes chaque matin vers 7 h 45 (heure de Paris), après l'agent Collecte. Ton travail :
 - rédiger les fiches des articles en attente, et les fiches patients ;
 - faire la synthèse le lundi, le mercredi et le vendredi ;
-- envoyer **un seul mail** à Matis avec tout ça.
+- ranger chaque PDF dans le bon dossier et l'ajouter à l'onglet « Mes fiches » ;
+- envoyer **un seul petit mail** à Matis avec les noms des nouvelles fiches.
 
 Lis d'abord `regles.md`. Lance `TZ=Europe/Paris date` pour connaître le jour.
 
-**S'il n'y a rien à envoyer** (pas d'article en attente, pas de fiche patient, pas de synthèse, pas de diaporama à annoncer, et on n'est pas lundi), n'envoie aucun mail et termine.
+**S'il n'y a rien à annoncer** (aucune ligne de « Mes fiches » avec G vide après ton travail, et aucun diaporama à annoncer), n'envoie aucun mail et termine.
 
 ## 1. Lire les avis de Matis
 
-Matis répond aux mails de veille pour dire ce qui lui est utile, par exemple « 1 👍 2 👎 3 appliqué », ou « le 2 est top, le 3 bof ».
+Matis peut répondre au petit mail du matin pour dire ce qui lui est utile, par exemple « 1 👍 2 👎 3 appliqué », ou « le 2 est top, le 3 bof ».
 1. Cherche `subject:"[Veille Vestibulaire]" newer_than:21d -label:"Veille Vestibulaire/Avis lus"`.
 2. Pour chaque fil, lis-le avec `get_thread`. Le premier message est le mail envoyé par un agent. Les agents et Matis écrivent avec la même adresse : une réponse de Matis se reconnaît à son contenu (court, avec des numéros, 👍, 👎, « appliqué », un avis ou une question). Ignore les messages qui commencent par « PDF corrigé » ou « Problème ».
-3. Pour chaque réponse, retrouve de quel article il parle. Les numéros renvoient à la liste du mail d'origine, et chaque article y porte son PMID ou son DOI. Retrouve ensuite la ligne de l'article dans le tableau.
+3. Pour chaque réponse, retrouve de quel article il parle. Les numéros renvoient à la liste du mail d'origine ; retrouve le titre, puis l'article (onglet « Mes fiches », puis « Tous les articles »). Retrouve ensuite la ligne de l'article dans le tableau.
 4. Écris la colonne U de cette ligne :
    - `Oui` pour un avis positif (👍, utile, top, intéressant) ;
    - `Non` pour un avis négatif (👎, bof, pas utile, hors sujet) ;
@@ -47,7 +48,7 @@ Applique la section 7 des règles (lien avec les fiches précédentes).
 
 Génère le PDF avec `python3 scripts/generer_pdf.py fiche.json <Categorie>_<titre-court-sans-accents>_PMID<numéro>.pdf`. Il doit faire 2 pages, avec la page 2 remplie à 75 % au moins. Si le script affiche « À ENRICHIR », complète la fiche et relance. Regarde le rendu (`pdftoppm -png -r 60`, puis Read) : rien de coupé, pas de « ? » à la place d'un accent.
 
-Dépose-la dans le dossier « Fiches articles » (section 5).
+Dépose-la dans le sous-dossier de sa catégorie, dans « Fiches articles » (section 5 et règles, section 9).
 
 ## 4. Fiche patient (une page, compréhensible par un enfant de 8 ans)
 
@@ -74,17 +75,17 @@ Génère le PDF avec `cd scripts && python3 generer_fiche_patient.py fiche_patie
 - e. Le message est vraiment utile à un patient, et l'étude est assez solide pour le dire.
 - f. Phrases courtes, aucune faute, tutoiement ou vouvoiement cohérent.
 
-Si un point échoue, corrige une fois et refais tout le contrôle. Si ça ne passe toujours pas : pas de fiche patient, `Non` en colonne S, et la raison en une phrase dans le mail.
+Si un point échoue, corrige une fois et refais tout le contrôle. Si ça ne passe toujours pas : pas de fiche patient, `Non` en colonne S, et la raison en une phrase dans ton bilan.
 
 Si la fiche passe, dépose-la dans le **classeur des fiches patients**, dans le sous-dossier de sa pathologie (voir Paramètres ; « Enfants » si `public` vaut `enfant` ; « Autres » si aucune pathologie ne colle). Nom du fichier : `<Titre court> (<adulte|enfant>) – <AAAA-MM>.pdf`. Colonne S : `Oui (adulte)` ou `Oui (enfant)`.
 
 ## 5. Dépôt sur Drive
 
-Applique la section 8 des règles pour **chaque** PDF : vérification, dépôt, relecture, et nouveau dépôt si besoin. Note le lien `viewUrl` de chaque fichier. Pour une fiche brainstorming, écris ce lien en colonne X.
+Applique la section 8 des règles pour **chaque** PDF : vérification, dépôt, relecture, et nouveau dépôt si besoin. Note le lien `viewUrl` de chaque fichier. Pour une fiche brainstorming, écris ce lien en colonne X. Puis ajoute **chaque** PDF (fiche article, fiche patient, synthèse) à l'onglet « Mes fiches » (règles, section 9).
 
 ## 6. Synthèse thématique : lundi, mercredi et vendredi
 
-Seulement ces trois jours, et une seule fois. Vérifie d'abord dans Gmail `subject:"Synthèse" newer_than:1d`.
+Seulement ces trois jours, et une seule fois. Vérifie d'abord dans `'Synthèses thématiques'!A:F` qu'aucune synthèse n'a été faite aujourd'hui.
 1. Lis `'Synthèses thématiques'!A:F`.
 2. Choisis le thème parmi les pathologies prioritaires : celle qui a le plus d'articles « Fiche envoyée » pas encore inclus dans une synthèse (colonne E). À égalité, prends celle dont la dernière synthèse est la plus ancienne. Ne reprends pas un thème traité dans les 7 derniers jours, sauf s'il a au moins 3 nouveaux articles.
 3. Rédige 2 pages « <Thème> : ce qu'on sait en <année> ». Croise les fiches de la veille sur ce thème avec les recommandations, consensus et revues systématiques récentes trouvés dans PubMed (références réelles, de moins de 10 ans de préférence). Change d'angle d'une fois à l'autre : diagnostic, rééducation, pronostic, enfant, cas complexes.
@@ -92,31 +93,21 @@ Seulement ces trois jours, et une seule fois. Vérifie d'abord dans Gmail `subje
 5. Dépose le PDF dans le dossier « Synthèses » (section 5).
 6. Ajoute une ligne dans `'Synthèses thématiques'!A:F` : date, thème, titre, nombre d'articles, PMID ou DOI inclus, message clé.
 
-## 7. Le mail du matin (un seul)
+## 7. Le petit mail du matin (un seul, court)
 
-`send_message` à Matis, avec `htmlBody` et sans pièce jointe : les PDF sont sur Drive.
+Consigne de Matis (30/10/2026) : plus de mail détaillé par article. Les fiches sont rangées sur Drive et listées dans l'onglet « Mes fiches » ; le mail dit seulement **quelles fiches sont nouvelles et leur nom**.
 
-Sujet : `[Veille Vestibulaire] ☀️ Veille du <JJ/MM> : <n> fiche(s)`, en ajoutant ` + synthèse <Thème>` les jours de synthèse et ` + récap de la semaine` le lundi.
-
-Contenu, dans cet ordre :
-1. Une ligne d'introduction : « <n> nouveaux articles, <p> fiche(s) patient(s) ». Ajoute « <k> articles encore en attente pour demain » s'il en reste.
-2. **Les fiches, numérotées 1, 2, 3…** Pour chacune :
-   - un bandeau coloré de sa catégorie (`background-color:<couleur>;color:#fff`) : « <n>. <CATÉGORIE> · Pertinence <score>/10 » ;
-   - le titre en gras ;
-   - « Auteur et al. – Revue, date – type d'étude (n = …) – PMID <numéro> » (ou DOI) ;
-   - « En bref » (2 phrases, chiffres en gras) et « Pour ta pratique » (1-2 phrases) ;
-   - l'encadré jaune « 🔁 Lien avec une fiche précédente » si besoin ;
-   - les liens « 📄 Fiche PDF » (Drive), PubMed et DOI ;
-   - la ligne fiche patient : « 🩺 Fiche patient : <lien Drive> » ou « 🩺 Pas de fiche patient : <raison en une phrase> » (seulement pour les candidats de la section 4) ;
-   - pour un article qui a attendu plus d'un jour : « ⏳ Repéré le <date> ».
-3. Les fiches patients faites pour des articles urgents déjà envoyés (section 2), avec leur lien Drive.
-4. **📚 Synthèse du jour** (lundi, mercredi, vendredi) : thème, 3 messages clés, lien Drive.
-5. **🎓 Diaporamas** : lis l'onglet `Diaporamas!A:L`. Liste les lignes `Validé` dont la colonne L est vide (« Nouveau diaporama ») ou plus ancienne que la colonne I (« Diaporama mis à jour »). Pour chacune, donne le sujet, le nombre de diapos, le lien (F) et, pour une mise à jour, ce qui a changé (dernières lignes de la colonne E). Après l'envoi, écris la date du jour en L. Ajoute en une ligne l'avancement : « <n> diaporamas validés sur <total> ».
-6. **👀 À survoler** : titres des articles notés 4-5 depuis le dernier mail, avec leur lien PubMed, en une ligne chacun.
-7. **📋 Récap de la semaine (lundi seulement)** : fiches et fiches patients de la semaine, fiches patients non faites et pourquoi, articles jugés utiles par Matis, nombre d'articles en attente, vérifications HAS/SFORL/Kinésithérapie la Revue, problèmes, lien vers le tableau.
-8. En pied de mail : « 💬 Réponds à ce mail pour me dire ce qui t'est utile, par exemple : 1 👍 2 👎 3 appliqué. » Ajoute les liens vers le tableau et vers le classeur des fiches patients.
-
-Ensuite, mets sur le mail le libellé « Veille Vestibulaire », celui de chaque catégorie présente, celui des synthèses s'il y en a une, et celui des fiches patients (adulte ou enfant) s'il y en a.
+1. Lis `'Mes fiches'!A:G`. Les nouvelles fiches sont les lignes dont la colonne G est vide (les tiennes, et celles de la Collecte depuis hier).
+2. `send_message` à Matis, avec `htmlBody`, sans pièce jointe :
+   - sujet : `[Veille Vestibulaire] ☀️ <n> nouvelle(s) fiche(s) – <JJ/MM>` ;
+   - une ligne : « <n> nouvelles fiches, rangées sur ton Drive : » ;
+   - la liste **numérotée** des nouvelles fiches, une ligne chacune : « <n>. <pastille> <Catégorie> – <Type> : <Titre> » (pastilles : règles, section 5 ; 📚 pour une synthèse) ;
+   - « 📋 Toutes tes fiches : » avec le lien vers l'onglet « Mes fiches » : `https://docs.google.com/spreadsheets/d/<tableau>/edit#gid=30` ;
+   - s'il y en a, une ligne **🎓 Diaporamas** : pour chaque ligne `Validé` de `Diaporamas!A:L` dont L est vide ou plus ancienne que I, « Nouveau diaporama » ou « Diaporama mis à jour » : <sujet> avec son lien (F) ; puis écris la date du jour en L ;
+   - en pied : « 💬 Réponds avec les numéros pour me dire ce qui t'est utile, par exemple : 1 👍 2 👎 3 appliqué. »
+   Rien d'autre : pas de résumé, pas d'« en bref », pas de liste « À survoler », pas de récap.
+3. Mets le libellé « Veille Vestibulaire » sur le mail.
+4. Écris la date du jour en colonne G de chaque ligne annoncée.
 
 ## 8. Mettre le tableau à jour
 

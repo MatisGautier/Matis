@@ -103,7 +103,7 @@ Pour ajouter une ligne : `append_values` sur `'Tous les articles'!A:X`. Pour cha
 
 Avant de rédiger une fiche, cherche dans le tableau (colonnes C, F, O) les fiches déjà envoyées sur le même sujet. Si le nouvel article **confirme**, **nuance** ou **contredit** une fiche précédente :
 - mets en tête de `impact_pratique` une puce « **Contredit** (ou **Confirme**, **Nuance**) la fiche du <date> : <titre> » ;
-- signale-le dans le mail ;
+- signale-le dans le petit mail du matin, en une ligne après le titre ;
 - remplis la colonne W.
 
 ## 8. Fichiers PDF : toujours vérifiés
@@ -113,14 +113,35 @@ Les PDF voyagent sous forme de texte base64 que tu recopies. Une seule faute de 
 1. Avant l'envoi : `python3 scripts/verifier_pdf.py fichier.pdf` doit afficher `OK`.
 2. Dépose-le sur Drive : `create_file` avec `base64Content` = la sortie de `base64 -w0 fichier.pdf`, `contentMimeType: application/pdf`, `disableConversionToGoogleType: true`, et le bon `parentId`.
 3. Relis-le : `download_file_content` sur l'ID obtenu. Si le résultat est enregistré dans un fichier, utilise ce chemin ; sinon enregistre-le dans ton scratchpad. Puis lance `python3 scripts/verifier_pdf.py fichier.pdf --drive <chemin>`. Si tu ne peux pas relire le fichier, compare au moins la taille : `--taille <fileSize>`.
-4. Si le résultat est `À REFAIRE` : `trash_file` sur le fichier abîmé, puis dépose-le à nouveau, en recopiant le base64 sans rien changer. Au deuxième échec, signale-le à Matis dans le mail du jour.
+4. Si le résultat est `À REFAIRE` : `trash_file` sur le fichier abîmé, puis dépose-le à nouveau, en recopiant le base64 sans rien changer. Au deuxième échec, signale-le dans ton bilan.
 
-Les mails donnent des **liens Drive**. Ils ne joignent pas les PDF : c'est plus léger et plus fiable.
+Aucun mail ne joint de PDF ni ne détaille un article : tout est rangé sur Drive et listé dans l'onglet « Mes fiches » (section 9).
 
 **Plan B si l'exécution d'un script PDF est refusée** : Matis veut des PDF, pas des Google Docs (consigne du 29/10/2026). Ne saute pas la fiche ; fabrique le PDF avec Google Docs, sans aucun script :
 - crée la fiche en Google Doc : `create_file` avec `textContent` = la fiche en HTML simple (titres `<h1>`/`<h2>`, paragraphes, listes, tableau des chiffres clés, bandeau de catégorie en `<p style="background-color:<couleur>;color:#fff">`), `contentMimeType: text/html`, **sans** `disableConversionToGoogleType`. Même contenu et mêmes sections que le PDF ;
 - exporte-la en PDF avec `download_file_content` (`exportMimeType: application/pdf`). Si le contenu base64 t'est renvoyé directement, dépose ce PDF dans le même dossier (`create_file`, `base64Content`, `contentMimeType: application/pdf`, `disableConversionToGoogleType: true`), mets le Doc à la corbeille et donne le lien du PDF ;
-- sinon, garde le Doc mais donne, dans le mail et dans le tableau, son lien de téléchargement en PDF : `https://docs.google.com/document/d/<ID>/export?format=pdf` (texte du lien : « Fiche en PDF »). Jamais un simple lien vers le Doc.
+- sinon, garde le Doc mais donne, dans les tableaux, son lien de téléchargement en PDF : `https://docs.google.com/document/d/<ID>/export?format=pdf` (texte du lien : « Fiche en PDF »). Jamais un simple lien vers le Doc.
 Signale « script refusé : PDF fait via Google Docs » dans ton bilan.
 
 Le bandeau coloré des mails s'écrit avec `background-color:<couleur>;color:#fff`. Sans `background-color`, le texte blanc est invisible.
+
+## 9. Rangement sur Drive et onglet « Mes fiches » (consigne de Matis, 30/10/2026)
+
+Matis ne veut plus de mail par article. Il veut des **PDF bien rangés** et **un tableau à jour**.
+
+1. **Rangement** : chaque fiche article va dans le sous-dossier de sa catégorie, dans « Fiches articles » : `Kiné pratique`, `Pathos`, `ORL`, `Pédiatrie ORL` ou `HAS` (identifiants dans les Paramètres ; `parentId` = celui de la catégorie, jamais le dossier « Fiches articles » lui-même). Les fiches patients vont dans le classeur des fiches patients, les synthèses dans « Synthèses », comme avant.
+2. **Tableau** : pour chaque PDF déposé et vérifié (section 8), ajoute **une ligne** avec `append_values` sur `'Mes fiches'!A:G` :
+
+| Col. | Contenu |
+|---|---|
+| A | Date du jour (`JJ/MM/AAAA`) |
+| B | Catégorie (`Kiné pratique`, `Pathos`, `ORL`, `Pédiatrie ORL`, `HAS`, ou `Synthèse`) |
+| C | `Fiche article`, `Fiche patient (adulte)`, `Fiche patient (enfant)` ou `Synthèse` |
+| D | Titre en français de l'article (ou de la fiche patient, ou de la synthèse) |
+| E | `=HYPERLINK("https://drive.google.com/file/d/<ID>/view";"📄 Ouvrir la fiche")` |
+| F | `=HYPERLINK("https://pubmed.ncbi.nlm.nih.gov/<PMID>/";"PubMed")` (ou le lien DOI ; vide pour une synthèse) |
+| G | vide : l'agent Rédaction y écrit la date quand il annonce la fiche dans son petit mail |
+
+Le séparateur dans `HYPERLINK` est le point-virgule (tableau en français). Ne modifie jamais les lignes existantes, sauf la colonne G (agent Rédaction).
+3. **Mail** : un seul petit mail par jour, envoyé par l'agent Rédaction (`redaction.md`, section 7), qui donne seulement les noms des nouvelles fiches et le lien vers l'onglet. Aucun autre mail sur les articles.
+
