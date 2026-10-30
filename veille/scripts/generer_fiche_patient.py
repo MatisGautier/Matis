@@ -9,6 +9,14 @@ from pathlib import Path
 
 # reportlab est fourni dans veille/vendor : aucune installation nécessaire
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "vendor"))
+try:
+    from PIL import Image  # noqa: F401  (reportlab l'importe d'office)
+except Exception:  # Pillow absent ou compilé pour un autre Python : les fiches n'ont aucune image
+    import types
+    _pil, _image = types.ModuleType("PIL"), types.ModuleType("PIL.Image")
+    _image.Image = type("Image", (), {})
+    _pil.Image = _image
+    sys.modules.update({"PIL": _pil, "PIL.Image": _image})
 from datetime import date
 
 from reportlab.graphics.shapes import Circle, Drawing, Line, PolyLine, String
