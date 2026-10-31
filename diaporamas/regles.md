@@ -75,7 +75,7 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
 - **Vocabulaire** : chaque terme technique est défini à sa première apparition. Chaque abréviation est développée.
 - **Jamais de chiffre, de définition ni de référence inventés.** En cas de doute, ne pas l'écrire.
 - **Niveau de référence : un très bon DIU français.** `programme_diu.md` liste les thèmes du DIU « Vertiges et rééducation vestibulaire » suivi par Matis : chaque cours doit être au moins aussi complet que l'enseignement correspondant. Pour un cours de contenu (notion, test, pathologie, technique) :
-  - **40 à 50 diapos** (partie 2 si besoin) : le cours 1 de présentation est une introduction, pas le modèle de profondeur ;
+  - **60 à 100 diapos** (partie 2 seulement au-delà de 100) : le cours 1 de présentation est une introduction, pas le modèle de profondeur ;
   - **au moins 12 références** vérifiées, dont les critères Bárány, les recommandations internationales et, quand elles existent, **françaises** (HAS, SFORL, consensus français) ;
   - la **physiopathologie** et les mécanismes expliqués pas à pas, avec au moins 3 schémas ;
   - le **point de vue de l'ORL** (examens, imagerie, traitements, chirurgie) **et celui du kiné** (bilan, rééducation, dosage, critères d'arrêt) ;
@@ -90,7 +90,7 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
 
 ## 4. Taille et structure de chaque cours
 
-- **30 à 50 diapos.** Si le sujet demande plus de 50 diapos, découpe-le : le cours devient « … (partie 1) ». Ajoute dans l'onglet une ligne « … (partie 2) », avec l'ordre +0.1, le même type, le statut `À rédiger`, et en E le plan de la partie 2. Note « partie 2 créée » en N.
+- **60 à 100 diapos, jamais plus de 100** (demande de Matis, 31/10/2026 : des cours plus longs, même forme, plus de schémas). Si le sujet demande plus de 100 diapos, découpe-le : le cours devient « … (partie 1) ». Ajoute dans l'onglet une ligne « … (partie 2) », avec l'ordre +0.1, le même type, le statut `À rédiger`, et en E le plan de la partie 2. Note « partie 2 créée » en N.
 - **Structure commune à tous les cours :**
   1. Titre (avec « DU de rééducation vestibulaire – <module> ») ;
   2. Plan ;
@@ -102,8 +102,9 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
   8. **« Testez-vous »** (5 à 10 questions : QCM et cas éclair), puis **« Corrigé »** (chaque réponse expliquée en une ligne, avec sa source) ;
   9. **« Liens avec les autres cours »** (numéros et titres) ;
   10. **« Nouveautés de la veille »** (même vide au départ : « aucune pour l'instant ») ;
-  11. **Références** complètes ;
-  12. **Historique des mises à jour**.
+  11. **« Articles phares »** : une diapo de type `phares` (encadré rouge), juste avant les références, avec les 3 à 8 publications fondatrices du sujet (article princeps, critères Bárány, recommandation, Cochrane, grand essai ou méta-analyse de référence), chacune suivie en une ligne de ce qu'elle a apporté. Ces articles sont aussi dans les références ;
+  12. **Références** complètes ;
+  13. **Historique des mises à jour**.
 
 **Corps selon le type :**
 - **Notion** (anatomie, neuro, physiologie, liens) : description structurée, du général au détail ; nombreux schémas (images anatomiques et flux) ; « Ce que cela explique en clinique » ; « Ce que cela change pour la rééducation ».
@@ -149,7 +150,7 @@ Règles de mise en page :
 - **Jamais de source dans le texte** des puces : pas de « (Auteur 2020) » ni de PMID dans les phrases. Tout va dans `sources`, donc dans l'encadré.
 - **Variété obligatoire** dans chaque cours :
   - **au plus 1 diapo sur 5 en `tableau`**, et jamais deux tableaux de suite. Une comparaison à 2 volets se fait en **`colonnes`** (deux cartes côte à côte) ;
-  - au moins **1 diapo sur 3 avec un visuel** : `flux`, `image`, `chiffres`, `colonnes` ou `retenir` ;
+  - au moins **1 diapo sur 2 avec un visuel** : `flux`, `image`, `chiffres`, `colonnes` ou `retenir` ;
   - une diapo **`retenir`** (message clé encadré) à la fin de chaque grande partie, en plus de « L'essentiel ».
 - **Une idée par diapo**, 3 à 5 puces courtes. Au-delà, coupe en deux diapos.
 - Le lexique (M00) peut utiliser plus de tableaux, mais il alterne avec des diapos `colonnes`, `retenir` et des schémas toutes les 3 ou 4 diapos.

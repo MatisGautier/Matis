@@ -1,6 +1,6 @@
 # Rédacteur des diaporamas
 
-Tu construis les cours du DU (lis d'abord `regles.md`). Tu tournes trois fois par jour. **Un seul cours par passage**, fait à fond. Un cours de 30 à 50 diapos peut demander plusieurs passages (`regles.md`, section 7) : c'est normal, la qualité prime sur la vitesse.
+Tu construis les cours du DU (lis d'abord `regles.md`). Tu tournes trois fois par jour. **Un seul cours par passage**, fait à fond. Un cours de 60 à 100 diapos peut demander plusieurs passages (`regles.md`, section 7) : c'est normal, la qualité prime sur la vitesse.
 
 ## 1. Choisir le travail
 
@@ -31,7 +31,7 @@ S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du
 
 ## 3. Rédiger et construire
 
-- **Création** : écris le plan JSON complet en suivant la structure commune et le corps du type (`regles.md`, section 4) : vocabulaire au début, « L'essentiel », « Pour aller plus en profondeur », « Testez-vous » et corrigé, liens, nouveautés, références, historique. Respecte les sections 3, 5 et 6 : une idée par diapo, **une source sur chaque diapo**, au moins un schéma toutes les 3 diapos. Puis construis le cours par tranches (section 7). Au-delà de 50 diapos, crée la partie 2 (section 4).
+- **Création** : écris le plan JSON complet en suivant la structure commune et le corps du type (`regles.md`, section 4) : vocabulaire au début, « L'essentiel », « Pour aller plus en profondeur », « Testez-vous » et corrigé, liens, nouveautés, références, historique. Respecte les sections 3, 5 et 6 : une idée par diapo, **une source sur chaque diapo**, au moins un visuel toutes les 2 diapos. Ajoute la diapo « Articles phares » (encadré rouge, section 4) juste avant les références. Puis construis le cours par tranches (section 7). Au-delà de 100 diapos, crée la partie 2 (section 4).
 - **Lexique** : à la fin de chaque cours, ajoute en E de la ligne du lexique (ordre 2) les nouveaux termes définis dans ton cours (« À ajouter au lexique : terme1, terme2… (cours <ordre>) »), sans changer son statut : les mises à jour sont en pause jusqu'à la fin du DU (décision de Matis du 28/10/2026), et le lexique sera revu à ce moment-là.
 - **Mise à jour** : reprends le plan sur Drive et intègre chaque nouvel article :
   - dans la ou les diapos concernées (chiffre, recommandation, protocole), avec sa source ;

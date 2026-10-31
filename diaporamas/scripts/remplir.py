@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 
-MAX_PUCES = {"Mtexte": 360, "Mplan": 600, "Mrefs": 2500, "Mimage": 300, "Mfluxv": 300, "Mchiffres": 300,
+MAX_PUCES = {"Mtexte": 360, "Mplan": 600, "Mrefs": 2500, "Mphares": 1400, "Mimage": 300, "Mfluxv": 300, "Mchiffres": 300,
              "Mretenir": 320, "Mcolonnes2": 380}
 
 
@@ -54,6 +54,8 @@ def choisir_modele(s, avert, num):
         return "Mcolonnes2"
     if genre == "references":
         return "Mrefs"
+    if genre == "phares":                 # articles phares : encadré rouge, juste avant les références
+        return "Mphares"
     if genre == "tableau":
         nc = max(len(r) for r in s["lignes"])
         if nc > 3 or len(s["lignes"]) > 9:
@@ -114,7 +116,7 @@ def diapo(s, num, prefixe, avert, surtitre=""):
     modele = choisir_modele(s, avert, num)
     page = f"{prefixe}{num:03d}diapo"
     ids = {modele: page}
-    if modele.startswith(("Mtexte", "Mplan", "Mrefs", "Mfluxv", "Mchiffres", "Mretenir")) or modele == "Mimage":
+    if modele.startswith(("Mtexte", "Mplan", "Mrefs", "Mphares", "Mfluxv", "Mchiffres", "Mretenir")) or modele == "Mimage":
         ids[f"{modele}_corps"] = f"{page}_corps"
     if modele == "Mcolonnes2":
         ids.update({"Mcolonnes2_c1": f"{page}_c1", "Mcolonnes2_c2": f"{page}_c2"})
@@ -146,7 +148,7 @@ def diapo(s, num, prefixe, avert, surtitre=""):
         r("CONCLUSION", "> " + nettoyer(s["conclusion"]) if s.get("conclusion") else "")
         if len(s.get("conclusion", "")) > 55:
             avert.append(f"Diapo {num} : conclusion trop longue ({len(s['conclusion'])} caractères, 55 au maximum)")
-    if modele not in ("Mplan", "Mrefs"):
+    if modele not in ("Mplan", "Mrefs", "Mphares"):
         sources = s.get("sources")
         if not sources:
             avert.append(f"Diapo {num} : aucune source (obligatoire sur chaque diapo de contenu)")

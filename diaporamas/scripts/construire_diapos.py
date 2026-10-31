@@ -32,6 +32,8 @@ Champs supplémentaires (remplir.py uniquement) : "surtitre" (sinon le titre de 
 Schéma "cercles" : {"type": "cercles", "elements": [["5-8 %", "libellé"], ...]} (3 ou 4, sans puces).
 
 Types de diapo supplémentaires (remplir.py uniquement) :
+  {"type": "phares", "titre": "Articles phares", "puces": ["**Auteur, revue année, PMID** : ce qu'il a apporté", ...]}
+     (encadré rouge, juste avant les références)
   {"type": "retenir", "titre": "À retenir", "message": "Une phrase forte", "puces": [...], "sources": [...]}
   {"type": "colonnes", "titre": "...", "colonnes": [{"titre": "Périphérique", "puces": [...]},
                                                     {"titre": "Central", "puces": [...]}], "sources": [...]}

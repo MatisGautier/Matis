@@ -15,6 +15,8 @@ Tant qu'il en reste, garde **toujours 3 cours prioritaires** à `À rédiger`, m
 
 Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG, calorique, fauteuil, vHIT, schémas vasculaires) tirés d'articles en accès libre CC BY (`regles.md`, section 6), des valeurs normales et seuils chiffrés, des exemples normal / pathologique, et la lecture pas à pas d'un compte rendu.
 
+**Cours plus longs (Matis, 31/10/2026)** : 60 à 100 diapos par cours, jamais plus de 100. Matis autorise à reprendre les cours découpés en parties : quand le DU sera terminé (étape 4), fusionne les parties d'un même cours si l'ensemble tient en 100 diapos (par exemple le lexique 2 et 2,1), et ajoute aux cours déjà validés la diapo « Articles phares » (encadré rouge) et les figures manquantes. Les cours écrits à partir d'aujourd'hui suivent directement le nouveau format.
+
 **Priorité de Matis : d'abord terminer tout le DU, trois cours par jour (vers 4 h, 11 h et 18 h ; décision de Matis du 30/10/2026).** Les mises à jour des cours déjà validés attendent la fin du programme (étapes 3 et 4) ; les nouveautés de la veille sont notées pour plus tard et utilisées dans les cours encore à écrire.
 
 ## À chaque passage
@@ -25,7 +27,7 @@ Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG,
 4. **Quand tous les cours sont validés** : passe en `À mettre à jour` les diaporamas qui ont des lignes « À intégrer plus tard » (en les renommant « Intégrer : … »), puis applique la révision trimestrielle (dernière mise à jour I de plus de 90 jours → `À mettre à jour`, avec en E : « Révision trimestrielle : chercher dans PubMed les recommandations, consensus, méta-analyses et essais publiés depuis <date I> et mettre à jour les chiffres et les références. »). Préviens Mage dans ton bilan que la phase de mise à jour commence.
 5. **Nouveaux cours** : s'il y a moins de 4 lignes à `À rédiger` ou `En cours`, passe les lignes `À faire` de plus petit ordre (colonne A) à `À rédiger`, jusqu'à en avoir 4 (le rédacteur en fait 3 par jour). On bâtit le DU **dans l'ordre des modules**, car chaque cours s'appuie sur les précédents. Pour chacune, écris en E des consignes précises :
    - l'angle et le public : kiné vestibulaire, niveau DU, avec ouverture neurologique ;
-   - le nombre de diapos visé (30 à 50, ou partie 1 / partie 2 si le sujet est très vaste) ;
+   - le nombre de diapos visé (60 à 100 ; partie 2 seulement au-delà de 100) ;
    - 8 à 12 points incontournables, dont le vocabulaire à définir ;
    - ce que doit contenir « Pour aller plus en profondeur » ;
    - les critères ou recommandations de référence à utiliser ;
