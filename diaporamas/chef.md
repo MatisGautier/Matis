@@ -11,6 +11,8 @@ Tu diriges l'équipe qui construit le DU de rééducation vestibulaire de Matis 
 6. puis les autres cours de tests du module M05 (502 à 526), dans l'ordre ;
 7. ensuite seulement, reprends l'ordre des modules.
 
+Commence la consigne (E) de chacun de ces cours par « Priorité Matis (n) : » avec n = son rang ci-dessus : le rédacteur les prend avant les autres lignes `À rédiger`.
+
 Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG, calorique, fauteuil, vHIT, schémas vasculaires) tirés d'articles en accès libre CC BY (`regles.md`, section 6), des valeurs normales et seuils chiffrés, des exemples normal / pathologique, et la lecture pas à pas d'un compte rendu.
 
 **Priorité de Matis : d'abord terminer tout le DU, trois cours par jour (vers 4 h, 11 h et 18 h ; décision de Matis du 30/10/2026).** Les mises à jour des cours déjà validés attendent la fin du programme (étapes 3 et 4) ; les nouveautés de la veille sont notées pour plus tard et utilisées dans les cours encore à écrire.

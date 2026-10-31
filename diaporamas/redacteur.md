@@ -8,7 +8,7 @@ Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 1. `En cours` avec un avancement incomplet en N : **termine d'abord ce qui est commencé** ;
 2. `À corriger` : remarques du relecteur en K ;
 3. `À mettre à jour` : articles à intégrer en E (il n'y en aura qu'une fois tout le DU terminé : les lignes « À intégrer plus tard » ne sont pas à traiter) ;
-4. `À rédiger` : celle de plus petit ordre (A).
+4. `À rédiger` : d'abord celles dont la consigne (E) commence par « Priorité Matis », dans l'ordre où le chef les a listées ; sinon celle de plus petit ordre (A).
 
 **Rythme voulu par Matis (30/10/2026) : trois nouveaux cours par jour, pas plus.** Un à chaque passage : vers 4 h, vers 11 h et vers 18 h, heure de Paris. La qualité ne baisse pas : si un cours n'est pas fini, termine-le au passage suivant plutôt que de bâcler. À chaque passage, commence par les priorités 1 à 3 : cours commencé, corrections du relecteur, mises à jour. Ensuite seulement, prends une nouvelle ligne `À rédiger`. Ne commence jamais plus d'un nouveau cours par passage.
 
