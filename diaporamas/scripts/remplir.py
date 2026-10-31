@@ -92,6 +92,18 @@ def choisir_modele(s, avert, num):
     return "Mtexte"
 
 
+ROUGE = {"red": 0.85, "green": 0.11, "blue": 0.11}
+PHARE = "★"                                  # une source ou une référence qui commence par ★ est un article phare
+
+
+def en_rouge(objet, debut, fin):
+    """Article phare : écrit en rouge et en gras dans la bibliographie (encadré du bas, références)."""
+    return {"updateTextStyle": {"objectId": objet,
+                                "textRange": {"type": "FIXED_RANGE", "startIndex": debut, "endIndex": fin},
+                                "style": {"bold": True, "foregroundColor": {"opaqueColor": {"rgbColor": ROUGE}}},
+                                "fields": "bold,foregroundColor"}}
+
+
 def remplacer(page, cle, valeur):
     return {"replaceAllText": {"containsText": {"text": "{{" + cle + "}}", "matchCase": True},
                                "replaceText": valeur, "pageObjectIds": [page]}}
@@ -123,6 +135,9 @@ def diapo(s, num, prefixe, avert, surtitre=""):
     if modele.startswith("Mtab"):
         ids = {modele: page, f"{modele}_tab": f"{page}_tab"}
     ids[f"{modele}_titre"] = f"{page}_titre"     # tous les modèles ont une zone <modèle>_titre
+    avec_sources = modele not in ("Mtitre", "Msection", "Mplan", "Mrefs", "Mphares")
+    if avec_sources:
+        ids[f"{modele}_src"] = f"{page}_src"
     req = [{"duplicateObject": {"objectId": modele, "objectIds": ids}},
            {"updateSlidesPosition": {"slideObjectIds": [page], "insertionIndex": num - 1}},
            {"updateSlideProperties": {"objectId": page, "slideProperties": {"isSkipped": False},
@@ -153,6 +168,11 @@ def diapo(s, num, prefixe, avert, surtitre=""):
         if not sources:
             avert.append(f"Diapo {num} : aucune source (obligatoire sur chaque diapo de contenu)")
         r("SOURCES", " ; ".join(sources or []))
+        pos = len("Sources : ")                  # texte du modèle : « Sources : {{SOURCES}} »
+        for src in sources or []:
+            if src.startswith(PHARE):
+                req.append(en_rouge(f"{page}_src", pos, pos + len(src)))
+            pos += len(src) + 3
     if modele.startswith("Mtab"):
         lignes = s["lignes"][:9]
         nc = int(modele[-1])
@@ -186,6 +206,12 @@ def diapo(s, num, prefixe, avert, surtitre=""):
             avert.append(f"Diapo {num} : texte trop long ({len(brut)} caractères, {limite} au maximum)")
         r("PUCES", brut)
         req.extend(sous_puces(page, brut))
+        if modele in ("Mrefs", "Mphares"):
+            pos = 0
+            for ligne in brut.split("\n"):
+                if ligne.startswith(PHARE):
+                    req.append(en_rouge(f"{page}_corps", pos, pos + len(ligne)))
+                pos += len(ligne) + 1
         if modele == "Mtexte" and sum(max(1, -(-len(l) // 55)) for l in brut.split("\n") if l.strip()) > 8:
             req.append({"updateTextStyle": {"objectId": f"{page}_corps", "textRange": {"type": "ALL"},  # 8 lignes en 22 pt
                                             "style": {"fontSize": {"magnitude": 19, "unit": "PT"}}, "fields": "fontSize"}})

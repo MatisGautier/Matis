@@ -69,6 +69,12 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
 
 ## 3. Niveau : un vrai DU, clair
 
+**Objectif du DU (Matis, 31/10/2026) : un kiné qui part de zéro doit pouvoir, avec ce DU et ses ressources, gérer une patientèle 100 % vestibulaire.** D'où deux niveaux dans chaque cours :
+- **le socle**, compréhensible sans prérequis (vocabulaire défini, mécanismes expliqués simplement, gestes pas à pas) et directement utilisable au cabinet : quoi demander, quoi tester, comment interpréter, quoi faire, quand adresser ;
+- **« Pour aller plus en profondeur »**, pour les meilleurs et ceux qui veulent pousser : mécanismes fins, controverses, recherche récente.
+
+Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s'y prête : protocoles, check-lists, trames de bilan et de compte rendu, arbres décisionnels, valeurs normales et seuils.
+
 - **Rigueur universitaire** : définitions exactes, critères officiels (Bárány Society/ICVD, HAS, AAO-HNS, APTA), mécanismes expliqués, chiffres sourcés, niveau de preuve indiqué, controverses signalées.
 - **Ouverture neurologique** : relie toujours le sujet au système nerveux (voies, centres, plasticité, diagnostics différentiels centraux).
 - **Clarté** : **une idée par diapo**, 6 puces au maximum, 20 mots au maximum par puce, gras sur 1-2 mots clés.
@@ -128,6 +134,7 @@ Le numéro d'ordre (colonne A) donne le module : 1 à 99 = M00, 101 à 199 = M01
   5. ouvrages de référence (anatomie, neuro-otologie, neuro-ophtalmologie) ;
   6. fiches de la veille (onglet `Tous les articles`, statut « Fiche envoyée »).
 - La diapo « Références » liste toutes les sources en entier : auteurs, titre, revue ou éditeur, année, PMID ou DOI.
+- **Articles phares en rouge dans la bibliographie (Matis, 31/10/2026)** : dans l'encadré des sources en bas de chaque diapo et dans les dernières diapos (« Articles phares », « Références »), un article phare (article princeps, critères Bárány, recommandation, Cochrane, grand essai ou méta-analyse de référence) commence par « ★ » dans le plan : `remplir.py` l'écrit alors en **rouge et en gras**. Le rouge ne sert qu'à la bibliographie, jamais dans le texte des diapos.
 
 ## 6. Mise en page : propre, visuelle, pas que des tableaux
 
