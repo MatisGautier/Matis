@@ -29,6 +29,11 @@ Ces avis servent au score (règles, section 4) : plus Matis répond, plus la sé
 
 Lis `'Tous les articles'!A:X`.
 - **Fiches à rédiger** : les lignes `En attente`, triées par score décroissant puis par date d'ajout (A) la plus ancienne. Prends-en **10 au maximum**. Les autres restent en attente pour demain : un article en attente n'est **jamais** abandonné ni rétrogradé.
+- **Articles phares (consigne de Matis, 31/10/2026)** : s'il y a moins de 10 fiches à rédiger, complète avec des **articles phares**, jusqu'à 10 fiches au total et **5 articles phares au maximum par jour**. Un article phare est une publication de référence qui fonde la pratique vestibulaire : article princeps (par exemple le head impulse test de Halmagyi 1988, le HINTS de Kattah 2009, la manœuvre d'Epley 1992), critères de la Bárány Society, recommandation (HAS, AAO-HNS, SFORL), revue Cochrane, grand essai randomisé ou méta-analyse de référence. Pour les choisir, dans cet ordre :
+  1. les sujets des prochains cours du DU (onglet `Diaporamas`, lignes `À rédiger` puis les premières `À faire`), pour que les fiches servent aussi aux cours ;
+  2. sinon, les pathologies prioritaires (règles, section 1), en variant les thèmes d'un jour à l'autre.
+  
+  Vérifie chaque article dans PubMed (`get_article_metadata`) et écarte ceux déjà présents dans le tableau (PMID en P, titre en G). Ajoute pour chacun une ligne dans « Tous les articles » (`append_values`) : A = date du jour, B = date de publication, D = `En attente` puis `Fiche envoyée`, E = score calculé normalement mais avec la nouveauté remplacée par l'importance historique (0 à 2), T = `Article phare`. Dans la fiche, commence `en_bref` par « Article phare (<année>) : » et explique dans `impact_pratique` ce qui a changé depuis (études plus récentes, recommandations actuelles). Dans « Mes fiches », la colonne C vaut `Fiche article (phare)`. Les articles phares ne passent jamais avant un article `En attente`.
 - **Fiches patients en retard** : les lignes `Fiche envoyée` des 2 derniers jours dont la colonne S est vide. Ce sont des articles urgents envoyés par la Collecte. Pour elles, seule la fiche patient est à faire (section 4).
 
 ## 3. Fiche brainstorming (2 pages pleines)
@@ -101,7 +106,7 @@ Consigne de Matis (30/10/2026) : plus de mail détaillé par article. Les fiches
 2. `send_message` à Matis, avec `htmlBody`, sans pièce jointe :
    - sujet : `[Veille Vestibulaire] ☀️ <n> nouvelle(s) fiche(s) – <JJ/MM>` ;
    - une ligne : « <n> nouvelles fiches, rangées sur ton Drive : » ;
-   - la liste **numérotée** des nouvelles fiches, une ligne chacune : « <n>. <pastille> <Catégorie> – <Type> : <Titre> » (pastilles : règles, section 5 ; 📚 pour une synthèse) ;
+   - la liste **numérotée** des nouvelles fiches, une ligne chacune : « <n>. <pastille> <Catégorie> – <Type> : <Titre> » (ajoute « ⭐ » devant le titre d'un article phare) (pastilles : règles, section 5 ; 📚 pour une synthèse) ;
    - « 📋 Toutes tes fiches : » avec le lien vers l'onglet « Mes fiches » : `https://docs.google.com/spreadsheets/d/<tableau>/edit#gid=30` ;
    - s'il y en a, une ligne **🎓 Diaporamas** : pour chaque ligne `Validé` de `Diaporamas!A:L` dont L est vide ou plus ancienne que I, « Nouveau diaporama » ou « Diaporama mis à jour » : <sujet> avec son lien (F) ; puis écris la date du jour en L ;
    - en pied : « 💬 Réponds avec les numéros pour me dire ce qui t'est utile, par exemple : 1 👍 2 👎 3 appliqué. »
