@@ -12,7 +12,7 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**
    - b. **Références** : vérifie avec `get_article_metadata` tous les PMID s'il y en a 15 ou moins, sinon au moins 15 tirés au hasard. Titre, premier auteur et année doivent concorder avec ce qui est écrit.
    - c. **Chiffres** : choisis 5 chiffres au hasard et retrouve-les dans la source citée (résumé ou texte intégral).
    - d. **Fond** : rien de faux ou de dangereux, rien de contraire aux recommandations ; les signes d'alerte sont présents pour une pathologie.
-   - e. **Forme** : une idée par diapo, 6 puces au maximum, pas de texte coupé (une diapo dont le texte a été réduit sous 11 pt est trop chargée), au moins un schéma toutes les 3 diapos, les images s'affichent (`contentUrl` présent), chaque image a un crédit.
+   - e. **Forme** : une idée par diapo, 6 puces au maximum, pas de texte coupé (une diapo dont le texte a été réduit sous 11 pt est trop chargée), au moins un schéma toutes les 2 diapos, les images s'affichent (`contentUrl` présent), chaque image a un crédit.
    - e ter. **Voir le rendu réel** (les miniatures de Slides ne s'ouvrent pas depuis ton environnement) :
      1. exporte la présentation en PDF avec `download_file_content` (`exportMimeType: application/pdf`) ;
      2. le résultat est enregistré dans un fichier JSON ; décode son champ `content` (base64) en PDF ;

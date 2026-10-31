@@ -155,7 +155,7 @@ Règles de mise en page :
 - **Une idée par diapo**, 3 à 5 puces courtes. Au-delà, coupe en deux diapos.
 - Le lexique (M00) peut utiliser plus de tableaux, mais il alterne avec des diapos `colonnes`, `retenir` et des schémas toutes les 3 ou 4 diapos.
 
-### Schémas : au moins un toutes les 3 diapos de contenu
+### Schémas : au moins un toutes les 2 diapos de contenu
 
 Les schémas viennent des **diapos modèles** (section 7). Limites à respecter :
 - **`flux`** : des étapes reliées par des flèches, pour un mécanisme, une voie nerveuse, un déroulé ou un arbre décisionnel. **3 à 5 étapes**, textes courts (une étape peut tenir sur 2 lignes avec `\n`). Avec des puces, le flux s'affiche verticalement à droite ; sans puces, horizontalement en pleine largeur.
