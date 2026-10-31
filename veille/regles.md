@@ -54,8 +54,8 @@ Bonus, avec un plafond à 10 :
 - **avis de Matis** (colonnes C, O et U du tableau) : articles proches (mêmes mots-clés ou même pathologie) jugés « Oui » ou « Appliqué au cabinet » → **+1** ; jugés « Non » → **-1**.
 
 Décision :
-- **≥ 6** → statut « En attente » (une fiche sera rédigée) ;
-- **4-5** → statut « À survoler » (pas de fiche) ;
+- **≥ 5** → statut « En attente » (une fiche sera rédigée ; seuil abaissé de 6 à 5 par Matis le 31/10/2026) ;
+- **4** → statut « À survoler » (pas de fiche) ;
 - **≤ 3** → ignoré.
 
 ## 5. Catégorie (première règle qui s'applique)

@@ -43,8 +43,8 @@ Pour chaque nouvel article :
 3. Choisis la catégorie (section 5).
 
 Ensuite, selon le score :
-- **≥ 6** : ligne au statut `En attente`, avec les colonnes A à T et W remplies. Lis le résumé, et le texte intégral via `get_full_text_article` quand `identifiers.pmc` existe, pour écrire un « En bref » et un « Impact » justes.
-- **4-5** : ligne au statut `À survoler`.
+- **≥ 5** : ligne au statut `En attente`, avec les colonnes A à T et W remplies. Lis le résumé, et le texte intégral via `get_full_text_article` quand `identifiers.pmc` existe, pour écrire un « En bref » et un « Impact » justes.
+- **4** : ligne au statut `À survoler`.
 - Laisse U et V vides (`""`), et X vide.
 
 ## 3. Article urgent (score ≥ 8) : fiche tout de suite
