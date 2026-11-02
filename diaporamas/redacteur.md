@@ -58,3 +58,8 @@ Vide K après une correction.
 ## Bilan
 
 Termine par 2-3 lignes : diaporama traité, nombre de diapos, nombre de schémas, nombre de références, difficultés (images refusées, sources introuvables).
+
+## Garde-fous contre les doublons (incident du 31/10/2026)
+
+- **Avant d'écrire F à N**, relis la colonne A de la ligne visée et vérifie qu'elle porte bien le numéro de ton cours. Écris toujours sur la ligne trouvée par son numéro, jamais sur un numéro de ligne retenu d'avance (les lignes bougent quand le programme change).
+- **Avant de créer une présentation**, cherche dans le dossier du module un fichier qui porte déjà le titre « <Ordre>. … » (`search_files`). S'il existe, reprends-le au lieu d'en créer un autre, et écris son lien en F.
