@@ -223,3 +223,8 @@ Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** 
 - remplace le plan sur Drive (corbeille pour l'ancien).
 
 Une petite correction (texte, taille, position) se fait directement dans la présentation, sans reconstruire. Pour ajouter une diapo, duplique une diapo du cours de même type (`duplicateObject`) et remplace ses textes.
+
+## 8. Lecture économe et bilan écrit (consigne de Matis, 02/11/2026)
+
+- **Lis seulement ce qu'il faut.** Ne charge pas l'onglet `Diaporamas` en entier : lis la ligne du cours qui t'intéresse, ou `Diaporamas!A:D` pour la liste des statuts, et les colonnes E à N seulement pour les lignes que tu traites. Les plans JSON et les diapos ne se relisent que pour le cours en cours.
+- **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`, `append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« DU Chef de projet », « DU Rédacteur » ou « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : cours traités (numéro et diapos x/y), problèmes, notes DIU à vérifier, ce qui demande une action de Matis. Mage lit cet onglet ; ton message de fin de session n'est plus relu.

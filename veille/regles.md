@@ -145,3 +145,9 @@ Matis ne veut plus de mail par article. Il veut des **PDF bien rangés** et **un
 Le séparateur dans `HYPERLINK` est le point-virgule (tableau en français). Ne modifie jamais les lignes existantes, sauf la colonne G (agent Rédaction).
 3. **Mail** : un seul petit mail par jour, envoyé par l'agent Rédaction (`redaction.md`, section 7), qui donne seulement les noms des nouvelles fiches et le lien vers l'onglet. Aucun autre mail sur les articles.
 
+
+## 10. Lecture économe et bilan écrit (consigne de Matis, 02/11/2026)
+
+- **Lis seulement ce qu'il faut.** Ne charge jamais un onglet entier : demande les colonnes utiles de la ligne ou de la plage dont tu as besoin (par exemple `'Tous les articles'!A2:F` pour le tri, `'Tous les articles'!P:P` pour les PMID déjà connus). Pas de relecture de l'historique des passages précédents : le tableau fait foi.
+- **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (`append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« Collecte », « Rédaction », « Tri des mails », « DU Chef de projet », « DU Rédacteur », « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : ce qui a été fait, ce qui a échoué et pourquoi, ce qui demande une action de Matis. Mage lit cet onglet ; ton message de fin de session n'est plus relu.
+- Si tu n'as rien fait et rien à signaler, écris quand même la ligne (« rien de nouveau »).
