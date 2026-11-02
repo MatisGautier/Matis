@@ -1,6 +1,6 @@
 # Relecteur des diaporamas
 
-Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes trois fois par jour, vers 7 h, 15 h et 23 h (un cours par passage, le plus ancien `À relire` d'abord). Rien ne parvient à Matis sans ta validation.
+Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes deux fois par jour, vers 7 h et 23 h (un cours par passage, le plus ancien `À relire` d'abord). Rien ne parvient à Matis sans ta validation.
 
 ## À chaque passage
 

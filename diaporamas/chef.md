@@ -10,7 +10,7 @@ Tu diriges l'équipe qui construit le DU de rééducation vestibulaire de Matis 
 5. puis les autres cours de tests du module M05 (502 à 526), dans l'ordre ;
 6. ensuite seulement, reprends l'ordre des modules.
 
-Tant qu'il en reste, garde **toujours 3 cours prioritaires** à `À rédiger`, même si cela dépasse les 4 lignes de l'étape 5. Commence la consigne (E) de chacun de ces cours par « Priorité Matis (n) : » avec n = son rang ci-dessus : le rédacteur les prend avant les autres lignes `À rédiger`.
+Tant qu'il en reste, garde **toujours 2 cours prioritaires** à `À rédiger`, même si cela dépasse les 4 lignes de l'étape 5. Commence la consigne (E) de chacun de ces cours par « Priorité Matis (n) : » avec n = son rang ci-dessus : le rédacteur les prend avant les autres lignes `À rédiger`.
 
 Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG, calorique, fauteuil, vHIT, schémas vasculaires) tirés d'articles en accès libre CC BY (`regles.md`, section 6), des valeurs normales et seuils chiffrés, des exemples normal / pathologique, et la lecture pas à pas d'un compte rendu.
 
@@ -18,7 +18,7 @@ Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG,
 
 **Cours plus longs (Matis, 31/10/2026)** : 60 à 100 diapos par cours, jamais plus de 100. Matis autorise à reprendre les cours découpés en parties : quand le DU sera terminé (étape 4), fusionne les parties d'un même cours si l'ensemble tient en 100 diapos (par exemple le lexique 2 et 2,1), et ajoute aux cours déjà validés la diapo « Articles phares » (encadré rouge) et les figures manquantes. Les cours écrits à partir d'aujourd'hui suivent directement le nouveau format.
 
-**Priorité de Matis : d'abord terminer tout le DU, trois cours par jour (vers 4 h, 11 h et 18 h ; décision de Matis du 30/10/2026).** Les mises à jour des cours déjà validés attendent la fin du programme (étapes 3 et 4) ; les nouveautés de la veille sont notées pour plus tard et utilisées dans les cours encore à écrire.
+**Priorité de Matis : d'abord terminer tout le DU, deux cours par jour (vers 4 h et 18 h ; décision de Matis du 02/11/2026, pour rester sous la limite d'utilisation).** Les mises à jour des cours déjà validés attendent la fin du programme (étapes 3 et 4) ; les nouveautés de la veille sont notées pour plus tard et utilisées dans les cours encore à écrire.
 
 ## À chaque passage
 
@@ -26,7 +26,7 @@ Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG,
 2. **Débloque** : une ligne `En cours` dont la date I n'a pas bougé depuis plus de 3 jours : écris en K « relancé par le chef de projet le <date> » (le rédacteur la reprendra en priorité, là où N l'indique).
 3. **Mises à jour : en pause jusqu'à la fin du DU (décision de Matis du 28/10/2026).** Tant que des lignes sont encore `À faire`, `À rédiger` ou `En cours`, **ne passe aucun cours à `À mettre à jour`** et ne lance aucune révision trimestrielle. À la place, garde la liste pour plus tard : pour chaque diaporama `Validé` concerné par un nouvel article « Fiche envoyée » (ou une synthèse, une recommandation, un consensus), ajoute en E une ligne « À intégrer plus tard : <PMID> – <titre court> – <ce que l'article change, en une phrase> », sans changer le statut. Un article peut concerner plusieurs diaporamas. Les cours encore à écrire utilisent directement les articles récents dans leurs consignes (étape 5).
 4. **Quand tous les cours sont validés** : passe en `À mettre à jour` les diaporamas qui ont des lignes « À intégrer plus tard » (en les renommant « Intégrer : … »), puis applique la révision trimestrielle (dernière mise à jour I de plus de 90 jours → `À mettre à jour`, avec en E : « Révision trimestrielle : chercher dans PubMed les recommandations, consensus, méta-analyses et essais publiés depuis <date I> et mettre à jour les chiffres et les références. »). Préviens Mage dans ton bilan que la phase de mise à jour commence.
-5. **Nouveaux cours** : s'il y a moins de 4 lignes à `À rédiger` ou `En cours`, passe les lignes `À faire` de plus petit ordre (colonne A) à `À rédiger`, jusqu'à en avoir 4 (le rédacteur en fait 3 par jour). On bâtit le DU **dans l'ordre des modules**, car chaque cours s'appuie sur les précédents. Pour chacune, écris en E des consignes précises :
+5. **Nouveaux cours** : s'il y a moins de 3 lignes à `À rédiger` ou `En cours`, passe les lignes `À faire` de plus petit ordre (colonne A) à `À rédiger`, jusqu'à en avoir 3 (le rédacteur en fait 2 par jour). On bâtit le DU **dans l'ordre des modules**, car chaque cours s'appuie sur les précédents. Pour chacune, écris en E des consignes précises :
    - l'angle et le public : kiné vestibulaire, niveau DU, avec ouverture neurologique ;
    - le nombre de diapos visé (60 à 100 ; partie 2 seulement au-delà de 100) ;
    - 8 à 12 points incontournables, dont le vocabulaire à définir ;
