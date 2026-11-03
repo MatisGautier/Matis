@@ -32,7 +32,7 @@ Mets ensuite le libellé « Alertes traitées » (voir Paramètres) sur le mail.
 
 **WebSearch, seulement au passage du matin**, sur les 30 derniers jours :
 - `site:has-sante.fr vertige OR vestibulaire OR VPPB OR "trouble de l'équilibre" OR chute`
-- `site:sforl.org vertige OR vestibulaire recommandation`
+- `site:sforl.org recommandation` puis `site:sforl.org recommandations de bonne pratique` : **toutes les recommandations de la SFORL** qui touchent le patient vertigineux ou ses comorbidités (vertige, vestibulaire, VPPB, Ménière, surdité brusque, acouphènes, hyperacousie, apnée du sommeil, otite, cholestéatome, schwannome, presbyacousie, implant cochléaire, enfant). Une recommandation SFORL nouvelle ou mise à jour va en catégorie HAS, avec un score d'au moins 6 (consigne de Matis, 03/11/2026).
 - `"Kinésithérapie, la Revue" vestibulaire OR vertige OR VPPB`
 
 ## 2. Trier et inscrire

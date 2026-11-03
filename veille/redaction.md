@@ -51,6 +51,11 @@ Le JSON contient :
 
 Applique la section 7 des règles (lien avec les fiches précédentes).
 
+**Recommandations de la SFORL (consigne de Matis, 03/11/2026)** : pour chaque fiche, cherche s'il existe une recommandation de la Société française d'ORL sur le sujet (WebSearch `site:sforl.org <sujet> recommandation`), par exemple sur la pathologie traitée, l'apnée du sommeil, les acouphènes, la surdité brusque, le VPPB ou la rééducation vestibulaire. Si elle existe :
+- cite-la dans `pour_aller_plus_loin` (« SFORL, <titre>, <année> », avec son lien) ;
+- dis dans `impact_pratique` ce qu'elle recommande et si l'article la confirme, la nuance ou la contredit ;
+- n'invente jamais une recommandation : si la recherche ne trouve rien, n'en parle pas.
+
 Génère le PDF avec `python3 scripts/generer_pdf.py fiche.json <Categorie>_<titre-court-sans-accents>_PMID<numéro>.pdf`. Il doit faire 2 pages, avec la page 2 remplie à 75 % au moins. Si le script affiche « À ENRICHIR », complète la fiche et relance. Regarde le rendu (`pdftoppm -png -r 60`, puis Read) : rien de coupé, pas de « ? » à la place d'un accent.
 
 Dépose-la dans le sous-dossier de sa catégorie, dans « Fiches articles » (section 5 et règles, section 9).
