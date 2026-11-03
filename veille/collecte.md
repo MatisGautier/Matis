@@ -32,6 +32,7 @@ Mets ensuite le libellé « Alertes traitées » (voir Paramètres) sur le mail.
 
 **WebSearch, seulement au passage du matin**, sur les 30 derniers jours :
 - `site:has-sante.fr vertige OR vestibulaire OR VPPB OR "trouble de l'équilibre" OR chute`
+- Sites officiels, à chaque passage du matin (WebSearch, 30 derniers jours), consigne de Matis du 03/11/2026 : `site:barany.org` (consensus et classifications de la Bárány Society) ; `site:cochranelibrary.com vertigo OR vestibular OR BPPV OR Meniere` (revues Cochrane) ; `site:entnet.org` (recommandations AAO-HNS) ; `site:nice.org.uk vertigo OR vestibular OR BPPV OR Meniere` (recommandations NICE) ; `site:orpha.net vestibulaire OR vertige` (maladies rares, pour les cours génétiques) ; `site:sfneuro.org vertige OR migraine vestibulaire` (neurologie). Une recommandation trouvée va en catégorie HAS, comme celles de la SFORL ; une revue Cochrane ou une fiche Orphanet ne donne une fiche que si elle est récente et touche la pratique.
 - `site:sforl.org recommandation` puis `site:sforl.org recommandations de bonne pratique` : **toutes les recommandations de la SFORL** qui touchent le patient vertigineux ou ses comorbidités (vertige, vestibulaire, VPPB, Ménière, surdité brusque, acouphènes, hyperacousie, apnée du sommeil, otite, cholestéatome, schwannome, presbyacousie, implant cochléaire, enfant). Une recommandation SFORL nouvelle ou mise à jour va en catégorie HAS, avec un score d'au moins 6 (consigne de Matis, 03/11/2026).
 - `"Kinésithérapie, la Revue" vestibulaire OR vertige OR VPPB`
 
