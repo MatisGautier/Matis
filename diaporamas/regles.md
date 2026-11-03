@@ -231,3 +231,12 @@ Une petite correction (texte, taille, position) se fait directement dans la pré
 
 - **Lis seulement ce qu'il faut.** Ne charge pas l'onglet `Diaporamas` en entier : lis la ligne du cours qui t'intéresse, ou `Diaporamas!A:D` pour la liste des statuts, et les colonnes E à N seulement pour les lignes que tu traites. Les plans JSON et les diapos ne se relisent que pour le cours en cours.
 - **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`, `append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« DU Chef de projet », « DU Rédacteur » ou « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : cours traités (numéro et diapos x/y), problèmes, notes DIU à vérifier, ce qui demande une action de Matis. Mage lit cet onglet ; ton message de fin de session n'est plus relu.
+
+## 11. Mises à jour visibles pour les kinés (consigne de Matis, 03/11/2026)
+
+Quand un cours **déjà `Validé`** change (correction, nouvelle partie, nouvelle référence, nouvelle recommandation), trois choses sont obligatoires :
+1. **Onglet `Nouveautés`** du tableau (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`) : ajoute une ligne (`append_values` sur `Nouveautés!A:E`) : A = date du jour (`JJ/MM/AAAA`), B = module (`M01`…), C = numéro et titre du cours, D = ce qui a changé, en deux phrases maximum et précis, E = **ce que ça change pour la pratique du kiné**, en une phrase concrète (geste, test, dosage, orientation, conseil au patient). Si rien ne change pour la pratique, écris « Pas de changement pour la pratique » : ne laisse pas E vide.
+2. **Mail à Matis** (`send_message`, à son adresse seulement) : objet « [DU] Mise à jour – <numéro> <titre> », quatre lignes : ce qui a changé, ce que ça change pour ta pratique, lien vers le cours, lien vers la page « Nouveautés » du site.
+3. **Colonne I de `Diaporamas`** : date de la mise à jour. Le site affiche alors « Mis à jour le … » en rouge pendant 30 jours.
+
+Un cours validé pour la première fois n'est pas une mise à jour : pas de ligne dans `Nouveautés`, l'annonce du petit mail suffit.
