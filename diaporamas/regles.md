@@ -240,3 +240,11 @@ Quand un cours **déjà `Validé`** change (correction, nouvelle partie, nouvell
 3. **Colonne I de `Diaporamas`** : date de la mise à jour. Le site affiche alors « Mis à jour le … » en rouge pendant 30 jours.
 
 Un cours validé pour la première fois n'est pas une mise à jour : pas de ligne dans `Nouveautés`, l'annonce du petit mail suffit.
+
+## 12. Partage des cours (décision de Matis, 03/11/2026)
+
+Chaque nouvelle présentation de cours doit être partagée **dès sa création**, et non laissée privée :
+- **Accès** : « toute personne disposant du lien » en **lecteur** (`share_file` avec `permissionId: "anyoneWithLink"`, `role: "reader"`). C'est ce lien qu'affiche le site.
+- **Téléchargement interdit aux lecteurs** : `update_file` avec `downloadRestriction: {"restrictedReader": true}`. Matis reste seul à pouvoir modifier et télécharger.
+- Si l'un de ces deux appels est refusé, ne tente pas de contournement : signale-le dans ton bilan (« partage du cours <numéro> à faire à la main »), et le relecteur le vérifiera.
+- Ne partage jamais le dossier « Notes du DIU » ni les plans JSON : ils restent privés.
