@@ -46,3 +46,7 @@ Une mise à jour (`À relire` après un `À mettre à jour`) se contrôle de la 
 ## Bilan
 
 Termine par 2-3 lignes : cours relu, validé ou renvoyé en correction (avec la raison principale), corrections faites toi-même.
+
+## Cours écrits avant le nouveau format (décision de Mage, 03/11/2026)
+
+Les cours dont la date de création (H) est antérieure au 01/11/2026 ont été écrits avec l'ancienne consigne de 35 à 50 diapos, sans diapo « Articles phares ». **Ne les renvoie pas `À corriger` pour leur taille, la diapo « Articles phares » ou les étoiles rouges** : le chef de projet les mettra à jour quand le DU sera terminé (`chef.md`, cours plus longs). Relis-les sur le fond (sources, chiffres, erreurs, mise en page) et valide-les si le fond est bon ; note en K « à passer au nouveau format en fin de DU ».
