@@ -104,6 +104,7 @@ Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s
   4. **« Vocabulaire du cours »** (1 à 3 diapos, en tableau : terme, définition, source) ;
   5. le corps du cours, selon le type (ci-dessous) ;
   6. **« L'essentiel »** : 5 à 8 messages à retenir pour le cabinet ;
+  6 bis. **« Ce que ça change pour ma pratique »** (demande de Matis, 03/11/2026), juste avant « L'essentiel », **dans tous les cours sauf l'anatomie et la physiologie pures** (tests, examens, pathologies, neurologie, ORL, pédiatrie, gériatrie, rééducation, traitements, pratique) : 3 à 6 diapos qui répondent à « en tant que kiné, qu'est-ce que ça m'apporte de savoir ça ? ». Exemple pour la VNG : un déficit canalaire droit, qu'est-ce que ça change pour mon bilan, mon diagnostic différentiel, mon choix d'exercices, mon dosage, mon pronostic, ce que je dis au patient et quand j'adresse au médecin. Toujours concret (situations de cabinet, décisions, phrases au patient), toujours sourcé. Pour l'anatomie et la physiologie, va au contraire très loin dans le détail, avec une seule diapo finale « Ce que cela explique en clinique » ;
   7. **« Pour aller plus en profondeur »** (4 à 8 diapos) : mécanismes avancés, détails anatomiques ou physiologiques fins, controverses, données récentes de recherche, questions non résolues, lectures de référence commentées ;
   8. **« Testez-vous »** (5 à 10 questions : QCM et cas éclair), puis **« Corrigé »** (chaque réponse expliquée en une ligne, avec sa source) ;
   9. **« Liens avec les autres cours »** (numéros et titres) ;

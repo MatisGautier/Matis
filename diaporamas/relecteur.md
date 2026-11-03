@@ -29,6 +29,7 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**
      
      Un cours monotone (surtout des tableaux ou des listes de puces) est renvoyé `À corriger`.
    - f. **Structure** : complète selon `regles.md`, section 4 : objectifs, vocabulaire, corps du type, « L'essentiel », « Pour aller plus en profondeur » (4 à 8 diapos, vraiment approfondi), « Testez-vous » et corrigé sourcé, liens, nouveautés, « Articles phares » (encadré rouge) puis références, avec les articles phares en rouge dans l'encadré des sources et dans les références (« ★ » dans le plan), historique ; 60 à 100 diapos, jamais plus de 100 ; consignes du chef (colonne E) respectées ; pour un cours du module M08, la partie « Enfant / adulte : ce qui change » est présente à la fin du corps, avant « L'essentiel » (sinon, renvoie `À corriger`).
+   - f ter. **« Ce que ça change pour ma pratique »** (`regles.md`, section 4, point 6 bis) : présente et concrète dans tout cours qui n'est pas de l'anatomie ou de la physiologie pure (sinon, renvoie `À corriger`, sauf pour un cours d'avant le 01/11/2026, voir plus bas).
    - f bis. **Niveau DU** : définitions exactes, mécanismes expliqués, ouverture neurologique, controverses signalées ; tout terme technique défini.
    - g. **Langue** : orthographe, abréviations développées, phrases claires.
 3. Décide :
