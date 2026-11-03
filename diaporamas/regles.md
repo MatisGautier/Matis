@@ -173,6 +173,7 @@ Les schémas viennent des **diapos modèles** (section 7). Limites à respecter 
   - Exemple qui fonctionne : `https://upload.wikimedia.org/wikipedia/commons/1/14/Blausen_0329_EarAnatomy_InternalEar.png`, crédit « Blausen.com staff (2014), Wikimedia Commons, CC BY 3.0 ».
   - Les planches de Gray (domaine public) sont précieuses pour l'anatomie.
   - **Figures d'articles (demande de Matis, 31/10/2026 : « complète bien avec des schémas des articles »)** : utilise aussi les figures d'articles **en accès libre sous licence CC BY ou CC BY-SA** (vérifie la licence avec `get_copyright_status` ou sur la page PMC de l'article ; jamais une figure d'un article sous droits, même cité). Tracés de VNG, courbes de vHIT, enregistrements de fauteuil rotatoire, schémas de vascularisation, arbres décisionnels publiés : c'est ce qui rend un cours de DU concret. Adresse de l'image : le fichier de la figure sur `europepmc.org` ou `ncbi.nlm.nih.gov/pmc` (lien direct vers le .jpg ou le .png). Crédit obligatoire : « Figure <n>, <Premier auteur> et al., <revue> <année>, PMID <n>, CC BY 4.0 ». Vise **au moins 2 figures d'articles** dans chaque cours de tests (M05) ou d'anatomie (M01, M02), quand il en existe.
+  - **Tu n'as pas besoin d'ouvrir l'image toi-même** : ton environnement bloque Wikimedia et Europe PMC, mais c'est Google Slides qui télécharge l'image depuis l'adresse, pas toi. Trouve l'adresse avec WebSearch (ou calcule-la pour Wikimedia, ci-dessus), passe-la à `replaceAllShapesWithImage`, et regarde seulement si Slides l'accepte. Ne renonce pas aux figures parce que l'adresse ne s'ouvre pas chez toi.
   - Si l'image est refusée, remplace-la par un `flux` ou un tableau.
 - **`chiffres`** : **2 ou 3** grands chiffres clés, à droite des puces.
 - La diapo **`tableau`** pour les comparaisons à plusieurs critères et le vocabulaire : **2 ou 3 colonnes, 9 lignes au maximum** (en-tête compris), textes courts. Avec modération (voir plus haut).
@@ -204,7 +205,7 @@ Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** 
 
 1. **Premier passage** :
    - fais la recherche, écris le **plan JSON complet**, vérifie-le avec le script ;
-   - enregistre le plan sur Drive, dans le dossier du module : `create_file` avec `textContent`, `contentMimeType: application/json`, `disableConversionToGoogleType: true`, titre « plan – <Ordre>. <Titre>.json » ;
+   - enregistre le plan sur Drive, dans le dossier du module : `create_file` avec `textContent`, `contentMimeType: application/json`, `disableConversionToGoogleType: true`, titre « plan – <Ordre>. <Titre>.json ». **Un plan de 60 à 100 diapos est long : s'il ne passe pas en un fichier, découpe-le en deux** (« … (diapos 1-50).json » et « … (diapos 51-100).json », chacun un JSON valide avec sa propre liste `diapos`). Le plan sur Drive est obligatoire : sans lui, une mise à jour devient impossible ;
    - crée la présentation : **`copy_file` de « Modèle DU »** dans le dossier du module, titre « <Ordre>. <Titre> », et note son lien en F ;
    - envoie les paquets, à la suite : un cours entier tient en un seul passage (environ 5 paquets) ;
    - après chaque paquet, mets à jour N (« 20/43 »).
