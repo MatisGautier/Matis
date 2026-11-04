@@ -202,7 +202,7 @@ Chaque diapo du cours = 3 petites requêtes + des remplacements de texte :
 
 Le script **`scripts/remplir.py plan.json sortie/ [prefixe] [premiere_diapo]`** fait tout cela et écrit `sortie/paquet_01.json` (10 diapos), `paquet_02.json`… à envoyer chacun avec **un** `update_presentation`, recopié à l'identique. Format du plan : en tête de `scripts/construire_diapos.py`. S'il refuse un schéma ou un texte trop long, il affiche « ATTENTION » : corrige le plan jusqu'à `OK`. Depuis le 29/10/2026, Matis a autorisé `remplir.py` et `ajuster_mise_en_page.py` dans le script d'installation de son environnement : écris le plan avec l'outil Write, place-toi dans `diaporamas/` avec un `cd` à part, puis lance le script dans sa propre commande commençant par `python3 scripts/`.
 
-**Si l'exécution du script est refusée**, écris toi-même les requêtes en suivant exactement le schéma ci-dessus : c'est simple et léger.
+**Si l'exécution du script est refusée**, écris toi-même les requêtes en suivant exactement le schéma ci-dessus : c'est simple et léger. Ne t'arrête pas pour autant et n'attends pas d'autorisation : construis au moins 25 diapos par passage, par paquets de 5 à 10 diapos (un `update_presentation` par paquet), note dans N où tu en es (ex. `40/100`), et le passage suivant reprend à la diapo suivante. Un cours « En cours » avec 0 diapo construite après un passage est un échec.
 
 1. **Premier passage** :
    - fais la recherche, écris le **plan JSON complet**, vérifie-le avec le script ;
@@ -230,7 +230,8 @@ Une petite correction (texte, taille, position) se fait directement dans la pré
 ## 8. Lecture économe et bilan écrit (consigne de Matis, 02/11/2026)
 
 - **Lis seulement ce qu'il faut.** Ne charge pas l'onglet `Diaporamas` en entier : lis la ligne du cours qui t'intéresse, ou `Diaporamas!A:D` pour la liste des statuts, et les colonnes E à N seulement pour les lignes que tu traites. Les plans JSON et les diapos ne se relisent que pour le cours en cours.
-- **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`, `append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« DU Chef de projet », « DU Rédacteur » ou « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : cours traités (numéro et diapos x/y), problèmes, notes DIU à vérifier, ce qui demande une action de Matis. Mage lit cet onglet ; ton message de fin de session n'est plus relu.
+- **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`, `append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« DU Chef de projet », « DU Rédacteur » ou « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : cours traités (numéro et diapos x/y), problèmes, notes DIU à vérifier, ce qui demande une action (de Mage ou de Matis). Mage lit cet onglet ; ton message de fin de session n'est plus relu.
+- **Message de fin de session : une seule ligne, sans alerte** (consigne de Matis, 04/11/2026 : il voit ces messages dans l'app Claude et ne veut plus y lire de problèmes). Écris exactement : « Passage terminé – bilan écrit dans l'onglet Bilans. » Rien d'autre : pas de liste de problèmes, pas d'« action requise », pas de question à Matis. Les problèmes vont uniquement dans `Bilans` ; Mage les traite et en rend compte à Matis dans son rapport du matin.
 
 ## 11. Mises à jour visibles pour les kinés (consigne de Matis, 03/11/2026)
 

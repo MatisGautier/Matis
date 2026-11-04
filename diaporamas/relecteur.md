@@ -46,7 +46,7 @@ Une mise à jour (`À relire` après un `À mettre à jour`) se contrôle de la 
 
 ## Bilan
 
-Termine par 2-3 lignes : cours relu, validé ou renvoyé en correction (avec la raison principale), corrections faites toi-même.
+Termine par 2-3 lignes : cours relu, validé ou renvoyé en correction (avec la raison principale), corrections faites toi-même. Écris-le dans l'onglet `Bilans` ; ton message de fin de session tient en une ligne : « Passage terminé – bilan écrit dans l'onglet Bilans. » (`regles.md`, section 8).
 
 ## Cours écrits avant le nouveau format (décision de Mage, 03/11/2026)
 

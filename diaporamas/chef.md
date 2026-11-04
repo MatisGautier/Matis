@@ -46,4 +46,4 @@ Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG,
 
 ## Bilan
 
-Termine par 2-3 lignes : sujets lancés, mises à jour demandées, lignes débloquées, sujets proposés, avancement global (« <n> cours validés sur <total> », et par module).
+Termine par 2-3 lignes : sujets lancés, mises à jour demandées, lignes débloquées, sujets proposés, avancement global (« <n> cours validés sur <total> », et par module). Écris-le dans l'onglet `Bilans` ; ton message de fin de session tient en une ligne : « Passage terminé – bilan écrit dans l'onglet Bilans. » (`regles.md`, section 8).

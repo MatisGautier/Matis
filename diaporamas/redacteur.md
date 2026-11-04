@@ -57,7 +57,7 @@ Vide K après une correction.
 
 ## Bilan
 
-Termine par 2-3 lignes : diaporama traité, nombre de diapos, nombre de schémas, nombre de références, difficultés (images refusées, sources introuvables).
+Écris ton bilan dans l'onglet `Bilans` (diaporama traité, nombre de diapos, schémas, références, difficultés). Ton message de fin de session tient en une ligne : « Passage terminé – bilan écrit dans l'onglet Bilans. » (`regles.md`, section 8).
 
 ## Garde-fous contre les doublons (incident du 31/10/2026)
 
