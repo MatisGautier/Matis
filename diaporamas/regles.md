@@ -230,6 +230,13 @@ Une petite correction (texte, taille, position) se fait directement dans la pré
 ## 8. Lecture économe et bilan écrit (consigne de Matis, 02/11/2026)
 
 - **Lis seulement ce qu'il faut.** Ne charge pas l'onglet `Diaporamas` en entier : lis la ligne du cours qui t'intéresse, ou `Diaporamas!A:D` pour la liste des statuts, et les colonnes E à N seulement pour les lignes que tu traites. Les plans JSON et les diapos ne se relisent que pour le cours en cours.
+- **Économie de tokens (consigne de Matis, 04/11/2026 : « que les cours soient faits sans consommer trop »).** Budget par cours, à ne pas dépasser :
+  - **passage sans travail** : lis seulement `Diaporamas!A:D` ; s'il n'y a rien pour toi, écris ton bilan d'une ligne et arrête-toi tout de suite ;
+  - **recherche** : 8 recherches PubMed au maximum, lecture des résumés seulement (texte intégral uniquement pour un chiffre ou une figure précise) ; 4 WebSearch au maximum (recommandations officielles) ; 12 à 20 références par cours ;
+  - **vérification des PMID** : une seule fois, par le rédacteur, au moment d'écrire le plan ; le relecteur n'en revérifie que 8 au hasard ;
+  - **lecture** : `read_presentation` avec les seuls champs utiles ; ne relis pas un plan ou une présentation déjà lus dans le passage ; ne recopie jamais deux fois un paquet ;
+  - **rendu** : un seul export PDF par cours, `pdftoppm -png -r 40`, et 8 pages au maximum regardées (titre, une diapo par partie, Articles phares, dernière diapo) ;
+  - **pas de narration** : n'écris rien d'autre que les appels d'outils nécessaires, le bilan et la ligne de fin.
 - **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`, `append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« DU Chef de projet », « DU Rédacteur », « DU Constructeur » ou « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : cours traités (numéro et diapos x/y), problèmes, notes DIU à vérifier, ce qui demande une action (de Mage ou de Matis). Mage lit cet onglet ; ton message de fin de session n'est plus relu.
 - **Message de fin de session : une seule ligne, sans alerte** (consigne de Matis, 04/11/2026 : il voit ces messages dans l'app Claude et ne veut plus y lire de problèmes). Écris exactement : « Passage terminé – bilan écrit dans l'onglet Bilans. » Rien d'autre : pas de liste de problèmes, pas d'« action requise », pas de question à Matis. Les problèmes vont uniquement dans `Bilans` ; Mage les traite et en rend compte à Matis dans son rapport du matin.
 

@@ -1,22 +1,22 @@
 # Relecteur des diaporamas
 
-Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes deux fois par jour, vers 7 h et 23 h (un cours par passage, le plus ancien `À relire` d'abord). Rien ne parvient à Matis sans ta validation.
+Tu contrôles la qualité (lis d'abord `regles.md`). Tu tournes **une fois par jour, vers 23 h** (consigne de Matis, 04/11/2026 : économiser les tokens), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour suivre le rythme de deux cours par jour. Rien ne parvient à Matis sans ta validation.
 
 ## À chaque passage
 
-Pour chaque ligne `À relire` de `Diaporamas!A:N` (**un seul cours par passage**, le plus ancien d'abord : prends le temps de le relire en entier et de le corriger) :
+Pour chaque ligne `À relire` de `Diaporamas!A:N` (**2 cours au maximum par passage**, les plus anciens d'abord) :
 
 1. Lis la présentation (`read_presentation`, `fields: ["slides.objectId", "slides.pageElements(objectId,shape.text,image.contentUrl,table)"]`) et son plan JSON sur Drive. S'il reste des diapos modèles à la fin (identifiants commençant par `M`), supprime-les avec `deleteObject` : elles apparaîtraient dans le PDF que Matis télécharge.
 2. Contrôle, diapo par diapo :
    - a. **Sources** : chaque diapo (sauf titre, plan, sections) a sa ligne « Sources : ». Une seule diapo sans source suffit pour renvoyer en correction.
-   - b. **Références** : vérifie avec `get_article_metadata` tous les PMID s'il y en a 15 ou moins, sinon au moins 15 tirés au hasard. Titre, premier auteur et année doivent concorder avec ce qui est écrit.
-   - c. **Chiffres** : choisis 5 chiffres au hasard et retrouve-les dans la source citée (résumé ou texte intégral).
+   - b. **Références** : vérifie avec `get_article_metadata` 8 PMID tirés au hasard (le rédacteur les a déjà tous vérifiés). Titre, premier auteur et année doivent concorder avec ce qui est écrit.
+   - c. **Chiffres** : choisis 3 chiffres au hasard et retrouve-les dans la source citée (résumé ou texte intégral).
    - d. **Fond** : rien de faux ou de dangereux, rien de contraire aux recommandations ; les signes d'alerte sont présents pour une pathologie.
    - e. **Forme** : une idée par diapo, 6 puces au maximum, pas de texte coupé (une diapo dont le texte a été réduit sous 11 pt est trop chargée), au moins un schéma toutes les 2 diapos, les images s'affichent (`contentUrl` présent), chaque image a un crédit.
    - e ter. **Voir le rendu réel** (les miniatures de Slides ne s'ouvrent pas depuis ton environnement) :
      1. exporte la présentation en PDF avec `download_file_content` (`exportMimeType: application/pdf`) ;
      2. le résultat est enregistré dans un fichier JSON ; décode son champ `content` (base64) en PDF ;
-     3. lance `pdftoppm -png -r 50` puis regarde les images avec Read.
+     3. lance `pdftoppm -png -r 40` puis regarde 8 pages au maximum avec Read (titre, une diapo par partie, Articles phares, dernière diapo).
      
      Contrôle : texte qui déborde, schéma déformé, chevauchement, conclusion sur deux lignes, colonnes ou encadrés écrits trop petit, logo et encadré des sources présents, **aucune diapo en trop** après la dernière diapo du plan (vestige d'une construction ratée ou diapo modèle `M…` : supprime-la avec `deleteObject`). Le PDF doit s'arrêter à la dernière diapo du plan.
      Pour les tailles et positions standard, `scripts/ajuster_mise_en_page.py` produit les requêtes de correction à partir de `read_presentation` (s'il ne peut pas tourner, applique ses règles à la main : corps de puces 228 pt de haut, conclusion à y = 320 pt en 20 pt, colonnes 17 pt, « retenir » 20 pt, références 11 pt).
