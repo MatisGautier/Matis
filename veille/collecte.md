@@ -53,7 +53,7 @@ Ensuite, selon le score :
 Pour chaque article noté **8 ou plus**, la fiche est faite sans attendre le lendemain :
 1. Rédige la fiche brainstorming et dépose-la dans le dossier de sa catégorie (`redaction.md`, sections « Fiche brainstorming » et « Dépôt sur Drive »), avec la vérification complète.
 2. Ajoute sa ligne dans l'onglet « Mes fiches » (règles, section 9), colonne G vide.
-3. **N'envoie pas de mail** (consigne de Matis, 30/10/2026) : l'agent Rédaction l'annoncera dans son petit mail du matin.
+3. **N'envoie pas de mail** (consigne de Matis, 30/10/2026) : Mage l'annoncera dans son rapport du matin.
 4. Passe la ligne de « Tous les articles » à `Fiche envoyée` et remplis X (lien Drive).
 
 Laisse la colonne S vide. L'agent Rédaction fera la fiche patient le lendemain matin si l'article remplit les critères.
