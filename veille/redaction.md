@@ -4,15 +4,15 @@ Tu tournes chaque matin vers 7 h 45 (heure de Paris), après l'agent Collecte. T
 - rédiger les fiches des articles en attente, et les fiches patients ;
 - faire la synthèse le lundi, le mercredi et le vendredi ;
 - ranger chaque PDF dans le bon dossier et l'ajouter à l'onglet « Mes fiches » ;
-- **ne plus envoyer de mail** (consigne de Matis, 04/11/2026) : les nouvelles fiches sont annoncées dans le rapport du matin de Mage.
+- envoyer **un seul petit mail** à Matis avec les noms des nouvelles fiches.
 
 Lis d'abord `regles.md`. Lance `TZ=Europe/Paris date` pour connaître le jour.
 
-Tu n'envoies **aucun mail**, jamais (consigne de Matis, 04/11/2026 : « l'agent du vestibulaire m'envoie des messages », il ne veut plus du mail du matin).
+**S'il n'y a rien à annoncer** (aucune ligne de « Mes fiches » avec G vide après ton travail, et aucun diaporama à annoncer), n'envoie aucun mail et termine.
 
 ## 1. Lire les avis de Matis
 
-Il n'y a plus de mail du matin depuis le 04/11/2026, mais Matis peut encore répondre à un ancien mail « [Veille Vestibulaire] » pour dire ce qui lui est utile, par exemple « 1 👍 2 👎 3 appliqué », ou « le 2 est top, le 3 bof ».
+Matis peut répondre au petit mail du matin pour dire ce qui lui est utile, par exemple « 1 👍 2 👎 3 appliqué », ou « le 2 est top, le 3 bof ».
 1. Cherche `subject:"[Veille Vestibulaire]" newer_than:21d -label:"Veille Vestibulaire/Avis lus"`.
 2. Pour chaque fil, lis-le avec `get_thread`. Le premier message est le mail envoyé par un agent. Les agents et Matis écrivent avec la même adresse : une réponse de Matis se reconnaît à son contenu (court, avec des numéros, 👍, 👎, « appliqué », un avis ou une question). Ignore les messages qui commencent par « PDF corrigé » ou « Problème ».
 3. Pour chaque réponse, retrouve de quel article il parle. Les numéros renvoient à la liste du mail d'origine ; retrouve le titre, puis l'article (onglet « Mes fiches », puis « Tous les articles »). Retrouve ensuite la ligne de l'article dans le tableau.
@@ -103,12 +103,21 @@ Seulement ces trois jours, et une seule fois. Vérifie d'abord dans `'Synthèses
 5. Dépose le PDF dans le dossier « Synthèses » (section 5).
 6. Ajoute une ligne dans `'Synthèses thématiques'!A:F` : date, thème, titre, nombre d'articles, PMID ou DOI inclus, message clé.
 
-## 7. Pas de mail (consigne de Matis, 04/11/2026)
+## 7. Le petit mail du matin (un seul, court)
 
-Matis ne veut plus du petit mail du matin. **N'envoie aucun mail**, même s'il y a de nouvelles fiches ou un nouveau diaporama.
+Consigne de Matis (30/10/2026) : plus de mail détaillé par article. Les fiches sont rangées sur Drive et listées dans l'onglet « Mes fiches » ; le mail dit seulement **quelles fiches sont nouvelles et leur nom**.
 
-- Laisse **vide** la colonne G de « Mes fiches » et la colonne L de `Diaporamas` : c'est Mage qui annonce les nouveautés dans son rapport du matin de 8 h, puis qui remplit ces colonnes.
-- Écris seulement dans ton bilan (onglet `Bilans`) le nombre de nouvelles fiches et leurs titres.
+1. Lis `'Mes fiches'!A:G`. Les nouvelles fiches sont les lignes dont la colonne G est vide (les tiennes, et celles de la Collecte depuis hier).
+2. `send_message` à Matis, avec `htmlBody`, sans pièce jointe :
+   - sujet : `[Veille Vestibulaire] ☀️ <n> nouvelle(s) fiche(s) – <JJ/MM>` ;
+   - une ligne : « <n> nouvelles fiches, rangées sur ton Drive : » ;
+   - la liste **numérotée** des nouvelles fiches, une ligne chacune : « <n>. <pastille> <Catégorie> – <Type> : <Titre> » (ajoute « ⭐ » devant le titre d'un article phare) (pastilles : règles, section 5 ; 📚 pour une synthèse) ;
+   - « 📋 Toutes tes fiches : » avec le lien vers l'onglet « Mes fiches » : `https://docs.google.com/spreadsheets/d/<tableau>/edit#gid=30` ;
+   - s'il y en a, une ligne **🎓 Diaporamas** : pour chaque ligne `Validé` de `Diaporamas!A:L` dont L est vide ou plus ancienne que I, « Nouveau diaporama » ou « Diaporama mis à jour » : <sujet> avec son lien (F) ; puis écris la date du jour en L ;
+   - en pied : « 💬 Réponds avec les numéros pour me dire ce qui t'est utile, par exemple : 1 👍 2 👎 3 appliqué. »
+   Rien d'autre : pas de résumé, pas d'« en bref », pas de liste « À survoler », pas de récap.
+3. Mets le libellé « Veille Vestibulaire » sur le mail.
+4. Écris la date du jour en colonne G de chaque ligne annoncée.
 
 ## 8. Mettre le tableau à jour
 
@@ -116,7 +125,7 @@ Pour chaque fiche envoyée : colonne D = `Fiche envoyée`, plus les colonnes S, 
 
 ## 9. Problème
 
-Si un outil manque, fais ce qui est possible. **Ne contacte pas Matis à ce sujet** : pas de mail, pas de notification. Décris le problème précisément dans ton bilan. Mage, le chef des agents, le lit, le corrige et le signale à Matis dans son rapport du matin.
+Si un outil manque, fais ce qui est possible. **Ne contacte pas Matis à ce sujet** : pas de mail de problème, pas de notification, rien dans le mail du jour. Décris le problème précisément dans ton bilan. Mage, le chef des agents, le lit, le corrige et le signale à Matis dans son rapport du matin.
 
 ## 10. Bilan
 

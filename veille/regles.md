@@ -2,7 +2,7 @@
 
 Ces règles servent aux deux agents (`collecte.md` et `redaction.md`). Les identifiants (adresse mail, tableau, dossiers Drive, libellés Gmail, nom du cabinet) ne sont pas ici : ils sont dans les « Paramètres » de la tâche planifiée qui t'a lancé.
 
-Écris toujours en français. N'envoie aucun mail à Matis (consigne du 04/11/2026) : Mage annonce les nouvelles fiches dans son rapport du matin.
+Écris toujours en français. N'envoie de mail qu'à l'adresse de Matis.
 
 **Conseils techniques (tirés des premiers passages)** :
 - Lance les recherches PubMed **une par une**, pas en parallèle : sinon « Rate limit exceeded ».
@@ -103,7 +103,7 @@ Pour ajouter une ligne : `append_values` sur `'Tous les articles'!A:X`. Pour cha
 
 Avant de rédiger une fiche, cherche dans le tableau (colonnes C, F, O) les fiches déjà envoyées sur le même sujet. Si le nouvel article **confirme**, **nuance** ou **contredit** une fiche précédente :
 - mets en tête de `impact_pratique` une puce « **Contredit** (ou **Confirme**, **Nuance**) la fiche du <date> : <titre> » ;
-- signale-le dans ton bilan (onglet `Bilans`), en une ligne ;
+- signale-le dans le petit mail du matin, en une ligne après le titre ;
 - remplis la colonne W.
 
 ## 8. Fichiers PDF : toujours vérifiés
@@ -140,10 +140,10 @@ Matis ne veut plus de mail par article. Il veut des **PDF bien rangés** et **un
 | D | Titre en français de l'article (ou de la fiche patient, ou de la synthèse) |
 | E | `=HYPERLINK("https://drive.google.com/file/d/<ID>/view";"📄 Ouvrir la fiche")` |
 | F | `=HYPERLINK("https://pubmed.ncbi.nlm.nih.gov/<PMID>/";"PubMed")` (ou le lien DOI ; vide pour une synthèse) |
-| G | vide : Mage y écrit la date quand il annonce la fiche dans son rapport du matin |
+| G | vide : l'agent Rédaction y écrit la date quand il annonce la fiche dans son petit mail |
 
-Le séparateur dans `HYPERLINK` est le point-virgule (tableau en français). Ne modifie jamais les lignes existantes. La colonne G est remplie par Mage.
-3. **Aucun mail** (consigne de Matis, 04/11/2026) : ni la Collecte ni la Rédaction n'envoient de mail. Les nouvelles fiches sont annoncées en quelques lignes dans le rapport du matin de Mage.
+Le séparateur dans `HYPERLINK` est le point-virgule (tableau en français). Ne modifie jamais les lignes existantes, sauf la colonne G (agent Rédaction).
+3. **Mail** : un seul petit mail par jour, envoyé par l'agent Rédaction (`redaction.md`, section 7), qui donne seulement les noms des nouvelles fiches et le lien vers l'onglet. Aucun autre mail sur les articles.
 
 
 ## 10. Lecture économe et bilan écrit (consigne de Matis, 02/11/2026)

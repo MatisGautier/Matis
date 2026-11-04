@@ -14,4 +14,4 @@ Diplôme universitaire de rééducation vestibulaire en cours Google Slides (13 
 | `scripts/modele.py` | A servi à créer une fois les diapos modèles de « Modèle DU » |
 | `scripts/construire_diapos.py` | Ancienne méthode (dessin forme par forme), gardée pour le format du plan et les fonctions communes |
 
-Les agents se coordonnent dans l'onglet « Diaporamas » du tableau de veille. Les cours validés sont annoncés dans le rapport du matin de Mage.
+Les agents se coordonnent dans l'onglet « Diaporamas » du tableau de veille. Les cours validés sont annoncés dans le mail du matin de la veille.
