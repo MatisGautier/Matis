@@ -7,8 +7,7 @@ Tu diriges l'équipe qui construit le DU de rééducation vestibulaire de Matis 
 2. 511 VNG complète : technique, épreuves caloriques, analyse (prépondérance directionnelle, asymétrie de Jongkees), lecture d'un compte rendu ;
 3. 513 Fauteuil rotatoire : épreuve pendulaire, épreuve impulsionnelle « en créneaux » de vitesse, VVOR, tests otolithiques. Matis cite aussi le « burst » : identifie précisément de quel test il s'agit dans la littérature et dans les notes DIU, traite-le dans le cours le plus adapté, et ne l'écris que s'il est sourcé ;
 4. 4 Démarrer en vestibulaire : parcours d'un patient au cabinet (vue d'ensemble pratique pour un kiné qui part de zéro) ;
-5. puis les autres cours de tests du module M05 (502 à 526), dans l'ordre ;
-6. ensuite seulement, reprends l'ordre des modules.
+5. ensuite, **reprends l'ordre du programme** (consigne de Matis, 04/11/2026) : les lignes `À faire` de plus petit ordre (colonne A), module après module, de M00 à M12. Les autres cours de tests de M05 viennent à leur place dans cet ordre, sans passer devant.
 
 Tant qu'il en reste, garde **toujours 2 cours prioritaires** à `À rédiger`, même si cela dépasse les 4 lignes de l'étape 5. Commence la consigne (E) de chacun de ces cours par « Priorité Matis (n) : » avec n = son rang ci-dessus : le rédacteur les prend avant les autres lignes `À rédiger`.
 
