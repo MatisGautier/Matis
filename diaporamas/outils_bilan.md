@@ -3,7 +3,7 @@
 Matis utilise au cabinet deux grilles de bilan (Excel) : **adulte** et **enfant**. Chaque test de ces grilles doit être enseigné dans le DU, dans le cours indiqué ci-dessous.
 
 Les repères chiffrés de ce fichier viennent des grilles. Ce sont des **points de départ à vérifier** :
-- chaque seuil, norme ou MCID est revérifié dans l'article source (PMID ou DOI avec `get_article_metadata`) avant d'être écrit sur une diapo ;
+- chaque seuil, norme ou MCID est revérifié dans l'article source (PMID ou DOI avec `get_article_metadata`) avant d'être écrit sur un bloc ;
 - si la littérature donne une autre valeur, on suit la littérature et on le signale dans le bilan.
 
 ## Ce que chaque test doit contenir dans le cours
@@ -18,7 +18,7 @@ Les repères chiffrés de ce fichier viennent des grilles. Ce sont des **points 
 8. **Pièges**.
 9. **Référence vérifiée**.
 
-À la fin du cours 518, une diapo « Feuille de bilan » montre comment les résultats s'enchaînent dans une grille de suivi (bilan 1, bilan 2, bilan 3, évolution).
+À la fin du cours 518, un bloc « Feuille de bilan » montre comment les résultats s'enchaînent dans une grille de suivi (bilan 1, bilan 2, bilan 3, évolution).
 
 ## Adulte
 
