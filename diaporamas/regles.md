@@ -17,6 +17,10 @@ Conseils techniques :
 - Les passages sont limités par l'abonnement de Matis : travaille efficacement et écris l'avancement au fur et à mesure (colonne N), pour qu'un passage interrompu puisse être repris.
 
 
+## Format des cours : Notion (décision de Matis, 05/11/2026)
+
+**Chaque cours du DU est une page Notion, et non plus un Google Slides.** Lis `notion.md` : il remplace les sections 6 (pour les tailles, positions et polices des diapos), 7 (construction des diapos) et 12 (partage Slides). Partout ailleurs dans ces règles, « diapo » se lit « bloc » (une entrée du plan JSON, un `###` de la page). Le contenu, les sources, la structure et les articles phares ne changent pas. L'onglet garde son nom `Diaporamas`.
+
 ## 0. Communication : Matis ne parle qu'à Mage
 
 Matis ne veut échanger qu'avec **Mage**, le chef des agents. Tu ne t'adresses donc jamais à lui directement :
@@ -235,7 +239,7 @@ Une petite correction (texte, taille, position) se fait directement dans la pré
   - **recherche** : 8 recherches PubMed au maximum, lecture des résumés seulement (texte intégral uniquement pour un chiffre ou une figure précise) ; 4 WebSearch au maximum (recommandations officielles) ; 12 à 20 références par cours ;
   - **vérification des PMID** : une seule fois, par le rédacteur, au moment d'écrire le plan ; le relecteur n'en revérifie que 8 au hasard ;
   - **lecture** : `read_presentation` avec les seuls champs utiles ; ne relis pas un plan ou une présentation déjà lus dans le passage ; ne recopie jamais deux fois un paquet ;
-  - **rendu** : un seul export PDF par cours, `pdftoppm -png -r 40`, et 8 pages au maximum regardées (titre, une diapo par partie, Articles phares, dernière diapo) ;
+  - **rendu** : relis le fichier `.md` généré, puis un seul `notion-fetch` de la page publiée ;
   - **pas de narration** : n'écris rien d'autre que les appels d'outils nécessaires, le bilan et la ligne de fin.
 - **Bilan écrit, une ligne par passage.** En fin de passage, ajoute une ligne à l'onglet **`Bilans`** du tableau de veille (spreadsheetId `1ew0uNsjIzrlfRefVzLT_g6LJTSBakgM6ce6BAWDgLBE`, `append_values` sur `Bilans!A:D`) : A = date et heure de Paris, B = ton nom d'agent (« DU Chef de projet », « DU Rédacteur », « DU Constructeur » ou « DU Relecteur »), C = `ok`, `partiel` ou `échec`, D = une à trois lignes en français : cours traités (numéro et diapos x/y), problèmes, notes DIU à vérifier, ce qui demande une action (de Mage ou de Matis). Mage lit cet onglet ; ton message de fin de session n'est plus relu.
 - **Message de fin de session : une seule ligne, sans alerte** (consigne de Matis, 04/11/2026 : il voit ces messages dans l'app Claude et ne veut plus y lire de problèmes). Écris exactement : « Passage terminé – bilan écrit dans l'onglet Bilans. » Rien d'autre : pas de liste de problèmes, pas d'« action requise », pas de question à Matis. Les problèmes vont uniquement dans `Bilans` ; Mage les traite et en rend compte à Matis dans son rapport du matin.

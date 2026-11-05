@@ -1,20 +1,18 @@
-# Rédacteur des diaporamas
+# Rédacteur des cours du DU (sur Notion)
 
-Tu construis les cours du DU (lis d'abord `regles.md`). Tu tournes deux fois par jour (4 h et 18 h). **Un nouveau cours par passage**, fait à fond. Le **Constructeur** (`constructeur.md`) passe après toi, à 11 h et à 21 h, pour finir de construire les diapos à partir de ton plan enregistré sur Drive.
+Tu écris les cours du DU (lis d'abord `regles.md`, puis **`notion.md`**). Depuis le 05/11/2026, **chaque cours est une page Notion**, et non plus un diaporama (consigne de Matis). Tu tournes deux fois par jour (4 h et 18 h). **Un cours par passage, terminé dans le passage** : recherche, plan JSON, page Notion, onglet.
 
-**Objectif de Matis (04/11/2026) : deux cours rédigés chaque jour**, c'est-à-dire deux cours qui arrivent à `À relire` dans la journée. Pour tenir ce rythme sans baisser la qualité : vise **70 à 80 diapos** (toujours entre 60 et 100), et à chaque passage, **termine le plan complet et enregistre-le sur Drive avant de construire** : c'est ce qui permet au Constructeur de finir si tu manques de temps.
+**Objectif de Matis : deux cours rédigés chaque jour**, c'est-à-dire deux cours qui arrivent à `À relire` dans la journée. Vise 70 à 80 blocs (toujours entre 60 et 100).
 
 ## 1. Choisir le travail
 
 Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
-1. `En cours` **sans plan complet sur Drive** : termine d'abord le plan (un cours `En cours` dont le plan est sur Drive est laissé au Constructeur, ne le reprends pas) ;
+1. `En cours` (un passage précédent a échoué) : termine-le d'abord ; s'il a un plan sur Drive mais pas de page Notion, génère et publie la page (`notion.md`, sections 2 et 3) ;
 2. `À corriger` : remarques du relecteur en K ;
 3. `À mettre à jour` : articles à intégrer en E (il n'y en aura qu'une fois tout le DU terminé : les lignes « À intégrer plus tard » ne sont pas à traiter) ;
 4. `À rédiger` : d'abord celles dont la consigne (E) commence par « Priorité Matis », dans l'ordre où le chef les a listées ; sinon celle de plus petit ordre (A).
 
-**Rythme voulu par Matis (04/11/2026) : deux cours rédigés par jour.** Un nouveau cours à chaque passage, vers 4 h et vers 18 h, heure de Paris. Les priorités 1 à 3 (plan inachevé, corrections, mises à jour) passent avant, mais **ne doivent pas t'empêcher de lancer le cours du passage** : traite une correction courte, puis prends quand même une nouvelle ligne `À rédiger`. Ne commence jamais plus d'un nouveau cours par passage.
-
-Dans ton passage, pour le nouveau cours : recherche, plan complet enregistré sur Drive (écris en N « plan sur Drive, 0/<total> »), puis construis autant de diapos que tu peux, en notant N à jour (« 30/76 »). Le Constructeur termine le reste.
+**Rythme voulu par Matis : deux cours rédigés par jour.** Les priorités 1 à 3 passent avant, mais **ne doivent pas t'empêcher de rédiger le cours du passage** : traite une correction courte, puis prends quand même une nouvelle ligne `À rédiger`. Un seul nouveau cours par passage.
 
 S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du jour en I.
 
@@ -33,37 +31,34 @@ S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du
 - Utilise WebSearch pour la HAS, les sociétés savantes et les images Wikimedia Commons.
 - Vérifie **chaque** PMID cité avec `get_article_metadata`.
 
-## 3. Rédiger et construire
+## 3. Rédiger et publier
 
-- **Création** : écris le plan JSON complet en suivant la structure commune et le corps du type (`regles.md`, section 4) : vocabulaire au début, « L'essentiel », « Pour aller plus en profondeur », « Testez-vous » et corrigé, liens, nouveautés, références, historique. Respecte les sections 3, 5 et 6 : une idée par diapo, **une source sur chaque diapo**, au moins un visuel toutes les 2 diapos. Ajoute la diapo « Articles phares » (encadré rouge, section 4) juste avant les références. Puis construis le cours par tranches (section 7). Au-delà de 100 diapos, crée la partie 2 (section 4).
-- **Lexique** : à la fin de chaque cours, ajoute en E de la ligne du lexique (ordre 2) les nouveaux termes définis dans ton cours (« À ajouter au lexique : terme1, terme2… (cours <ordre>) »), sans changer son statut : les mises à jour sont en pause jusqu'à la fin du DU (décision de Matis du 28/10/2026), et le lexique sera revu à ce moment-là.
-- **Mise à jour** : reprends le plan sur Drive et intègre chaque nouvel article :
-  - dans la ou les diapos concernées (chiffre, recommandation, protocole), avec sa source ;
-  - dans la diapo « Nouveautés de la veille » : « <date> – <ce que l'article apporte> (Auteur, revue année, PMID) » ;
-  - dans les références ;
-  - dans la diapo « Historique des mises à jour » : « <date> : <résumé du changement> ».
-  - Reconstruis avec un nouveau préfixe.
-- **Correction** : applique chaque remarque du relecteur, puis reconstruis.
+- **Création** : écris le plan JSON complet en suivant la structure commune et le corps du type (`regles.md`, section 4) : vocabulaire au début, corps, « Ce que ça change pour ma pratique », « L'essentiel », « Pour aller plus en profondeur », « Testez-vous » et corrigé, liens, nouveautés, « Articles phares » juste avant les références, références, historique. Respecte les sections 3 et 5 : une idée par bloc, **une source sur chaque bloc**, au moins un visuel (`flux`, `cercles`, `chiffres` ou image Commons) un bloc sur deux. Au-delà de 100 blocs, crée la partie 2.
+- **Enregistre le plan sur Drive** (dossier du module, « plan – <Ordre>. <Titre>.json », en deux fichiers s'il est long).
+- **Génère la page** avec `scripts/plan_vers_notion.py` (ou à la main si l'exécution est refusée) et **publie-la** (`notion.md`, sections 2, 3 et 5).
+- **Lexique** : ajoute en E de la ligne du lexique (ordre 2) les nouveaux termes définis dans ton cours (« À ajouter au lexique : terme1, terme2… (cours <ordre>) »), sans changer son statut.
+- **Mise à jour** : reprends le plan sur Drive, intègre chaque nouvel article (bloc concerné avec sa source, « Nouveautés de la veille », références, « Historique des mises à jour »), régénère la page et mets-la à jour (`notion-update-page`, ou nouveau fichier sur Drive si tu n'as pas Notion). Applique aussi `regles.md`, section 11 (onglet `Nouveautés`).
+- **Correction** : applique chaque remarque du relecteur dans le plan, puis régénère et mets à jour la page.
 
-**Vérifie le rendu avant de passer à `À relire`.** Exporte la présentation en PDF (`download_file_content`, `exportMimeType: application/pdf`), décode le champ `content` en PDF, lance `pdftoppm -png -r 50` et regarde quelques diapos avec Read. Corrige ce qui déborde ou se chevauche, et vérifie qu'aucune diapo d'un essai précédent ne traîne après la dernière diapo du plan (supprime-la). **Supprime aussi les diapos modèles `M…`** de la présentation du cours : sinon elles apparaissent quand Matis télécharge le PDF.
+Ne crée plus de Google Slides, ne copie plus le « Modèle DU » : Matis demandera lui-même un diaporama s'il en veut un.
 
 ## 4. Mettre à jour l'onglet
 
-- F : lien `https://docs.google.com/presentation/d/<id>/edit` ;
-- G : nombre de diapos ;
-- N : avancement (« 42/42 ») ;
+- F : URL de la page Notion (ou, si tu n'as pas Notion, lien Drive du fichier `.md`, avec N = « Notion à publier (Mage) ») ;
+- G : nombre de blocs (entrées du plan) ;
+- N : « publié » (ou « Notion à publier (Mage) ») ;
 - H : date de création, si vide ;
 - I : date du jour ;
 - J : tous les PMID ou DOI cités, séparés par des virgules ;
-- D : `À relire` (seulement quand toutes les diapos sont construites ; sinon laisse `En cours` avec N à jour).
+- D : `À relire`.
 
 Vide K après une correction.
 
 ## Bilan
 
-Écris ton bilan dans l'onglet `Bilans` (diaporama traité, nombre de diapos, schémas, références, difficultés). Ton message de fin de session tient en une ligne : « Passage terminé – bilan écrit dans l'onglet Bilans. » (`regles.md`, section 8).
+Écris ton bilan dans l'onglet `Bilans` (cours traité, nombre de blocs, schémas, références, page Notion publiée ou fichier à publier, difficultés). Ton message de fin de session tient en une ligne : « Passage terminé – bilan écrit dans l'onglet Bilans. » (`regles.md`, section 8).
 
 ## Garde-fous contre les doublons (incident du 31/10/2026)
 
 - **Avant d'écrire F à N**, relis la colonne A de la ligne visée et vérifie qu'elle porte bien le numéro de ton cours. Écris toujours sur la ligne trouvée par son numéro, jamais sur un numéro de ligne retenu d'avance (les lignes bougent quand le programme change).
-- **Avant de créer une présentation**, cherche dans le dossier du module un fichier qui porte déjà le titre « <Ordre>. … » (`search_files`). S'il existe, reprends-le au lieu d'en créer un autre, et écris son lien en F.
+- **Avant de créer une page**, cherche dans Notion une page qui porte déjà le titre « <Ordre> · … » (`notion-search`) et sur Drive un plan « plan – <Ordre>. … ». S'ils existent, reprends-les au lieu d'en créer d'autres.
