@@ -181,7 +181,7 @@ def convertir(plans, slides=None):
             fermer()
             out += ['<toggle heading="h3">', "✅ Corrigé (cliquer pour afficher)", ""]
             corrige = True
-        elif profondeur and not est_prof and not titre.startswith("Approfondir"):
+        elif profondeur and (t in ("phares", "references") or titre.startswith(("Testez", "Corrigé", "Liens", "Nouveautés", "Historique"))):
             fermer()
         elif corrige and not est_corrige:
             fermer()
