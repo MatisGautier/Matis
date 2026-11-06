@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Notion",
+      "mcp__PubMed",
+      "mcp__Google_Sheets",
+      "mcp__Google_Drive",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Bash(git:*)"
+    ]
+  }
+}
