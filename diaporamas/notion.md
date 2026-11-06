@@ -49,3 +49,13 @@ Le rouge ne sert qu'aux articles phares. Pas de titre en tête du contenu : le t
 ## 5. Contrôle de la page
 
 Avant de passer la ligne à `À relire`, relis la page générée (le fichier `.md`) : chaque `###` a sa ligne de sources, les ★ sont en rouge, « Articles phares » est juste avant les références, aucune balise non fermée (`<toggle>`, `<callout>`, `<columns>`). Si tu as publié sur Notion, `notion-fetch` sur la page et vérifie qu'elle n'est pas tronquée.
+
+## 6. Cours sans plan JSON (diaporama seul)
+
+Si un cours n'a qu'un Google Slides (pas de plan sur Drive), on reconstruit la page depuis le diaporama :
+1. `read_presentation` (le résultat est enregistré dans un fichier) ;
+2. `python3 scripts/extraire_slides.py <fichier> slides.json` (texte et tableaux, diapo par diapo) ;
+3. `python3 scripts/slides_vers_notion.py slides.json <ID du diaporama> > page.md` ;
+4. relire la page : les schémas `flux` et les colonnes sortent en puces découpées, à remettre en `→` ou en `<columns>` à la main.
+
+Les sources contenant plusieurs références séparées par « ; » ne mettent en rouge que les références ★.

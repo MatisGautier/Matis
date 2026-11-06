@@ -23,10 +23,12 @@ def inline(txt):
 
 
 def source(s):
-    s = inline(s)
-    if "★" in s:
-        return f'<span color="{ROUGE}"><b>{s}</b></span>'
-    return s
+    """Une source ; si plusieurs sont jointes par « ; », seules les ★ passent en rouge."""
+    morceaux = []
+    for m in str(s).split(" ; "):
+        m = inline(m)
+        morceaux.append(f'<span color="{ROUGE}"><b>{m}</b></span>' if "★" in m else m)
+    return " ; ".join(morceaux)
 
 
 def puces(items, prof=0):
