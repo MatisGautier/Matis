@@ -59,3 +59,12 @@ Si un cours n'a qu'un Google Slides (pas de plan sur Drive), on reconstruit la p
 4. relire la page : les schémas `flux` et les colonnes sortent en puces découpées, à remettre en `→` ou en `<columns>` à la main.
 
 Les sources contenant plusieurs références séparées par « ; » ne mettent en rouge que les références ★.
+
+## 7. Figures d'articles (PubMed Central, consigne de Matis du 06/11/2026)
+
+Chaque cours est illustré avec de **vraies figures d'articles**, PubMed en priorité, Wikimedia Commons en complément pour l'anatomie.
+1. `python3 scripts/figures_pmc.py <PMID cités dans le cours> > figures.json` : pour chaque article en libre accès, la licence et la liste des figures (numéro, légende, adresse publique sur le dépôt Open Access du NCBI).
+2. Licences acceptées (le DU n'est pas vendu) : CC0, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA, CC BY-ND, CC BY-NC-ND. Licence « ND » : image telle quelle, jamais recadrée. Une figure marquée « reprinted / reproduced with permission » dans sa légende n'est **jamais** reprise.
+3. Choisis 3 à 6 figures qui expliquent quelque chose (schéma, tracé, imagerie, arbre décisionnel), jamais un diagramme de sélection d'études (PRISMA, STARD).
+4. Dans la page : `<image source="<url>">Légende en français. Auteur et al., Revue Année, PMID …, fig. n – <licence></image>`, juste sous le `###` du bloc concerné. Pour une page déjà publiée : `notion-update-page`, commande `update_content`, en remplaçant le `###` par le `###` suivi de l'image.
+5. Hôtes nécessaires (déjà autorisés dans l'environnement) : pmc.ncbi.nlm.nih.gov, pmc-oa-opendata.s3.amazonaws.com.

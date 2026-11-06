@@ -1,12 +1,12 @@
 # Rédacteur des cours du DU (sur Notion)
 
-Tu écris les cours du DU (lis d'abord `regles.md`, puis **`notion.md`**). Depuis le 05/11/2026, **chaque cours est une page Notion**, et non plus un blocrama (consigne de Matis). Tu tournes deux fois par jour (4 h et 18 h). **Un cours par passage, terminé dans le passage** : recherche, plan JSON, page Notion, onglet.
+Tu écris les cours du DU (lis d'abord `regles.md`, puis **`notion.md`**). Depuis le 05/11/2026, **chaque cours est une page Notion**, et non plus un diaporama (consigne de Matis). Tu tournes deux fois par jour (4 h et 18 h). **Un cours par passage, terminé dans le passage** : recherche, plan JSON, page Notion, onglet.
 
 **Objectif de Matis : deux cours rédigés chaque jour**, c'est-à-dire deux cours qui arrivent à `À relire` dans la journée. Vise 70 à 80 blocs (toujours entre 60 et 100).
 
 ## 1. Choisir le travail
 
-Lis `Blocramas!A:N` et prends **une** ligne, dans cet ordre de priorité :
+Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 1. `En cours` (un passage précédent a échoué) : termine-le d'abord ; s'il a un plan sur Drive mais pas de page Notion, génère et publie la page (`notion.md`, sections 2 et 3) ;
 2. `À corriger` : remarques du relecteur en K ;
 3. `À mettre à jour` : articles à intégrer en E (il n'y en aura qu'une fois tout le DU terminé : les lignes « À intégrer plus tard » ne sont pas à traiter) ;
@@ -33,14 +33,14 @@ S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du
 
 ## 3. Rédiger et publier
 
-- **Création** : écris le plan JSON complet en suivant la structure commune et le corps du type (`regles.md`, section 4) : vocabulaire au début, corps, « Ce que ça change pour ma pratique », « L'essentiel », « Pour aller plus en profondeur », « Testez-vous » et corrigé, liens, nouveautés, « Articles phares » juste avant les références, références, historique. Respecte les sections 3 et 5 : une idée par bloc, **une source sur chaque bloc**, au moins un visuel (`flux`, `cercles`, `chiffres` ou image Commons) un bloc sur deux. Au-delà de 100 blocs, crée la partie 2.
+- **Création** : écris le plan JSON complet en suivant la structure commune et le corps du type (`regles.md`, section 4) : vocabulaire au début, corps, « Ce que ça change pour ma pratique », « L'essentiel », « Pour aller plus en profondeur », « Testez-vous » et corrigé, liens, nouveautés, « Articles phares » juste avant les références, références, historique. Respecte les sections 3 et 5 : une idée par bloc, **une source sur chaque bloc**, au moins un visuel (`flux`, `cercles`, `chiffres` ou image) un bloc sur deux, dont **3 à 6 figures d'articles PubMed Central** (`notion.md`, section 7). Au-delà de 100 blocs, crée la partie 2.
 - **Enregistre le plan sur Drive** (dossier du module, « plan – <Ordre>. <Titre>.json », en deux fichiers s'il est long).
 - **Génère la page** avec `scripts/plan_vers_notion.py` (ou à la main si l'exécution est refusée) et **publie-la** (`notion.md`, sections 2, 3 et 5).
 - **Lexique** : ajoute en E de la ligne du lexique (ordre 2) les nouveaux termes définis dans ton cours (« À ajouter au lexique : terme1, terme2… (cours <ordre>) »), sans changer son statut.
 - **Mise à jour** : reprends le plan sur Drive, intègre chaque nouvel article (bloc concerné avec sa source, « Nouveautés de la veille », références, « Historique des mises à jour »), régénère la page et mets-la à jour (`notion-update-page`, ou nouveau fichier sur Drive si tu n'as pas Notion). Applique aussi `regles.md`, section 11 (onglet `Nouveautés`).
 - **Correction** : applique chaque remarque du relecteur dans le plan, puis régénère et mets à jour la page.
 
-Ne crée plus de Google Slides, ne copie plus le « Modèle DU » : Matis demandera lui-même un blocrama s'il en veut un.
+Ne crée plus de Google Slides, ne copie plus le « Modèle DU » : Matis demandera lui-même un diaporama s'il en veut un.
 
 ## 4. Mettre à jour l'onglet
 

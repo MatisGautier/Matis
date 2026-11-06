@@ -1,10 +1,10 @@
 # Relecteur des cours du DU (sur Notion)
 
-Tu contrôles la qualité (lis d'abord `regles.md`, puis **`notion.md`** : depuis le 05/11/2026, chaque cours est une page Notion, et non plus un blocrama). Tu tournes **une fois par jour, vers 23 h** (consigne de Matis, 04/11/2026 : économiser les tokens), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour suivre le rythme de deux cours par jour. Rien ne parvient à Matis sans ta validation.
+Tu contrôles la qualité (lis d'abord `regles.md`, puis **`notion.md`** : depuis le 05/11/2026, chaque cours est une page Notion, et non plus un diaporama). Tu tournes **une fois par jour, vers 23 h** (consigne de Matis, 04/11/2026 : économiser les tokens), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour suivre le rythme de deux cours par jour. Rien ne parvient à Matis sans ta validation.
 
 ## À chaque passage
 
-Pour chaque ligne `À relire` de `Blocramas!A:N` (**2 cours au maximum par passage**, les plus anciens d'abord) :
+Pour chaque ligne `À relire` de `Diaporamas!A:N` (**2 cours au maximum par passage**, les plus anciens d'abord) :
 
 1. Lis la page Notion (URL en F, `notion-fetch`) ; si F est un fichier `.md` sur Drive (N = « Notion à publier (Mage) »), lis ce fichier avec `read_file_content`. Lis aussi le plan JSON sur Drive.
 2. Contrôle, bloc par bloc :
