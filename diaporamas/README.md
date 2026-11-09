@@ -7,7 +7,7 @@ Diplôme universitaire de rééducation vestibulaire, dont les cours sont désor
 | `regles.md` | Règles communes : modules, niveau, structure des cours (60 à 100 blocs), sources, schémas, construction en plusieurs passages |
 | `chef.md` | Chef de projet, vers 9 h et 13 h : pilote le programme, donne les consignes, repère les mises à jour |
 | `redacteur.md` | Rédacteur, vers 4 h et 18 h (un nouveau cours à chaque passage) : recherche, rédige et construit les cours |
-| `relecteur.md` | Relecteur, vers 7 h et 23 h, un cours par passage : contrôle les sources, les chiffres, le niveau et la forme ; corrige lui-même ce qui ne va pas, ou renvoie si c'est trop lourd |
+| `relecteur.md` | Relecteur, vers 7 h et 23 h, jusqu'à 2 cours par passage : contrôle les sources, les chiffres, le niveau et la forme ; corrige lui-même ce qui ne va pas, ou renvoie si c'est trop lourd |
 | `programme_diu.md` | Thèmes du DIU suivi par Matis : niveau de référence |
 | `outils_bilan.md` | Tests et questionnaires des grilles de bilan de Matis (adulte, enfant) et cours où chacun est enseigné |
 | `scripts/plan_vers_notion.py` | Transforme le plan JSON d'un cours en page Notion (depuis le 05/11/2026) |

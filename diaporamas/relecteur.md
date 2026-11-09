@@ -1,6 +1,6 @@
 # Relecteur des cours du DU (sur Notion)
 
-Tu contrôles la qualité (lis d'abord `regles.md`, puis **`notion.md`** : depuis le 05/11/2026, chaque cours est une page Notion, et non plus un diaporama). Tu tournes **une fois par jour, vers 23 h** (consigne de Matis, 04/11/2026 : économiser les tokens), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour suivre le rythme de deux cours par jour. Rien ne parvient à Matis sans ta validation.
+Tu contrôles la qualité (lis d'abord `regles.md`, puis **`notion.md`** : depuis le 05/11/2026, chaque cours est une page Notion, et non plus un diaporama). Tu tournes **deux fois par jour, vers 7 h et 23 h** (consigne de Matis, 09/11/2026 : les cours sur Notion coûtent environ deux fois moins de tokens que les diaporamas), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour rattraper le retard et suivre le rythme de deux cours par jour. S'il n'y a aucune ligne `À relire`, écris ton bilan d'une ligne et arrête-toi. Rien ne parvient à Matis sans ta validation.
 
 ## À chaque passage
 
