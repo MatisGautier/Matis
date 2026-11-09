@@ -68,3 +68,20 @@ Chaque cours est illustré avec de **vraies figures d'articles**, PubMed en prio
 3. Choisis 3 à 6 figures qui expliquent quelque chose (schéma, tracé, imagerie, arbre décisionnel), jamais un diagramme de sélection d'études (PRISMA, STARD).
 4. Dans la page : `<image source="<url>">Légende en français. Auteur et al., Revue Année, PMID …, fig. n – <licence></image>`, juste sous le `###` du bloc concerné. Pour une page déjà publiée : `notion-update-page`, commande `update_content`, en remplaçant le `###` par le `###` suivi de l'image.
 5. Hôtes nécessaires (déjà autorisés dans l'environnement) : pmc.ncbi.nlm.nih.gov, pmc-oa-opendata.s3.amazonaws.com.
+
+## 8. PDF du cours à télécharger (consigne de Matis, 09/11/2026)
+
+Chaque cours validé a son **PDF**, que Matis télécharge depuis un lien **à la fin de la page Notion**. C'est le relecteur qui le fait, au moment où il passe la ligne à `Validé`, pour que le PDF corresponde à la version finale.
+
+1. `cd` dans `diaporamas/` dans une commande à part, puis : `python3 scripts/plan_vers_html.py <plan.json> [<plan partie 2.json>] > cours.html` (même contenu et même ordre que la page Notion, images comprises ; les dépliants sont ouverts). **Si l'exécution est refusée**, écris toi-même ce HTML simple à partir du plan, en suivant le script : `<h1>` titre, `<h2>` parties, `<h3>` blocs, `<ul>` puces, `<table>` tableaux, encadrés en `<table>` à une cellule colorée, `<img src="URL">` pour les figures, sources en gris, articles phares en rouge.
+2. Dépose-le **dans le dossier Drive du module**, en Google Doc : `create_file` avec `title` « <Ordre>. <Titre> (PDF du cours) », `textContent` = le contenu de `cours.html`, `contentMimeType: text/html`, `parentId` = dossier du module, **sans** `disableConversionToGoogleType` (Drive le convertit en Google Doc).
+3. Lien de téléchargement en PDF : `https://docs.google.com/document/d/<ID du Doc>/export?format=pdf`. Contrôle une fois : `download_file_content` sur l'ID avec `exportMimeType: application/pdf` doit renvoyer un PDF (le résultat est enregistré dans un fichier : ne le relis pas en entier, vérifie seulement qu'il existe et que `mimeType` vaut `application/pdf`).
+4. Ajoute **à la toute fin de la page Notion**, après l'historique, avec `notion-update-page` :
+   `---` puis `<callout icon="📄" color="gray_bg">` **[Télécharger ce cours en PDF](<lien du point 3>)** – version du <date> `</callout>`.
+5. Écris le lien du point 3 en colonne **O** (« PDF du cours ») de la ligne.
+
+**Mise à jour d'un cours** (nouvelle validation après `À mettre à jour` ou `À corriger`) : refais les points 1 à 3, mets l'ancien Doc à la corbeille (`trash_file`), remplace le lien à la fin de la page et en O.
+
+**Cours déjà validés sans PDF** (lien Notion en F, O vide) : à chaque passage, après tes relectures, fais le PDF de 2 d'entre eux au maximum, en commençant par le plus ancien.
+
+Le PDF ne compte pas dans les 100 blocs. Si la création du Doc échoue, valide quand même le cours, laisse O vide et signale-le dans `Bilans`.

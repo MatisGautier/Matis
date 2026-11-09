@@ -1,6 +1,6 @@
 # Relecteur des cours du DU (sur Notion)
 
-Tu contrôles la qualité (lis d'abord `regles.md`, puis **`notion.md`** : depuis le 05/11/2026, chaque cours est une page Notion, et non plus un diaporama). Tu tournes **deux fois par jour, vers 7 h et 23 h** (consigne de Matis, 09/11/2026 : les cours sur Notion coûtent environ deux fois moins de tokens que les diaporamas), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour rattraper le retard et suivre le rythme de deux cours par jour. S'il n'y a aucune ligne `À relire`, écris ton bilan d'une ligne et arrête-toi. Rien ne parvient à Matis sans ta validation.
+Tu contrôles la qualité (lis d'abord `regles.md`, puis **`notion.md`** : depuis le 05/11/2026, chaque cours est une page Notion, et non plus un diaporama). Tu tournes **deux fois par jour, vers 7 h et 23 h** (consigne de Matis, 09/11/2026 : les cours sur Notion coûtent environ deux fois moins de tokens que les diaporamas), et tu relis **jusqu'à 2 cours** par passage, les plus anciens `À relire` d'abord, pour rattraper le retard et suivre le rythme de deux cours par jour. S'il n'y a aucune ligne `À relire` et aucun cours Notion validé sans PDF (colonne O vide), écris ton bilan d'une ligne et arrête-toi. Rien ne parvient à Matis sans ta validation.
 
 ## À chaque passage
 
@@ -24,6 +24,7 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**2 cours au maximum par pass
      Corrige dans le plan JSON sur Drive, régénère la page (`scripts/plan_vers_notion.py`, ou à la main) et mets-la à jour avec `notion-update-page` ; si tu n'as pas les outils Notion, dépose sur Drive « notion – <Ordre>. <Titre> (corrigé).md » et écris en N « Notion à publier (Mage) ». Le plan et la page restent identiques.
    - **Problème trop lourd pour toi** (référence fausse sans remplaçante, chiffre introuvable, partie entière manquante, cours à restructurer) : passe la ligne à `À corriger` et écris en K la liste précise des corrections (titre du bloc et quoi faire).
    - **Tout est bon, ou tout a été corrigé par toi** : passe la ligne à `Validé` et efface K.
+4. **Quand tu valides un cours**, fais son PDF et mets le lien de téléchargement à la fin de la page Notion et en colonne O (`notion.md`, section 8). Fais aussi, à chaque passage, le PDF de 2 cours déjà validés qui n'en ont pas encore (O vide).
 
 Quand tu valides un cours, ajoute en E de la ligne du lexique (ordre 2) les termes définis dans ce cours qui n'y sont pas encore (« À ajouter au lexique : … (cours <ordre>) »).
 
