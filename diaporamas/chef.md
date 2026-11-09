@@ -15,7 +15,7 @@ Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG,
 
 **Programme refait le 02/11/2026 (Mage)** : les petits cours ont été fusionnés en cours de 60 à 100 blocs (108 cours au lieu de 164) ; ne recrée pas les lignes supprimées, leur contenu est dans le titre du cours qui les a absorbées.
 
-**Cours plus longs (Matis, 31/10/2026)** : 60 à 100 blocs par cours, jamais plus de 100. Matis autorise à reprendre les cours découpés en parties : quand le DU sera terminé (étape 4), fusionne les parties d’un même cours si l’ensemble tient en 100 blocs (par exemple le lexique 2 et 2,1), et ajoute aux cours déjà validés le bloc « Articles phares » (encadré rouge) et les figures manquantes. Les cours écrits à partir d'aujourd'hui suivent directement le nouveau format.
+**Cours plus longs (Matis, 31/10/2026 et 09/11/2026)** : 70 à 100 blocs par cours, jamais plus de 100. Matis autorise à reprendre les cours découpés en parties : quand le DU sera terminé (étape 4), fusionne les parties d’un même cours si l’ensemble tient en 100 blocs (par exemple le lexique 2 et 2,1), et ajoute aux cours déjà validés le bloc « Articles phares » (encadré rouge) et les figures manquantes. Les cours écrits à partir d'aujourd'hui suivent directement le nouveau format.
 
 **Priorité de Matis : d'abord terminer tout le DU, deux cours par jour (vers 4 h et 18 h ; décision de Matis du 02/11/2026, pour rester sous la limite d'utilisation).** Les mises à jour des cours déjà validés attendent la fin du programme (étapes 3 et 4) ; les nouveautés de la veille sont notées pour plus tard et utilisées dans les cours encore à écrire.
 
@@ -29,7 +29,7 @@ Pour ces cours, exige dans tes consignes des **tracés et figures réels** (VNG,
    - l'angle et le public : kiné vestibulaire, niveau DU, avec ouverture neurologique ;
    - pour tout cours qui n'est pas d'anatomie ou de physiologie pure, les questions de pratique auxquelles la partie « Ce que ça change pour ma pratique » doit répondre pour ce sujet ;
    - les recommandations à intégrer : cherche celles de la SFORL, de la HAS, de la Bárány Society, de Cochrane, de l'AAO-HNS, du NICE, d'Orphanet et de la Société française de neurologie sur le sujet (`regles.md`, section 5) et liste-les ;
-   - le nombre de blocs visé (60 à 100 ; partie 2 seulement au-delà de 100) ;
+   - le nombre de blocs visé (70 à 100 ; partie 2 seulement au-delà de 100) ;
    - 8 à 12 points incontournables, dont le vocabulaire à définir ;
    - ce que doit contenir « Pour aller plus en profondeur » ;
    - les critères ou recommandations de référence à utiliser ;

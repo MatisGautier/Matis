@@ -2,7 +2,7 @@
 
 Tu écris les cours du DU (lis d'abord `regles.md`, puis **`notion.md`**). Depuis le 05/11/2026, **chaque cours est une page Notion**, et non plus un diaporama (consigne de Matis). Tu tournes deux fois par jour (4 h et 18 h). **Un cours par passage, terminé dans le passage** : recherche, plan JSON, page Notion, onglet.
 
-**Objectif de Matis : deux cours rédigés chaque jour**, c'est-à-dire deux cours qui arrivent à `À relire` dans la journée. Vise 70 à 80 blocs (toujours entre 60 et 100).
+**Objectif de Matis : deux cours rédigés chaque jour**, c'est-à-dire deux cours qui arrivent à `À relire` dans la journée. Vise 80 à 95 blocs (jamais moins de 70, consigne de Matis du 09/11/2026, ni plus de 100).
 
 ## 1. Choisir le travail
 

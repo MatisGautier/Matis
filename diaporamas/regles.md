@@ -85,8 +85,8 @@ Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s
 - **Vocabulaire** : chaque terme technique est défini à sa première apparition. Chaque abréviation est développée.
 - **Jamais de chiffre, de définition ni de référence inventés.** En cas de doute, ne pas l'écrire.
 - **Niveau de référence : un très bon DIU français.** `programme_diu.md` liste les thèmes du DIU « Vertiges et rééducation vestibulaire » suivi par Matis : chaque cours doit être au moins aussi complet que l'enseignement correspondant. Pour un cours de contenu (notion, test, pathologie, technique) :
-  - **60 à 100 blocs** (partie 2 seulement au-delà de 100) : le cours 1 de présentation est une introduction, pas le modèle de profondeur ;
-  - **au moins 12 références** vérifiées, dont les critères Bárány, les recommandations internationales et, quand elles existent, **françaises** (HAS, SFORL, consensus français) ;
+  - **70 à 100 blocs** (partie 2 seulement au-delà de 100 ; consigne de Matis, 09/11/2026 : 70 au minimum) : le cours 1 de présentation est une introduction, pas le modèle de profondeur ;
+  - **au moins 15 références** vérifiées, dont les critères Bárány, les recommandations internationales et, quand elles existent, **françaises** (HAS, SFORL, consensus français) ;
   - la **physiopathologie** et les mécanismes expliqués pas à pas, avec au moins 3 schémas ;
   - le **point de vue de l'ORL** (examens, imagerie, traitements, chirurgie) **et celui du kiné** (bilan, rééducation, dosage, critères d'arrêt) ;
   - les chiffres (épidémiologie, performances des tests, résultats des traitements) avec leur source ;
@@ -100,7 +100,7 @@ Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s
 
 ## 4. Taille et structure de chaque cours
 
-- **60 à 100 blocs, jamais plus de 100** (demande de Matis, 31/10/2026 : des cours plus longs, même forme, plus de schémas). Si le sujet demande plus de 100 blocs, découpe-le : le cours devient « … (partie 1) ». Ajoute dans l'onglet une ligne « … (partie 2) », avec l'ordre +0.1, le même type, le statut `À rédiger`, et en E le plan de la partie 2. Note « partie 2 créée » en N.
+- **70 à 100 blocs, jamais plus de 100** (demande de Matis, 31/10/2026 : des cours plus longs, même forme, plus de schémas ; 09/11/2026 : **70 blocs au minimum**, un cours plus court est trop léger). Si le sujet demande plus de 100 blocs, découpe-le : le cours devient « … (partie 1) ». Ajoute dans l'onglet une ligne « … (partie 2) », avec l'ordre +0.1, le même type, le statut `À rédiger`, et en E le plan de la partie 2. Note « partie 2 créée » en N.
 - **Structure commune à tous les cours :**
   1. Titre (avec « DU de rééducation vestibulaire – <module> ») ;
   2. Plan ;
@@ -109,7 +109,7 @@ Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s
   5. le corps du cours, selon le type (ci-dessous) ;
   6. **« L'essentiel »** : 5 à 8 messages à retenir pour le cabinet ;
   6 bis. **« Ce que ça change pour ma pratique »** (demande de Matis, 03/11/2026), juste avant « L'essentiel », **dans tous les cours sauf l'anatomie et la physiologie pures** (tests, examens, pathologies, neurologie, ORL, pédiatrie, gériatrie, rééducation, traitements, pratique) : 3 à 6 blocs qui répondent à « en tant que kiné, qu'est-ce que ça m'apporte de savoir ça ? ». Exemple pour la VNG : un déficit canalaire droit, qu'est-ce que ça change pour mon bilan, mon diagnostic différentiel, mon choix d'exercices, mon dosage, mon pronostic, ce que je dis au patient et quand j'adresse au médecin. Toujours concret (situations de cabinet, décisions, phrases au patient), toujours sourcé. Pour l'anatomie et la physiologie, va au contraire très loin dans le détail, avec une seule bloc finale « Ce que cela explique en clinique » ;
-  7. **« Pour aller plus en profondeur »** (4 à 8 blocs) : mécanismes avancés, détails anatomiques ou physiologiques fins, controverses, données récentes de recherche, questions non résolues, lectures de référence commentées ;
+  7. **« Pour aller plus en profondeur »** (6 à 10 blocs) : mécanismes avancés, détails anatomiques ou physiologiques fins, controverses, données récentes de recherche, questions non résolues, lectures de référence commentées ;
   8. **« Testez-vous »** (5 à 10 questions : QCM et cas éclair), puis **« Corrigé »** (chaque réponse expliquée en une ligne, avec sa source) ;
   9. **« Liens avec les autres cours »** (numéros et titres) ;
   10. **« Nouveautés de la veille »** (même vide au départ : « aucune pour l'instant ») ;
@@ -155,7 +155,7 @@ Un cours est généré à partir de son plan JSON avec `scripts/plan_vers_notion
 - **Lis seulement ce qu'il faut.** Ne charge pas l'onglet `Diaporamas` en entier : lis la ligne du cours qui t'intéresse, ou `Diaporamas!A:D` pour la liste des statuts, et les colonnes E à N seulement pour les lignes que tu traites. Les plans JSON et les blocs ne se relisent que pour le cours en cours.
 - **Économie de tokens (consigne de Matis, 04/11/2026 : « que les cours soient faits sans consommer trop »).** Budget par cours, à ne pas dépasser :
   - **passage sans travail** : lis seulement `Diaporamas!A:D` ; s'il n'y a rien pour toi, écris ton bilan d'une ligne et arrête-toi tout de suite ;
-  - **recherche** : 8 recherches PubMed au maximum, lecture des résumés seulement (texte intégral uniquement pour un chiffre ou une figure précise) ; 4 WebSearch au maximum (recommandations officielles) ; 12 à 20 références par cours ;
+  - **recherche** : 12 recherches PubMed au maximum, lecture des résumés, et texte intégral des articles phares et pour un chiffre ou une figure précise ; 4 WebSearch au maximum (recommandations officielles) ; 15 à 25 références par cours (09/11/2026 : les cours sur Notion coûtent deux fois moins, l'économie va dans le contenu) ;
   - **vérification des PMID** : une seule fois, par le rédacteur, au moment d'écrire le plan ; le relecteur n'en revérifie que 8 au hasard ;
   - **lecture** : `read_presentation` avec les seuls champs utiles ; ne relis pas un plan ou une présentation déjà lus dans le passage ; ne recopie jamais deux fois un paquet ;
   - **rendu** : relis le fichier `.md` généré, puis un seul `notion-fetch` de la page publiée ;

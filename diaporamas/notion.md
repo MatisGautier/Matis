@@ -8,7 +8,7 @@ Ce qui ne s'applique plus : `regles.md` section 6 pour les tailles, positions et
 
 ## 1. Le plan JSON reste la source
 
-Le cours s'écrit d'abord en plan JSON, **au même format qu'avant** (`scripts/construire_diapos.py`, en tête du fichier) : une entrée par bloc (`contenu`, `colonnes`, `tableau`, `retenir`, `section`, `phares`, `references`…), 60 à 100 entrées, une source sur chaque entrée, au moins un visuel (`schema` : `flux`, `cercles`, `chiffres` ou `image`) une entrée sur deux. Le plan est enregistré sur Drive comme avant (dossier du module, « plan – <Ordre>. <Titre>.json », en deux fichiers s'il est long). Il permet les mises à jour, et un diaporama si Matis en veut un.
+Le cours s'écrit d'abord en plan JSON, **au même format qu'avant** (`scripts/construire_diapos.py`, en tête du fichier) : une entrée par bloc (`contenu`, `colonnes`, `tableau`, `retenir`, `section`, `phares`, `references`…), 70 à 100 entrées, une source sur chaque entrée, au moins un visuel (`schema` : `flux`, `cercles`, `chiffres` ou `image`) une entrée sur deux. Le plan est enregistré sur Drive comme avant (dossier du module, « plan – <Ordre>. <Titre>.json », en deux fichiers s'il est long). Il permet les mises à jour, et un diaporama si Matis en veut un.
 
 ## 2. Du plan à la page Notion
 
@@ -43,7 +43,7 @@ Le rouge ne sert qu'aux articles phares. Pas de titre en tête du contenu : le t
 
 ## 4. Taille et rythme
 
-- Un cours = une page, de 60 à 100 blocs (entrées du plan), jamais plus : au-delà, partie 2 (`regles.md`, section 4).
+- Un cours = une page, de 70 à 100 blocs (entrées du plan), jamais plus : au-delà, partie 2 (`regles.md`, section 4).
 - **Deux cours par jour**, un par passage du Rédacteur (4 h et 18 h). Sans diapos à construire, **un cours se termine dans le passage** : recherche, plan, page, onglet. Pas de cours `En cours` d'un passage à l'autre, sauf échec signalé dans `Bilans`.
 
 ## 5. Contrôle de la page
@@ -71,7 +71,7 @@ Chaque cours est illustré avec de **vraies figures d'articles**, PubMed en prio
 
 ## 8. PDF du cours à télécharger (consigne de Matis, 09/11/2026)
 
-Chaque cours validé a son **PDF**, que Matis télécharge depuis un lien **à la fin de la page Notion**. C'est le relecteur qui le fait, au moment où il passe la ligne à `Validé`, pour que le PDF corresponde à la version finale.
+Chaque cours validé a son **PDF**, que Matis télécharge depuis un lien **à la fin de la page Notion**. Le PDF contient **tout le cours, sans rien couper ni résumer**, quel que soit son nombre de pages : chaque bloc, chaque figure, l'approfondissement, le Testez-vous et son corrigé, les articles phares et toutes les références. Un cours en plusieurs parties a **un seul PDF avec toutes ses parties** (tous les plans à la suite dans la commande du point 1), refait à la validation de chaque partie, et son lien figure à la fin de la page de chaque partie. C'est le relecteur qui le fait, au moment où il passe la ligne à `Validé`, pour que le PDF corresponde à la version finale.
 
 1. `cd` dans `diaporamas/` dans une commande à part, puis : `python3 scripts/plan_vers_html.py <plan.json> [<plan partie 2.json>] > cours.html` (même contenu et même ordre que la page Notion, images comprises ; les dépliants sont ouverts). **Si l'exécution est refusée**, écris toi-même ce HTML simple à partir du plan, en suivant le script : `<h1>` titre, `<h2>` parties, `<h3>` blocs, `<ul>` puces, `<table>` tableaux, encadrés en `<table>` à une cellule colorée, `<img src="URL">` pour les figures, sources en gris, articles phares en rouge.
 2. Dépose-le **dans le dossier Drive du module**, en Google Doc : `create_file` avec `title` « <Ordre>. <Titre> (PDF du cours) », `textContent` = le contenu de `cours.html`, `contentMimeType: text/html`, `parentId` = dossier du module, **sans** `disableConversionToGoogleType` (Drive le convertit en Google Doc).
