@@ -45,8 +45,11 @@ def pieces_jointes_du_mail(chemin_json):
 
 
 def pdf_telecharge_de_drive(chemin):
-    """Retrouve le PDF dans le résultat de download_file_content (texte ou JSON)."""
-    texte = open(chemin, encoding="utf-8", errors="replace").read()
+    """Retrouve le PDF dans le résultat de download_file_content (fichier PDF brut, texte ou JSON)."""
+    brut = open(chemin, "rb").read()
+    if brut[:5] == b"%PDF-":
+        return brut  # download_file_content enregistre désormais le PDF tel quel (11/11/2026)
+    texte = brut.decode("utf-8", errors="replace")
     for morceau in re.findall(r"JVBER[A-Za-z0-9+/=_\-\\n]+", texte):
         morceau = morceau.replace("\\n", "").replace("-", "+").replace("_", "/")
         try:
