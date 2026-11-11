@@ -14,6 +14,8 @@ Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 
 **Rythme voulu par Matis : deux cours rédigés par jour.** Les priorités 1 à 3 passent avant, mais **ne doivent pas t'empêcher de rédiger le cours du passage** : traite une correction courte, puis prends quand même une nouvelle ligne `À rédiger`. Un seul nouveau cours par passage.
 
+**Corrections en retard (règle de Mage du 11/11/2026)** : s'il y a **2 lignes `À corriger` ou plus**, le passage de **4 h** est consacré aux corrections : traite les 2 plus anciennes en entier (visuels, figures PMC, plan JSON régénéré depuis la page et enregistré sur Drive), sans nouveau cours. Le passage de 18 h rédige le nouveau cours comme d'habitude.
+
 S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du jour en I.
 
 ## 2. Rechercher
