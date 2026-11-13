@@ -97,7 +97,7 @@ Une ligne par article retenu, colonnes A à X. N'écris jamais dans les onglets 
 | W | Lien avec une fiche précédente |
 | X | Lien Drive de la fiche PDF |
 
-Pour ajouter une ligne : **n'utilise plus `append_values`** sur cet onglet (incidents des 12 et 13/11/2026 : les lignes partaient en W:AT). Lis `'Tous les articles'!A:A`, prends la première ligne vide n (nombre de lignes remplies en A + 1) et écris avec `update_values` sur `'Tous les articles'!A{n}:X{n}` (plusieurs articles : `A{n}:X{n+k}`). Relis la colonne A juste avant d'écrire. Pour changer une ligne existante : `update_values` sur les cellules concernées uniquement.
+Pour ajouter une ligne : **n'utilise plus `append_values`** sur cet onglet (incidents des 12 et 13/11/2026 : les lignes partaient en W:AT). Lis `'Tous les articles'!A:A`, prends la ligne n juste après la **dernière ligne remplie** en A (n = numéro de la dernière ligne non vide + 1 ; ne compte pas les lignes remplies, car il peut y avoir des lignes vides au milieu) et écris avec `update_values` sur `'Tous les articles'!A{n}:X{n}` (plusieurs articles : `A{n}:X{n+k}`). Relis la colonne A juste avant d'écrire. Pour changer une ligne existante : `update_values` sur les cellules concernées uniquement.
 
 ## 7. Lien avec les fiches précédentes
 
