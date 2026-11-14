@@ -106,7 +106,7 @@ Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s
   2. Plan ;
   3. Objectifs pédagogiques (3 à 5) ;
   4. **« Vocabulaire du cours »** (1 à 3 blocs, en tableau : terme, définition, source) ;
-  5. le corps du cours, selon le type (ci-dessous) ;
+  5. le corps du cours, selon le type (ci-dessous). **Chaque partie (section) du corps est encadrée (demande de Matis, 14/11/2026, surtout pour les longs cours)** : elle commence par un **mini-rappel** (bloc `retenir` titré « Rappel – <partie> » : en 2 ou 3 puces, ce qu'il faut avoir en tête des parties précédentes ou d'un autre cours pour comprendre celle-ci ; pour la première partie, « Rappel – ce que vous savez déjà ») et se termine par une **mini-conclusion** (bloc `retenir` titré « En résumé – <partie> » : 3 puces, une phrase chacune, sourcées comme le reste) ;
   6. **« L'essentiel »** : 5 à 8 messages à retenir pour le cabinet ;
   6 bis. **« Ce que ça change pour ma pratique »** (demande de Matis, 03/11/2026), juste avant « L'essentiel », **dans tous les cours sauf l'anatomie et la physiologie pures** (tests, examens, pathologies, neurologie, ORL, pédiatrie, gériatrie, rééducation, traitements, pratique) : 3 à 6 blocs qui répondent à « en tant que kiné, qu'est-ce que ça m'apporte de savoir ça ? ». Exemple pour la VNG : un déficit canalaire droit, qu'est-ce que ça change pour mon bilan, mon diagnostic différentiel, mon choix d'exercices, mon dosage, mon pronostic, ce que je dis au patient et quand j'adresse au médecin. Toujours concret (situations de cabinet, décisions, phrases au patient), toujours sourcé. Pour l'anatomie et la physiologie, va au contraire très loin dans le détail, avec une seule bloc finale « Ce que cela explique en clinique » ;
   7. **« Pour aller plus en profondeur »** (6 à 10 blocs) : mécanismes avancés, détails anatomiques ou physiologiques fins, controverses, données récentes de recherche, questions non résolues, lectures de référence commentées ;
@@ -149,7 +149,7 @@ Chaque cours donne aussi des **ressources prêtes à l'emploi** quand le sujet s
 
 ## 6. Mise en page (Notion)
 
-La mise en page est décrite dans `notion.md`, section 2 (encadrés, dépliants, tableaux, colonnes, couleurs). Règles de contenu à respecter sur chaque bloc : une idée par bloc, 6 puces au maximum, une source sur chaque bloc, au moins un visuel un bloc sur deux, le rouge réservé aux articles phares.
+La mise en page est décrite dans `notion.md`, section 2 (encadrés, dépliants, tableaux, colonnes, couleurs). Règles de contenu à respecter sur chaque bloc : une idée par bloc, 6 puces au maximum, une source sur chaque bloc, **un visuel sur au moins 2 blocs sur 3** (schéma en étapes, chiffres clés, figure PMC, tableau ou colonnes ; demande de Matis, 14/11/2026 : « je suis quelqu'un de visuel »), **un encadré au moins tous les 3 blocs** (conclusion 👉, `retenir`, mini-rappel, mini-conclusion), le rouge réservé aux articles phares.
 
 ## 7. Construction (Notion)
 

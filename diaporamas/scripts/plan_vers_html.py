@@ -12,7 +12,8 @@ Mise en page « cours visuel » (demande de Matis, 14/11/2026) :
 - schémas en étapes (cases reliées par des flèches), chiffres clés en grandes cartes,
   colonnes en cartes, tableaux à en-tête coloré et lignes alternées ;
 - figures grandes et centrées, légende en dessous ;
-- encadrés « À retenir », « En pratique », articles phares, Testez-vous.
+- encadrés « À retenir », mini-rappels (bleu), mini-conclusions (jaune), articles phares ;
+- puces dans une carte claire et deux lignes vides entre les blocs.
 Uniquement du HTML que Google Docs sait importer (tableaux, couleurs de fond, bordures).
 """
 import html
@@ -47,6 +48,8 @@ ENCADRES = {
 }
 
 C = {"fort": DEFAUT[0], "clair": DEFAUT[1]}  # couleurs du module en cours
+# Espace entre deux blocs (demande de Matis, 14/11/2026) : Google Docs ignore les marges CSS.
+ESPACE = '<p style="font-size:8pt">&nbsp;</p><p style="font-size:8pt">&nbsp;</p>'
 # Google Docs ignore les sauts de page CSS à l'import (testé le 14/11/2026) : simple espace.
 SAUT = '<p>&nbsp;</p>'
 
@@ -231,7 +234,10 @@ def bloc(d):
     tit = d.get("titre", "")
     titre = inline(tit)
     if t == "contenu":
-        out = titre_bloc(titre, icone_titre(tit)) + puces(d.get("puces")) + schema(d.get("schema"))
+        corps = puces(d.get("puces"))
+        if corps:
+            corps = table1(corps, "#fafafc", pad=8)
+        out = titre_bloc(titre, icone_titre(tit)) + corps + schema(d.get("schema"))
         if d.get("conclusion"):
             out += encadre("jaune", "👉 <b>" + inline(d["conclusion"].lstrip("> ")) + "</b>")
     elif t == "colonnes":
@@ -239,9 +245,15 @@ def bloc(d):
     elif t == "tableau":
         out = titre_bloc(titre, icone_titre(tit) or "📋 ") + tableau(d.get("lignes"))
     elif t == "retenir":
-        out = table1(f'<span style="font-size:12pt;color:#2e7d32"><b>📌 {titre}</b></span><br>'
+        if tit.lower().startswith("rappel"):
+            fond, fort, ic = "#e8f0fe", "#1a56c4", "🔁 "
+        elif tit.lower().startswith(("en résumé", "en resume", "résumé")):
+            fond, fort, ic = "#fff6d6", "#b58900", "✅ "
+        else:
+            fond, fort, ic = "#e8f5e9", "#2e7d32", "📌 "
+        out = table1(f'<span style="font-size:12pt;color:{fort}"><b>{ic}{titre}</b></span><br>'
                      f'{inline(d.get("message", ""))}{puces(d.get("puces"))}',
-                     "#e8f5e9", "#2e7d32", gauche=8, pad=12)
+                     fond, fort, gauche=8, pad=12)
     elif t == "phares":
         items = "".join(f'<li><span style="color:{ROUGE}"><b>{inline(p).replace("<b>", "").replace("</b>", "")}</b></span></li>'
                         for p in d.get("puces", []))
@@ -318,7 +330,9 @@ def convertir(plans):
             profondeur = True
         elif profondeur and (t in ("phares", "references") or tit.startswith(("Testez", "Corrigé", "Liens", "Nouveautés", "Historique"))):
             profondeur = False
-        out.append(bloc(d))
+        b = bloc(d)
+        if b:
+            out.append(b + ESPACE)
     out.append("</body></html>")
     return "\n".join(x for x in out if x) + "\n"
 
