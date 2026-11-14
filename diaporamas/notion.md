@@ -84,4 +84,6 @@ Chaque cours validé a son **PDF**, que Matis télécharge depuis un lien **à l
 
 **Cours déjà validés sans PDF** (lien Notion en F, O vide) : à chaque passage, après tes relectures, fais le PDF de 2 d'entre eux au maximum, en commençant par le plus ancien.
 
+**Nouvelle mise en page (demande de Matis, 14/11/2026 : « des cours plus cool et plus visuels »)** : `plan_vers_html.py` fait maintenant une page de garde à la couleur du module avec le sommaire, un bandeau coloré par partie, des titres de bloc à barre de couleur, des schémas en étapes, des chiffres clés en cartes, des colonnes en cartes, des tableaux à en-tête coloré et des figures en grand. Les PDF faits avant le 14/11/2026 ont l'ancienne mise en page : à chaque passage, après tes relectures et les PDF manquants, **refais le PDF de 2 cours validés de plus** avec le script (points 1 à 3, ancien Doc à la corbeille, lien remplacé à la fin de la page et en O), du plus ancien au plus récent. Si l'exécution du script est refusée, ne refais pas ces anciens PDF à la main : signale-le dans `Bilans`.
+
 Le PDF ne compte pas dans les 100 blocs. Si la création du Doc échoue, valide quand même le cours, laisse O vide et signale-le dans `Bilans`.
