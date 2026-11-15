@@ -102,8 +102,6 @@ def bloc(d):
         out.append(f"### {titre}")
         out += puces(d.get("puces"))
         out += schema(d.get("schema"))
-        if d.get("conclusion"):
-            out += [f'<callout icon="👉" color="yellow_bg">', inline(d["conclusion"].lstrip("> ")), "</callout>"]
     elif t == "colonnes":
         out.append(f"### {titre}")
         out.append("<columns>")
@@ -114,7 +112,11 @@ def bloc(d):
         out.append(f"### {titre}")
         out += tableau(d.get("lignes"))
     elif t == "retenir":
-        out += [f'<callout icon="📌" color="green_bg">', f"<b>{titre}</b>", "", inline(d.get("message", ""))]
+        tl = d.get("titre", "").lower()
+        ic, coul = (("🔁", "blue_bg") if tl.startswith("rappel")
+                    else ("✅", "yellow_bg") if tl.startswith(("en résumé", "résumé"))
+                    else ("📌", "green_bg"))
+        out += [f'<callout icon="{ic}" color="{coul}">', f"<b>{titre}</b>", "", inline(d.get("message", ""))]
         if d.get("puces"):
             out.append("")
             out += puces(d.get("puces"))
@@ -134,6 +136,10 @@ def bloc(d):
         return []  # remplacé par la table des matières
     else:
         return []
+    # Conclusion 👉 : pour les blocs contenu, colonnes et tableau (bug du 14/11/2026 :
+    # elle n'était affichée que pour les blocs contenu).
+    if t in ("contenu", "colonnes", "tableau") and d.get("conclusion"):
+        out += [f'<callout icon="👉" color="yellow_bg">', inline(d["conclusion"].lstrip("> ")), "</callout>"]
     out += sources(d)
     return out
 

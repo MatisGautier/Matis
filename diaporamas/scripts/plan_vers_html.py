@@ -238,8 +238,6 @@ def bloc(d):
         if corps:
             corps = table1(corps, "#fafafc", pad=8)
         out = titre_bloc(titre, icone_titre(tit)) + corps + schema(d.get("schema"))
-        if d.get("conclusion"):
-            out += encadre("jaune", "👉 <b>" + inline(d["conclusion"].lstrip("> ")) + "</b>")
     elif t == "colonnes":
         out = titre_bloc(titre, icone_titre(tit)) + colonnes(d.get("colonnes", []))
     elif t == "tableau":
@@ -265,6 +263,8 @@ def bloc(d):
         return titre_bloc(titre, "📚 ") + f"<ol>{items}</ol>"
     else:
         return ""
+    if t in ("contenu", "colonnes", "tableau") and d.get("conclusion"):
+        out += encadre("jaune", "👉 <b>" + inline(d["conclusion"].lstrip("> ")) + "</b>")
     return out + sources(d)
 
 
