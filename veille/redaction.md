@@ -8,6 +8,11 @@ Tu tournes chaque matin vers 7 h 45 (heure de Paris), après l'agent Collecte. T
 
 Lis d'abord `regles.md`. Lance `TZ=Europe/Paris date` pour connaître le jour.
 
+**Consignes de Matis du 16/11/2026 :**
+- **Le week-end (samedi et dimanche) : aucune fiche d'article**, ni en attente, ni article phare, ni synthèse, ni fiche patient. Fais seulement la section 1 (lire les avis), puis termine sans mail. Les articles en attente seront rédigés le lundi.
+- **5 fiches d'articles au maximum par jour**, articles phares et fiches urgentes de la Collecte compris (section 2).
+- **Chaque fiche fait 3 pages** et commence par un **résumé IMRAD d'une demi-page** ; l'article est **mieux expliqué**, pour que Matis le comprenne sans le lire (section 3).
+
 **S'il n'y a rien à annoncer** (aucune ligne de « Mes fiches » avec G vide après ton travail, et aucun diaporama à annoncer), n'envoie aucun mail et termine.
 
 ## 1. Lire les avis de Matis
@@ -28,15 +33,15 @@ Ces avis servent au score (règles, section 4) : plus Matis répond, plus la sé
 ## 2. Choisir les articles du jour
 
 Lis `'Tous les articles'!A:X`.
-- **Fiches à rédiger** : les lignes `En attente`, triées par score décroissant puis par date d'ajout (A) la plus ancienne. Prends-en **10 au maximum**. Les autres restent en attente pour demain : un article en attente n'est **jamais** abandonné ni rétrogradé.
-- **Articles phares (consigne de Matis, 31/10/2026)** : s'il y a moins de 10 fiches à rédiger, complète avec des **articles phares**, jusqu'à 10 fiches au total et **5 articles phares au maximum par jour**. Un article phare est une publication de référence qui fonde la pratique vestibulaire : article princeps (par exemple le head impulse test de Halmagyi 1988, le HINTS de Kattah 2009, la manœuvre d'Epley 1992), critères de la Bárány Society, recommandation (HAS, AAO-HNS, SFORL), revue Cochrane, grand essai randomisé ou méta-analyse de référence. Pour les choisir, dans cet ordre :
+- **Fiches à rédiger** : les lignes `En attente`, triées par score décroissant puis par date d'ajout (A) la plus ancienne. Prends-en **5 au maximum par jour**, moins les fiches urgentes déjà faites par la Collecte depuis hier matin (lignes de « Mes fiches » avec C = `Fiche article` et la date d'aujourd'hui ou d'hier, G vide). Les autres restent en attente pour demain : un article en attente n'est **jamais** abandonné ni rétrogradé.
+- **Articles phares (consigne de Matis, 31/10/2026)** : s'il reste de la place sous la limite de 5 fiches par jour, complète avec des **articles phares**, jusqu'à 5 fiches au total. Un article phare est une publication de référence qui fonde la pratique vestibulaire : article princeps (par exemple le head impulse test de Halmagyi 1988, le HINTS de Kattah 2009, la manœuvre d'Epley 1992), critères de la Bárány Society, recommandation (HAS, AAO-HNS, SFORL), revue Cochrane, grand essai randomisé ou méta-analyse de référence. Pour les choisir, dans cet ordre :
   1. les sujets des prochains cours du DU (onglet `Diaporamas`, lignes `À rédiger` puis les premières `À faire`), pour que les fiches servent aussi aux cours ;
   2. sinon, les pathologies prioritaires (règles, section 1), en variant les thèmes d'un jour à l'autre.
   
   Vérifie chaque article dans PubMed (`get_article_metadata`) et écarte ceux déjà présents dans le tableau (PMID en P, titre en G). Ajoute pour chacun une ligne dans « Tous les articles » (`update_values` sur la première ligne vide, `regles.md` section 6) : A = date du jour, B = date de publication, D = `En attente` puis `Fiche envoyée`, E = score calculé normalement mais avec la nouveauté remplacée par l'importance historique (0 à 2), T = `Article phare`. Dans la fiche, commence `en_bref` par « Article phare (<année>) : » et explique dans `impact_pratique` ce qui a changé depuis (études plus récentes, recommandations actuelles). Dans « Mes fiches », la colonne C vaut `Fiche article (phare)`. Les articles phares ne passent jamais avant un article `En attente`.
 - **Fiches patients en retard** : les lignes `Fiche envoyée` des 2 derniers jours dont la colonne S est vide. Ce sont des articles urgents envoyés par la Collecte. Pour elles, seule la fiche patient est à faire (section 4).
 
-## 3. Fiche brainstorming (2 pages pleines)
+## 3. Fiche article (3 pages pleines, consigne de Matis du 16/11/2026)
 
 Lis le résumé, et le texte intégral via `get_full_text_article` quand `identifiers.pmc` existe. Français clair et concret. **N'invente jamais de chiffres.** Mets en **gras** (`**…**`) 2 à 4 éléments par section : messages clés, chiffres, gestes.
 
@@ -44,8 +49,15 @@ Le JSON contient :
 - `categorie` (exactement `Kiné pratique`, `Pathos`, `ORL`, `Pédiatrie ORL` ou `HAS`) ;
 - `titre_fr`, `titre_original`, `auteurs`, `revue`, `date`, `pmid`, `doi`, `lien` ;
 - `type_etude`, `niveau_preuve`, `score`, `population` ;
+- **`imrad`** (obligatoire, en tête de fiche, une demi-page) : un objet avec 4 champs, chacun de **3 à 5 phrases** en français simple :
+  - `introduction` : le problème clinique et la question exacte que pose l'étude ;
+  - `methode` : type d'étude expliqué en mots simples, qui (nombre, âge, pathologie), comment (groupes, intervention, durée), ce qui a été mesuré et avec quel test ;
+  - `resultats` : les résultats principaux avec leurs chiffres, et **ce que veut dire chaque chiffre** (par exemple « OR 2,1 : deux fois plus de chances », « IC qui ne croise pas 1 : résultat significatif ») ;
+  - `discussion` : la conclusion des auteurs, puis ton avis sur sa solidité et ce qu'on peut en retenir pour la pratique.
 - `en_bref` (2-3 phrases) et `chiffres_cles` (3-4 paires [libellé, valeur]) ;
-- `rappel_patho` (5-6 puces), `article` (6-8), `limites` (5-6), `impact_pratique` (5-6), `a_tester_au_cabinet` (3) ;
+- **`mots_a_connaitre`** (3 à 6 puces « **terme** : définition simple ») : chaque mot technique ou statistique de la fiche ;
+- `rappel_patho` (5-6 puces), `article` (8-10), `limites` (5-6), `impact_pratique` (5-6), `a_tester_au_cabinet` (3) ;
+- **`article` : l'article expliqué simplement**, comme à un collègue qui ne l'a pas lu. Dans l'ordre : pourquoi les auteurs ont fait cette étude ; comment elle s'est déroulée, étape par étape ; ce qui a été mesuré et pourquoi ce test ; les résultats un par un avec leur sens clinique ; ce qui surprend ou ce qui confirme ce qu'on savait ; la place de l'étude par rapport aux études précédentes. Une idée par puce, des phrases complètes, aucun sigle sans sa signification.
 - `pour_aller_plus_loin` (3-4 références **réelles**, vérifiées dans PubMed, au format « Sujet : auteur, revue année, PMID ») ;
 - `mots_cles`.
 
@@ -56,7 +68,7 @@ Applique la section 7 des règles (lien avec les fiches précédentes).
 - dis dans `impact_pratique` ce qu'elle recommande et si l'article la confirme, la nuance ou la contredit ;
 - n'invente jamais une recommandation : si la recherche ne trouve rien, n'en parle pas.
 
-Génère le PDF avec `python3 scripts/generer_pdf.py fiche.json <Categorie>_<titre-court-sans-accents>_PMID<numéro>.pdf`. Il doit faire 2 pages, avec la page 2 remplie à 75 % au moins. Si le script affiche « À ENRICHIR », complète la fiche et relance. Regarde le rendu (`pdftoppm -png -r 60`, puis Read) : rien de coupé, pas de « ? » à la place d'un accent.
+Génère le PDF avec `python3 scripts/generer_pdf.py fiche.json <Categorie>_<titre-court-sans-accents>_PMID<numéro>.pdf`. Il doit faire **3 pages**, avec la page 3 remplie à 75 % au moins (une synthèse thématique reste à 2 pages). Si le script affiche « À ENRICHIR », complète la fiche et relance. Regarde le rendu (`pdftoppm -png -r 60`, puis Read) : rien de coupé, pas de « ? » à la place d'un accent.
 
 Dépose-la dans le sous-dossier de sa catégorie, dans « Fiches articles » (section 5 et règles, section 9).
 

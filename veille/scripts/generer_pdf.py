@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-"""Génère la fiche PDF « brainstorming » (2 pages pleines au maximum) d'un article
-à partir d'un fichier JSON. Champ facultatif « titres » pour renommer les sections
-(synthèses thématiques, categorie "Synthèse").
+"""Génère la fiche PDF d'un article à partir d'un fichier JSON.
+
+Fiche article (consigne de Matis, 16/11/2026) : 3 pages pleines, qui commencent par un
+résumé IMRAD d'une demi-page (champ « imrad » : introduction, methode, resultats,
+discussion), puis l'article expliqué simplement, avec les mots à connaître.
+Synthèse thématique (categorie "Synthèse") : 2 pages, sans IMRAD. Champ facultatif
+« titres » pour renommer les sections.
 
 Usage : python3 generer_pdf.py fiche.json sortie.pdf
 """
@@ -55,13 +59,22 @@ COULEURS = {
     "Synthèse": "#1c4587",
 }
 
-PAGES_MAX = 2
+PAGES_ARTICLE = 3
+PAGES_SYNTHESE = 2
 REMPLISSAGE_CIBLE = 0.75
+
+IMRAD = [
+    ("introduction", "Introduction", "Pourquoi cette étude ? La question posée."),
+    ("methode", "Méthode", "Qui, combien, comment, ce qui a été mesuré."),
+    ("resultats", "Résultats", "Les résultats principaux, avec leurs chiffres."),
+    ("discussion", "Discussion", "Ce que les auteurs en concluent, et jusqu'où on peut les suivre."),
+]
 ECHELLES = (1.0, 0.94, 0.88, 0.82)
 
 SECTIONS = [
     ("rappel_patho", "1. Rappel patho", "#7b5cc4"),
-    ("article", "2. L'article", "#2f6fd6"),
+    ("mots_a_connaitre", "Les mots à connaître", "#8a6d1d"),
+    ("article", "2. L'article expliqué simplement", "#2f6fd6"),
     ("limites", "3. Les limites", "#d9822b"),
     ("impact_pratique", "4. En quoi ça peut m'impacter", "#16a765"),
     ("a_tester_au_cabinet", "5. À tester au cabinet", "#0f7b6c"),
@@ -112,6 +125,8 @@ def styles():
                                textColor=colors.HexColor("#1b1b1f")),
         "chiffre": ParagraphStyle("chiffre", fontName=POLICE_GRAS, fontSize=13,
                                   leading=16, textColor=colors.HexColor("#1b1b1f")),
+        "imrad_lib": ParagraphStyle("imrad_lib", fontName=POLICE_GRAS, fontSize=9.5,
+                                    leading=12.5, textColor=colors.white),
         "pied": ParagraphStyle("pied", fontName=POLICE, fontSize=7.5, leading=10,
                                textColor=colors.HexColor("#7a7a85")),
     }
@@ -165,6 +180,34 @@ def tuiles(chiffres, st, accent):
     return t
 
 
+def bloc_imrad(imrad, st, accent):
+    """Résumé IMRAD : un tableau à 4 lignes, libellé coloré à gauche."""
+    lignes = []
+    for cle, libelle, _ in IMRAD:
+        texte = imrad.get(cle)
+        if texte:
+            if isinstance(texte, list):
+                texte = " ".join(texte)
+            lignes.append([Paragraph(f"<b>{libelle}</b>", st["imrad_lib"]),
+                           Paragraph(esc(texte), st["corps"])])
+    if not lignes:
+        return []
+    t = Table(lignes, colWidths=[30 * mm, 146 * mm])
+    t.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("BACKGROUND", (0, 0), (0, -1), colors.HexColor(accent)),
+        ("BACKGROUND", (1, 0), (1, -1), colors.HexColor("#f7f7fa")),
+        ("LINEBELOW", (0, 0), (-1, -2), 1.5, colors.white),
+        ("LEFTPADDING", (0, 0), (-1, -1), 7),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 7),
+        ("TOPPADDING", (0, 0), (-1, -1), 6),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+    ]))
+    titre = Paragraph("Résumé de l'article (IMRAD)", ParagraphStyle(
+        "hi", parent=st["h2"], textColor=colors.HexColor(accent), spaceBefore=4))
+    return [KeepTogether([titre, t]), Spacer(1, 8)]
+
+
 def construire(fiche, sortie, echelle=1.0):
     categorie = fiche.get("categorie", "Pathos")
     accent = COULEURS.get(categorie, "#4a86e8")
@@ -214,6 +257,9 @@ def construire(fiche, sortie, echelle=1.0):
     ]))
     flux += [t, Spacer(1, 8)]
 
+    if fiche.get("imrad") and categorie != "Synthèse":
+        flux += bloc_imrad(fiche["imrad"], st, accent)
+
     if fiche.get("en_bref"):
         flux.append(encadre(Paragraph(
             f"<b>En bref :</b> {esc(fiche['en_bref'])}", st["bref"]),
@@ -248,12 +294,16 @@ def construire(fiche, sortie, echelle=1.0):
     return doc.page, remplissage
 
 
+def pages_max(fiche):
+    return PAGES_SYNTHESE if fiche.get("categorie") == "Synthèse" else PAGES_ARTICLE
+
+
 def generer(fiche, sortie):
     fiche = dict(fiche)
     while True:
         for echelle in ECHELLES:
             pages, remplissage = construire(fiche, sortie, echelle)
-            if pages <= PAGES_MAX:
+            if pages <= pages_max(fiche):
                 return pages, remplissage
         cle = max((c for c, _, _ in SECTIONS), key=lambda c: len(fiche.get(c) or []))
         if len(fiche.get(cle) or []) <= 1:
@@ -265,9 +315,13 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         sys.exit(__doc__)
     with open(sys.argv[1], encoding="utf-8") as f:
-        pages, remplissage = generer(json.load(f), sys.argv[2])
+        fiche = json.load(f)
+    pages, remplissage = generer(fiche, sys.argv[2])
+    cible = pages_max(fiche)
     print(f"{sys.argv[2]} : {pages} page(s), dernière page remplie à "
           f"{remplissage:.0%}")
-    if pages < PAGES_MAX or remplissage < REMPLISSAGE_CIBLE:
-        print("À ENRICHIR : la fiche doit occuper 2 pages pleines "
-              "(ajouter des puces détaillées, des chiffres, des pistes cliniques).")
+    if fiche.get("categorie") != "Synthèse" and not fiche.get("imrad"):
+        print("À ENRICHIR : il manque le résumé IMRAD (champ « imrad »).")
+    if pages < cible or remplissage < REMPLISSAGE_CIBLE:
+        print(f"À ENRICHIR : la fiche doit occuper {cible} pages pleines "
+              "(expliquer davantage l'article, ajouter des chiffres et des pistes cliniques).")

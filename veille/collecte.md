@@ -51,6 +51,8 @@ Ensuite, selon le score :
 ## 3. Article urgent (score ≥ 8) : fiche tout de suite
 
 Pour chaque article noté **8 ou plus**, la fiche est faite sans attendre le lendemain :
+
+**Exceptions (consigne de Matis, 16/11/2026)** : **le week-end (samedi et dimanche), aucune fiche** : l'article reste `En attente`, il sera rédigé en premier le lundi. **5 fiches d'articles au maximum par jour** pour toute la veille : si la Rédaction a déjà fait 5 fiches aujourd'hui (onglet « Mes fiches », date du jour), l'article reste `En attente` pour le lendemain. Une fiche urgente suit le nouveau format (3 pages, résumé IMRAD, `redaction.md` section 3).
 1. Rédige la fiche brainstorming et dépose-la dans le dossier de sa catégorie (`redaction.md`, sections « Fiche brainstorming » et « Dépôt sur Drive »), avec la vérification complète.
 2. Ajoute sa ligne dans l'onglet « Mes fiches » (règles, section 9), colonne G vide.
 3. **N'envoie pas de mail** (consigne de Matis, 30/10/2026) : l'agent Rédaction l'annoncera dans son petit mail du matin.
