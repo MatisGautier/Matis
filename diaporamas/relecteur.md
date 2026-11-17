@@ -27,7 +27,7 @@ Pour chaque ligne `À relire` de `Diaporamas!A:N` (**2 cours au maximum par pass
    - **Tout est bon, ou tout a été corrigé par toi** : passe la ligne à `Validé` et efface K.
 4. **Quand tu valides un cours**, fais son PDF et mets le lien de téléchargement à la fin de la page Notion et en colonne O (`notion.md`, section 8). Fais aussi, à chaque passage, le PDF de 2 cours déjà validés qui n'en ont pas encore (O vide).
 
-Quand tu valides un cours, ajoute en E de la ligne du lexique (ordre 2) les termes définis dans ce cours qui n'y sont pas encore (« À ajouter au lexique : … (cours <ordre>) »).
+Quand tu valides un cours dont le rédacteur n'a pas déjà inscrit les termes, ajoute **une ligne** dans l'onglet **`Lexique à ajouter`** (`update_values` sur la ligne qui suit la dernière ligne remplie en A) : A = date du jour, B = numéro du cours, C = les nouveaux termes définis dans le cours, séparés par des virgules, D vide. **Ne réécris plus la cellule E de la ligne du lexique** (décision de Mage, 17/11/2026 : elle est trop longue pour être réécrite sans risque). Le rédacteur du lexique lira cet onglet, puis écrira en D la date d'intégration.
 
 Une mise à jour (`À relire` après un `À mettre à jour`) se contrôle de la même façon, mais seulement sur les blocs changés, plus les références.
 
