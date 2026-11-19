@@ -1,0 +1,12 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:880px;height:580px;overflow:hidden}
+body{position:relative;font-family:Lora,serif;color:#2a1a1e;
+ background:
+  radial-gradient(ellipse 55% 60% at 0% 0%,#F4A9C6 0%,transparent 70%),
+  radial-gradient(ellipse 50% 55% at 100% 100%,#F2A0BF 0%,transparent 70%),
+  radial-gradient(ellipse 45% 50% at 100% 0%,#F7BED3 0%,transparent 70%),
+  radial-gradient(ellipse 60% 60% at 45% 55%,#FDE6EE 0%,transparent 75%),
+  #F9CFDE}
+.grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply;pointer-events:none}
+.ig{width:58px;height:58px;border-radius:16px;flex:none;display:grid;place-items:center;
+ background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
