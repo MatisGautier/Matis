@@ -16,6 +16,8 @@ Lis `Diaporamas!A:N` et prends **une** ligne, dans cet ordre de priorité :
 
 **Corrections en retard (règle de Mage du 11/11/2026)** : s'il y a **2 lignes `À corriger` ou plus**, le passage de **4 h** est consacré aux corrections : traite les 2 plus anciennes en entier (visuels, figures PMC, plan JSON régénéré depuis la page et enregistré sur Drive), sans nouveau cours. Le passage de 18 h rédige le nouveau cours comme d'habitude.
 
+**Plans JSON à reconstruire (règle de Mage du 24/11/2026)** : les cours **102** et **511** sont `Validé` mais leur plan JSON sur Drive est périmé (102, plan du 31/10) ou absent (511, page reconstruite depuis le diaporama) ; sans plan à jour, le relecteur ne peut pas faire leur PDF (`plan_vers_html.py`). Au passage de **4 h**, avant le nouveau cours, reconstruis le plan d'**un** de ces cours (102 d'abord, puis 511) **depuis la page Notion actuelle** (URL en F, `notion-fetch`), au format de `scripts/construire_diapos.py`, sans rien changer au contenu de la page ; enregistre-le sur Drive (« plan – <Ordre>. <Titre>.json », dossier du module ; l'ancien plan de 102 à la corbeille, jamais supprimé). Ne touche pas au statut `Validé` et écris dans ton bilan « plan de <Ordre> reconstruit : PDF à faire par le relecteur » ; le relecteur fera le PDF à son passage suivant (cours validé, O vide). Quand les deux plans sont faits, cette règle ne s'applique plus.
+
 S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du jour en I.
 
 ## 2. Rechercher
