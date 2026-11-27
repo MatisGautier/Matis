@@ -159,7 +159,7 @@ def construire(fiche, sortie, echelle=1.0):
     bandeau = f"FICHE INFO VERTIGES ET ÉQUILIBRE · {public}"
     if fiche.get("cabinet"):
         bandeau += f"<br/><font name='{POLICE}'>{esc(fiche['cabinet'])}</font>"
-    flux = [boite(Paragraph(bandeau, st["bandeau"]), LARGEUR, "#0f7b6c", rembourrage=6),
+    flux = [boite(Paragraph(bandeau, st["bandeau"]), LARGEUR, "#8e24aa", rembourrage=6),
             Spacer(1, 7),
             Paragraph(esc(fiche.get("titre", "")), st["titre"])]
     if fiche.get("sous_titre"):

@@ -51,13 +51,16 @@ REMPLACEMENTS = {
 }
 
 COULEURS = {
-    "Kiné pratique": "#16a765",
-    "Pathos": "#a479e2",
-    "ORL": "#4a86e8",
-    "Pédiatrie ORL": "#e0679a",
-    "HAS": "#fb4c2f",
-    "Synthèse": "#1c4587",
+    # Couleurs de Matis (27/11/2026) : vert HAS, gris Pathos, rouge Pédiatrie, bleu ORL,
+    # « transparent » (fond blanc, contour gris) Kiné pratique, orange Synthèse.
+    "Kiné pratique": "#55555f",
+    "Pathos": "#7a8798",
+    "ORL": "#2f6fd6",
+    "Pédiatrie ORL": "#d93025",
+    "HAS": "#1f9d55",
+    "Synthèse": "#f57c00",
 }
+TRANSPARENT = {"Kiné pratique"}  # bandeau blanc à contour gris, texte sombre
 
 PAGES_ARTICLE = 3
 PAGES_SYNTHESE = 2
@@ -224,9 +227,15 @@ def construire(fiche, sortie, echelle=1.0):
         bandeau_texte += f" · {esc(fiche['type_etude'])}"
     if fiche.get("score") not in (None, ""):
         bandeau_texte += f" · Pertinence {esc(fiche['score'])}/10"
-    bandeau = Table([[Paragraph(bandeau_texte, st["bandeau"])]], colWidths=[176 * mm])
+    transparent = categorie in TRANSPARENT
+    st_bandeau = st["bandeau"]
+    if transparent:
+        st_bandeau = ParagraphStyle("bandeau_t", parent=st_bandeau,
+                                    textColor=colors.HexColor("#33333d"))
+    bandeau = Table([[Paragraph(bandeau_texte, st_bandeau)]], colWidths=[176 * mm])
     bandeau.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor(accent)),
+        ("BACKGROUND", (0, 0), (-1, -1), colors.white if transparent else colors.HexColor(accent)),
+        ("BOX", (0, 0), (-1, -1), 1.2 if transparent else 0, colors.HexColor(accent)),
         ("LEFTPADDING", (0, 0), (-1, -1), 8),
         ("TOPPADDING", (0, 0), (-1, -1), 5),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 5),

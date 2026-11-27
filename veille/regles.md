@@ -60,11 +60,13 @@ Décision :
 
 ## 5. Catégorie (première règle qui s'applique)
 
-1. Recommandation officielle ou consensus → **HAS** (🔴, couleur #fb4c2f).
-2. Population exclusivement de moins de 18 ans → **Pédiatrie ORL** (🩷, #e0679a). Exception : un geste, test ou exercice réalisé par le kiné → **Kiné pratique**, avec « (enfant) » dans le titre.
-3. Rééducation, manœuvre, exercice, test faisable au cabinet → **Kiné pratique** (🟢, #16a765).
-4. Examen instrumental ORL ou traitement médical ou chirurgical ORL → **ORL** (🔵, #4a86e8).
-5. Sinon → **Pathos** (🟣, #a479e2).
+1. Recommandation officielle ou consensus → **HAS** (🟢 vert, #1f9d55).
+2. Population exclusivement de moins de 18 ans → **Pédiatrie ORL** (🔴 rouge, #d93025). Exception : un geste, test ou exercice réalisé par le kiné → **Kiné pratique**, avec « (enfant) » dans le titre.
+3. Rééducation, manœuvre, exercice, test faisable au cabinet → **Kiné pratique** (⚪ « transparent » : bandeau blanc à contour gris, texte sombre).
+4. Examen instrumental ORL ou traitement médical ou chirurgical ORL → **ORL** (🔵 bleu, #2f6fd6).
+5. Sinon → **Pathos** (⚪ gris, #7a8798).
+
+Couleurs des autres documents : **Synthèse** 🟠 orange (#f57c00) ; **fiches patients** 🟣 violet (#8e24aa). Consigne de Matis du 27/11/2026 : ces couleurs remplacent les anciennes, pour les nouveaux PDF et les couvertures. Les anciens PDF ne sont pas refaits. Dans la pastille du mail, utilise ces emojis (⚪ pour Kiné pratique, ⚪ gris pour Pathos : écris « ⚪ gris » pour Pathos pour les distinguer).
 
 ## 6. Le tableau « Tous les articles »
 
@@ -118,7 +120,7 @@ Les PDF voyagent sous forme de texte base64 que tu recopies. Une seule faute de 
 Aucun mail ne joint de PDF ni ne détaille un article : tout est rangé sur Drive et listé dans l'onglet « Mes fiches » (section 9).
 
 **Plan B si l'exécution d'un script PDF est refusée** : Matis veut des PDF, pas des Google Docs (consigne du 29/10/2026). Ne saute pas la fiche ; fabrique le PDF avec Google Docs, sans aucun script :
-- crée la fiche en Google Doc : `create_file` avec `textContent` = la fiche en HTML simple (titres `<h1>`/`<h2>`, paragraphes, listes, tableau des chiffres clés, bandeau de catégorie en `<p style="background-color:<couleur>;color:#fff">`), `contentMimeType: text/html`, **sans** `disableConversionToGoogleType`. Même contenu et mêmes sections que le PDF ;
+- crée la fiche en Google Doc : `create_file` avec `textContent` = la fiche en HTML simple (titres `<h1>`/`<h2>`, paragraphes, listes, tableau des chiffres clés, bandeau de catégorie en `<p style="background-color:<couleur>;color:#fff">` (Kiné pratique : fond blanc, contour gris, texte sombre)), `contentMimeType: text/html`, **sans** `disableConversionToGoogleType`. Même contenu et mêmes sections que le PDF ;
 - exporte-la en PDF avec `download_file_content` (`exportMimeType: application/pdf`). Si le contenu base64 t'est renvoyé directement, dépose ce PDF dans le même dossier (`create_file`, `base64Content`, `contentMimeType: application/pdf`, `disableConversionToGoogleType: true`), mets le Doc à la corbeille et donne le lien du PDF ;
 - sinon, garde le Doc mais donne, dans les tableaux, son lien de téléchargement en PDF : `https://docs.google.com/document/d/<ID>/export?format=pdf` (texte du lien : « Fiche en PDF »). Jamais un simple lien vers le Doc.
 Signale « script refusé : PDF fait via Google Docs » dans ton bilan.
