@@ -33,6 +33,7 @@ S'il n'y a rien, termine. Sinon, passe la ligne à `En cours` et mets la date du
   - Lis les résumés. **Garde du budget pour rédiger** (incident du 09/11/2026 : cours 201 non écrit, budget épuisé par la recherche) : `search_articles` avec 5 résultats au plus par requête, 6 à 8 requêtes en tout ; `get_article_metadata` par lots de 3 à 5 PMID ; `get_full_text_article` seulement pour 1 ou 2 articles clés, jamais pour vérifier une référence. Arrête la recherche dès que tu as 12 à 15 références solides, puis rédige.
 - Lis les fiches de la veille sur ce sujet (onglet `Tous les articles`, statut « Fiche envoyée » ; PDF dans le dossier « Fiches articles » si besoin).
 - Utilise WebSearch pour la HAS, les sociétés savantes et les images Wikimedia Commons.
+- **SFORL (consigne de Matis, 27/11/2026)** : pour tout cours d'ORL, d'audiologie, d'otologie ou de pathologie de l'oreille, cherche aussi les recommandations de la Société française d'ORL : `WebSearch` avec `site:sforl.org recommandation <sujet>`, puis lis la page (le site `sforl.org` est autorisé dans l'environnement). Cite-les comme les autres sources (SFORL, titre, année, lien) ; une recommandation SFORL va dans « Articles phares » si elle change la pratique. Ne copie jamais un texte, résume-le avec tes mots.
 - Vérifie **chaque** PMID cité avec `get_article_metadata`.
 
 ## 3. Rédiger et publier
