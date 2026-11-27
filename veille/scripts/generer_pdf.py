@@ -288,7 +288,7 @@ def construire(fiche, sortie, echelle=1.0):
 
     if fiche.get("mots_cles"):
         flux += [Spacer(1, 10), Paragraph(
-            "<b>Mots-clés :</b> " + esc(", ".join(fiche["mots_cles"])), st["meta"])]
+            "<b>Mots-clés :</b> " + esc(fiche["mots_cles"] if isinstance(fiche["mots_cles"], str) else ", ".join(fiche["mots_cles"])), st["meta"])]
 
     flux += [Spacer(1, 12), Paragraph(
         f"Fiche générée automatiquement le {date.today():%d/%m/%Y} à partir du "

@@ -59,7 +59,7 @@ Le JSON contient :
 - `rappel_patho` (5-6 puces), `article` (8-10), `limites` (5-6), `impact_pratique` (5-6), `a_tester_au_cabinet` (3) ;
 - **`article` : l'article expliqué simplement**, comme à un collègue qui ne l'a pas lu. Dans l'ordre : pourquoi les auteurs ont fait cette étude ; comment elle s'est déroulée, étape par étape ; ce qui a été mesuré et pourquoi ce test ; les résultats un par un avec leur sens clinique ; ce qui surprend ou ce qui confirme ce qu'on savait ; la place de l'étude par rapport aux études précédentes. Une idée par puce, des phrases complètes, aucun sigle sans sa signification.
 - `pour_aller_plus_loin` (3-4 références **réelles**, vérifiées dans PubMed, au format « Sujet : auteur, revue année, PMID ») ;
-- `mots_cles`.
+- `mots_cles` : une **liste** de mots-clés (par exemple `["VPPB", "manœuvre"]`) ; une simple chaîne est aussi acceptée par le script depuis le 27/11/2026.
 
 Applique la section 7 des règles (lien avec les fiches précédentes).
 
